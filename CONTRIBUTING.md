@@ -1,9 +1,10 @@
 # Contributing
 
-Two different requests. Do not mix them.
+Three different requests. Do not mix them.
 
 1. **Copyrighted expression is hosted here** (verbatim paper, figure, long quotation, PDF) → [takedown PR](#copyright-takedown-pr). If we do not act, GitHub’s [DMCA process](#github-dmca) is still available.
-2. **You disagree with a claim** → [add sources](#disagreement-add-do-not-delete). Do not delete the existing claim.
+2. **You are the source we cited** (paper author, clinic, speaker, protocol operator) and we got it wrong → [correct the inaccuracy](#if-you-are-the-source).
+3. **You disagree with a claim** and you are not the source → [add sources](#disagreement-add-do-not-delete). Do not delete the existing claim.
 
 This file is process, not legal advice.
 
@@ -62,6 +63,16 @@ Required content, compressed from the statute and GitHub’s guide:
 False notices can carry perjury and [§ 512(f)](https://www.copyright.gov/title17/92chap5.html#512) misrepresentation exposure. GitHub is not the judge of the claim; they check the notice is complete.
 
 This section is supporting documentation for the PR path above. It does not replace that path.
+
+## If you are the source
+
+If this repo cited your paper, protocol, clinic page, thread, dataset, or talk and the writeup is inaccurate: please correct it.
+
+You are invited. Open a PR. Title: `correction: <your work> in <path>`. Use the [correction PR template](.github/PULL_REQUEST_TEMPLATE/correction.md), or open with `?template=correction.md` on the compare URL.
+
+Say who you are (author, corresponding author, clinic operator, speaker). Point at the exact sentence. State what is wrong. Put the corrected sentence in the same section, with the same cite (author, year, venue, DOI/PMID/URL). Quantify if the original claim quantified.
+
+This is for misstatements of *your* work: wrong N, wrong endpoint, wrong dose, a finding we attributed to you that you did not report. It is not a license to delete a neighboring claim, a cite, or a section you dislike. Verbatim hosted copies of your text are still a [takedown](#copyright-takedown-pr). A fight about what your result *implies* is still [add, do not delete](#disagreement-add-do-not-delete) — add the sentence you want next to ours.
 
 ## Disagreement: add, do not delete
 

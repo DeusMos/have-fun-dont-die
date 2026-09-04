@@ -102,7 +102,7 @@ The scientific community’s “wait for the perfect RCT in 2048” stance is no
 
 ```
 README.md                                            GitHub front door (index, not a writeup)
-CONTRIBUTING.md                                      copyright takedown PR; disagreement adds, does not delete
+CONTRIBUTING.md                                      copyright takedown PR; source corrections; disagreement adds, does not delete
 hallmarks/README.md                                  hallmark catalog + section maps
 topics/README.md                                     topic catalog (non-molecule subjects)
 compounds/README.md                                  compound catalog + section maps
@@ -153,9 +153,10 @@ When researching: dump notes and source tables in `tmp/` first, then write the r
 
 ## Pull requests
 
-Two jobs. Do not mix them. Full instructions: [CONTRIBUTING.md](CONTRIBUTING.md).
+Three jobs. Do not mix them. Full instructions: [CONTRIBUTING.md](CONTRIBUTING.md).
 
 - Copyrighted verbatim material: [takedown PR](CONTRIBUTING.md#copyright-takedown-pr). Remove only the identified expression. Leave the cite.
+- The cited source says we got their work wrong: [invite a correction](CONTRIBUTING.md#if-you-are-the-source). Fix the inaccurate sentence. Leave neighboring claims.
 - Disagreement with a claim: add a marked statement and a source note. Do not delete the existing claim. [CONTRIBUTING.md](CONTRIBUTING.md#disagreement-add-do-not-delete).
 
 ## Asking the docs
