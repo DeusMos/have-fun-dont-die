@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "docs-rag": {
+      "command": "bash",
+      "args": ["${workspaceFolder}/mcp/docs-rag/run.sh"]
+    }
+  }
+}

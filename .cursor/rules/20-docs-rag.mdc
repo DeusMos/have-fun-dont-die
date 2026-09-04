@@ -7,13 +7,14 @@ alwaysApply: true
 
 This repo ships an MCP named `docs-rag` over `hallmarks/`, `topics/`, and `compounds/`.
 
-Before answering a question about aging biology, a hallmark, a compound, a protocol, clinic practice, or "what does this repo say":
+Before answering a question:
 
-1. Call `search_docs` (or `mcp/docs-rag/run.sh search "…"` if the MCP is not loaded).
-2. Read the cited `report.md` / source note when the hits are enough.
-3. Do not launch adversarial-research unless the user asked to research, update, or fill a report, or the hits are empty/thin for the actual question.
+1. Load `docs-rag` first (discover the namespace / inspect `search_docs`). Cursor starts it from `.cursor/mcp.json`. If it is missing, ask the user to enable it or reload MCP servers, then discover again. Do not treat a missing namespace as "use the CLI."
+2. Call `search_docs`. CLI (`mcp/docs-rag/run.sh search "…"`) only if they cannot enable the server this turn.
+3. Read the cited `report.md` / source note when the hits are enough to answer. If they are, and the user did not ask to research, update, or fill a report, cite the files and stop.
+4. If the hits are empty or thin — they do not answer the actual question — and this is not repo-ops: do **not** return "no supporting data" or "the repo does not cover this." Tell the user: "Hey, I don't have all the facts yet. I am going to go do some research. This will take a while. Is that okay?" Then start `.cursor/skills/adversarial-research/` in the same turn for at least one Phase 1 iteration (Phase 0 + flight + compiler). After that compiler pass, answer if compiled, link-checked claims are enough; otherwise loop per that skill (cap 5). Do not wait for a second "yes" unless they already declined. `--mode=ask` cannot write: same sentence, then tell them to drop `--mode=ask`.
 
-Repo-ops (how to add a topic, where files go, how to ask) is not corpus. Read `AGENTS.md`, `topics/README.md`, and `.cursor/skills/adversarial-research/`. Empty `search_docs` hits are not a reason to explore-reconstruct or to research.
+Repo-ops (how to add a topic, where files go, how this repo works, how to ask) is not corpus. Those answers live in `AGENTS.md`, `topics/README.md`, and `.cursor/skills/adversarial-research/`. Empty hits there are expected — do not explore-reconstruct and do not start a research flight. Judge whether the hits answer the actual question, and whether the question is repo-ops vs a subject the notebook does not cover. Do not classify that with a keyword list.
 
 After writing or saving files under `hallmarks/`, `topics/`, or `compounds/`, call `reindex`.
 

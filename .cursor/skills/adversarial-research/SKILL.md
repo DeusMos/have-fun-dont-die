@@ -1,6 +1,6 @@
 ---
 name: adversarial-research
-description: Runs a Phase-0 rumor-mill briefing, a parallel validator / invalidator / domain-collector flight, then a compiler that link-checks and either loops the flight (max 3) or saves an AGENTS.md-marked writeup into hallmarks/, topics/, or compounds/. Use when the user asks to research a hallmark, fill or update a report, check whether a claim is true, investigate a compound, protocol, clinic practice, fad, smear, or rumor, or wants adversarial, steelman, or "is X true" research.
+description: Runs a Phase-0 rumor-mill briefing, a parallel validator / invalidator / domain-collector flight, then a compiler that link-checks and either loops the flight (max 5) or saves an AGENTS.md-marked writeup into hallmarks/, topics/, or compounds/. Use when the user asks to research a hallmark, fill or update a report, check whether a claim is true, investigate a compound, protocol, clinic practice, fad, smear, or rumor, or wants adversarial, steelman, or "is X true" research. Also use when docs-rag search cannot answer the actual question (empty or thin hits) — do not stop on "no supporting data." Repo-ops is not that path.
 ---
 
 # Adversarial Research
@@ -79,7 +79,7 @@ tmp/YYYY-MM-DD_<slug>/
   staging/domain/r{N}/<emoji>/
 ```
 
-Dump notes here first. Do not "finish" a report from memory. Default `{N}` starts at 1. Cap: **3** Phase 1 flights unless the user sets another number.
+Dump notes here first. Do not "finish" a report from memory. Default `{N}` starts at 1. Cap: **5** Phase 1 flights unless the user sets a lower number.
 
 ## Pipeline
 
@@ -100,13 +100,22 @@ Task progress:
 
 Do not return until every box is checked. Do not return after Phase 0, after launching Phase 1, or with "compiler starts after they file findings." That is not done. One subject per run.
 
+### Thin-ask trigger
+
+If this flight started because `search_docs` could not answer the actual question (empty or thin hits, not repo-ops), the parent already told the user: "Hey, I don't have all the facts yet. I am going to go do some research. This will take a while. Is that okay?" That is a real flight, not a briefing-only detour.
+
+- Complete Phase 0 + **at least one** Phase 1 + compiler before talking to the user again about the answer.
+- After that compiler pass, read `DECISION.md`. If `question_answerable_now` is yes, the parent answers the original question from the compiled, link-checked claims **now**. Then continue save or loop per the compiler.
+- If `question_answerable_now` is no, loop per the decision rubric (cap 5). Do not return "no supporting data." Answer from the draft, or say what is still unknown with marks.
+- Do not skip Phase 1 because Phase 0 found nothing in-repo. That is why the flight exists.
+
 ### Phase 0 — rumor mill (not a decision)
 
 Orchestrator (or one subagent) only. **Before** the flight.
 
 Job: gather context so the flight is not framed-stupid. Search the slogan, the controversy, the marketing, the political smear, the definition trap. Do **not** decide true/false. Do **not** validate or invalidate. Do **not** write `report.md`. Do **not** skip the flight because the rumor looks dumb.
 
-**Repo first.** Call `search_docs` on the subject and the claim (MCP `docs-rag`, or `mcp/docs-rag/run.sh search "…"`). Put the hits in `already_in_repo`. If the user asked a question and did **not** ask to research, update, or fill a report, and the hits answer that question, cite the files and stop — do not start Phase 1. If they asked to research or update, the flight still runs; the hits are starting context, not a verdict.
+**Repo first.** Load MCP `docs-rag`, then call `search_docs` on the subject and the claim. CLI (`mcp/docs-rag/run.sh search "…"`) only if they cannot enable the server this turn. Put the hits in `already_in_repo`. If the user asked a question and did **not** ask to research, update, or fill a report, and the hits answer that question, cite the files and stop — do not start Phase 1. If they asked to research or update, or this run is a thin-ask trigger (search already failed to answer), the flight still runs; the hits are starting context, not a verdict. Do not abort after Phase 0 because `already_in_repo` is empty.
 
 Checklist (every item, even if the answer is "none found"):
 
@@ -193,7 +202,19 @@ Does four jobs:
 1. **Compile** those files into `{SESSION}/DRAFT.md`. Both sides present. Phase 0 framing in the draft. No tidy winner.
 2. **Review and update** so the draft follows AGENTS.md (marks, sources, voice, one not-medical-advice paragraph, ☠︎︎ vs ⛔, 🥼 vs 🤼, 📜 vs 📚).
 3. **Test every source link** (fetch or HEAD the URL, DOI, PMID). Write `{SESSION}/LINKCHECK.md`. Dead, 404, invented, or paywall-only-without-identity (cannot resolve title/authors) → drop or flag the citation. The claim is removed or downgraded. No hallucinated leftovers. HTTP 403 / need-a-browser is **not** invented or dead — resolve via DOI, PMID, or Crossref before drop. Do not drop on the first 403. Do not classify a 403 as `paywall-no-identity`.
-4. **Decide process**, not truth. Write `{SESSION}/DECISION.md`. Then either loop Phase 1 or save.
+4. **Decide process**, not truth. Write `{SESSION}/DECISION.md`. Include whether the user’s original question is answerable from this round. Then either loop Phase 1 or save. The parent answers the user now if `question_answerable_now` is yes — do not wait for a save to do that.
+
+```markdown
+# DECISION
+- another_round: yes | no
+- reason: <which YES rubric line fired, or "none of the YES lines; polish-only leftovers">
+- question_answerable_now: yes | no
+- answer_from_this_round: <marked, cited sentences the parent can give the user> | not yet
+- briefing_was_wrong_about_meta: no | yes
+- gaps_if_saving_at_cap:
+```
+
+`question_answerable_now` is about the user’s question, not about whether the public `report.md` is finished. Yes means the parent must answer now. No means loop if the rubric says so; do not dump “no supporting data.”
 
 #### Decision rubric
 
@@ -218,7 +239,7 @@ The compiler does not pick a winner to look tidy.
 
 **No** → compile the final report and save it (see Save).
 
-**Cap: 3** Phase 1 flights unless the user sets another number. After the 3rd compiler pass, save. Flag remaining gaps in the report. Do not loop.
+**Cap: 5** Phase 1 flights unless the user sets a lower number. After the 5th compiler pass, save. Flag remaining gaps in the report. Do not loop.
 
 #### Update-packet schema
 

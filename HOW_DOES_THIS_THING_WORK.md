@@ -1,4 +1,4 @@
-# How this thing works
+    # How this thing works
 
 This file is the kitchen tour. [README.md](README.md) is the front door. [HOW_TO_ASK_AGENTS_QUESTIONS.MD](HOW_TO_ASK_AGENTS_QUESTIONS.MD) is “how do I ask a question.” [AGENTS.md](AGENTS.md) is the house rules for anyone writing here. This page is “what is actually running when I ask the agent a question.”
 
@@ -16,8 +16,8 @@ The notebook is the markdown under `hallmarks/`, `topics/`, and `compounds/`. Ea
 
 The crew is not a product and not a hosted chatbot. It is instructions that Cursor or Claude Code already know how to follow:
 
-1. **Ask** — search what is already written, read the hits, answer. Done.
-2. **Research** — only if you say so. Spawn a briefing, then three agents who look at the same claim from different angles, then one compiler who merges them, checks the links, and saves a report.
+1. **Ask** — search what is already written, read the hits, answer. Done — if the hits actually cover it.
+2. **Research** — if you say so, **or** if the ask path cannot answer from filed writeups. Spawn a briefing, then three agents who look at the same claim from different angles, then one compiler who merges them, checks the links, and (when the writeup is ready) saves a report. After at least one flight, the parent answers you from the compiled claims instead of shrugging.
 
 The parent agent in your chat is the stage manager. It does not read every file. It builds a small, relevant pile of context and (when you asked for research) hands copies of that pile to helpers.
 
@@ -46,15 +46,17 @@ The agent is trained, by this repo, to tell these apart.
 
 **Ask** — “what does this repo say about weekly rapamycin and PEARL VAT?”
 
-The agent searches the local index, opens the cited `report.md` / source notes, and answers from those files. If the hits already cover it, it **stops**. It does not launch a three-agent literature flight because you were curious.
+The agent searches the local index, opens the cited `report.md` / source notes, and answers from those files. If the hits already cover it, it **stops**. It does not launch a three-agent literature flight because you were curious and the notebook already had the answer.
 
-**Research** — “research fisetin,” “update the rapamycin report,” “is X true — write it up.”
+**Research** — “research fisetin,” “update the rapamycin report,” “is X true — write it up,” **or** an ask whose hits are empty or thin for the actual question.
 
 Now it is allowed to go outside the repo: PubMed, preprints, clinic pages, forums. That is the [adversarial-research](.cursor/skills/adversarial-research/) skill. Search still runs first, so the flight starts from what is already filed instead of pretending the folder is empty.
 
-If you only wanted an answer and the files already have one, say that. If you wanted a new or rewritten page, say “research” or “update the report.” The words matter because the agent is not supposed to invent a research project.
+If search cannot answer, the agent must **not** return “no supporting data.” It tells you: “Hey, I don't have all the facts yet. I am going to go do some research. This will take a while. Is that okay?” Then it runs at least one Phase 1 iteration and answers from what the compiler link-checked. A shrug is a failed ask, not a finished one.
 
-Repo-ops questions (“how do I add a topic,” “where do files go”) are **not** search. Those answers live in this file, `AGENTS.md`, and `topics/README.md`. The search index does not include READMEs or skills on purpose.
+If you only wanted an answer and the files already have one, you get the files. If you wanted a new or rewritten page, say “research” or “update the report.” If the notebook is empty on your question, you get research whether you said that word or not.
+
+Repo-ops questions (“how do I add a topic,” “where do files go”) are **not** search and **not** a research flight. Those answers live in this file, `AGENTS.md`, and `topics/README.md`. The search index does not include READMEs or skills on purpose. Empty hits there are expected.
 
 ---
 
@@ -69,13 +71,16 @@ You
          ├─ Tools: read files, fetch URLs, run shell, write markdown
          │
          ├─ Ask path: search → read hits → answer you → stop
+         │    (if hits are empty/thin: do not shrug — go to Research)
          │
-         ├─ Research path (only if you asked):
+         ├─ Research path (you asked, or ask could not answer):
+         │    tell you it will take a while
          │    Phase 0 briefing
          │    three Task subagents in parallel
          │      validator / invalidator / domain collector
          │    one compiler (sequential)
-         │    maybe another flight (cap 3)
+         │    answer you if compiled claims are enough
+         │    maybe another flight (cap 5)
          │    save report + sources + catalogs + reindex
          │
          └─ After some edits, a hook may ask the parent
@@ -99,10 +104,10 @@ Cursor and Claude Code treat the workspace as the project. Skills, rules, and `A
 ### 2. House rules load without you asking
 
 - **`AGENTS.md`** — voice, evidence marks, source rules, layout, indexing. Writers (human or model) obey this file. Existing reports that predate it lose; this file wins.
-- **`.cursor/rules/20-docs-rag.mdc`** — always on. Before a biology / practice / “what does the repo say” answer: search first, then read the hit, then stop unless you asked to research.
+- **`.cursor/rules/20-docs-rag.mdc`** — always on. Before answering a question: search first, then read the hit, then stop if it answers. If it does not, and this is not repo-ops, tell you research is starting and run the flight.
 - Other always-on user/workspace rules (safety, tmp artifacts, no keyword-intent classifiers, and so on) sit in your Cursor rules. They apply here too.
 
-The parent agent therefore starts every biology question with “look it up here” rather than “rehearse PubMed from memory.”
+The parent agent therefore starts every question with “look it up here” rather than answering from memory.
 
 ### 3. Skills show up when they match
 
@@ -110,14 +115,14 @@ A skill is a `SKILL.md` with a name and a description. The agent does **not** ne
 
 | Skill | When it fires | What it does |
 |---|---|---|
-| [docs-rag](.cursor/skills/docs-rag/) | “What does the repo say,” a longevity question that may already be filed, or after a save | Search, maybe reindex. Not new research. |
-| [adversarial-research](.cursor/skills/adversarial-research/) | You asked to research, update, fill a report, or pressure-test a claim | The Phase 0 → three-agent → compiler pipeline. |
+| [docs-rag](.cursor/skills/docs-rag/) | “What does the repo say,” a question that may already be filed, or after a save | Search, maybe reindex. Hand off to research if the hits cannot answer. |
+| [adversarial-research](.cursor/skills/adversarial-research/) | You asked to research, update, fill a report, or search could not answer the question | The Phase 0 → three-agent → compiler pipeline. |
 
 Claude Code uses the copies under `.claude/skills/`. Same law, same prompts.
 
 ### 4. Search is a local MCP, not a vibe
 
-[`.mcp.json`](.mcp.json) starts `docs-rag` on stdio:
+Cursor starts `docs-rag` from [`.cursor/mcp.json`](.cursor/mcp.json). Claude Code uses [`.mcp.json`](.mcp.json). Both launch the same process:
 
 ```text
 bash mcp/docs-rag/run.sh
@@ -131,7 +136,7 @@ That process exposes three tools to the agent:
 | `reindex` | “The files changed; update the index.” |
 | `corpus_status` | “What is indexed, and is anything stale?” |
 
-If MCP is not loaded this session, the same commands work from a terminal (`mcp/docs-rag/run.sh search "…"`). The skill says to fall back to that. Do not point a user-level `markdown_rag` server at this repo — that one shares a collection with other vaults.
+Load `docs-rag` first (enable / reload if the session does not list it). CLI (`mcp/docs-rag/run.sh search "…"`) is last resort, not the default when the namespace is missing. Do not point a user-level `markdown_rag` server at this repo — that one shares a collection with other vaults.
 
 ### 5. The index is a map, not the book
 
@@ -206,7 +211,7 @@ Phase 0 (briefing) is the parent or a single helper. It must exist **before** th
 
 Phase 1 is **three Task calls in one message**, same briefing, different mandates. They write three separate findings files so they cannot clobber each other. The parent waits for all three. Then it sends **one** compiler prompt. The compiler does not re-search the literature from scratch. It compiles, link-checks, and decides whether another flight is needed.
 
-Cap is **3** Phase 1 flights unless you set another number. After the third compiler pass, it saves and flags leftover gaps. Loops are for missing sides of a fight or dead citations, not for prettier prose.
+Cap is **5** Phase 1 flights unless you set a lower number. After the fifth compiler pass, it saves and flags leftover gaps. Loops are for missing sides of a fight or dead citations, not for prettier prose.
 
 ### Hooks can request a reviewer after you edit
 
@@ -223,7 +228,7 @@ Trust the workspace when Cursor asks, or the hooks stay off. Details: [`.cursor/
 
 ### Cursor Agent CLI is the same agent
 
-`agent --mode=ask "weekly rapamycin PEARL VAT"` is the parent in a terminal, read-only. Drop `--mode=ask` only if you asked it to write. Same skills, same MCP, same law. See [HOW_TO_ASK_AGENTS_QUESTIONS.MD](HOW_TO_ASK_AGENTS_QUESTIONS.MD).
+`agent --mode=ask "weekly rapamycin PEARL VAT"` is the parent in a terminal, read-only. Drop `--mode=ask` if you asked it to write, or if search cannot answer and you want the research flight. Same skills, same MCP, same law. See [HOW_TO_ASK_AGENTS_QUESTIONS.MD](HOW_TO_ASK_AGENTS_QUESTIONS.MD).
 
 ---
 
@@ -233,7 +238,7 @@ Think of a newsroom, not a tribunal. Nobody is assigned to “win.”
 
 ### Parent (the one in your chat)
 
-Stage manager. Reads your ask. Searches the repo. Decides ask-vs-research. Creates `tmp/YYYY-MM-DD_<slug>/`. Writes or delegates Phase 0. Launches the three, waits, launches the compiler, maybe loops, then makes sure the catalogs and `.rag/` got updated. Talks to you in normal language.
+Stage manager. Reads your ask. Searches the repo. Decides ask-vs-research (research if you asked, or if search cannot answer). If it is pivoting from a thin ask, it tells you it does not have the facts yet and that research will take a while. Creates `tmp/YYYY-MM-DD_<slug>/`. Writes or delegates Phase 0. Launches the three, waits, launches the compiler, answers you if the compiled claims are enough, maybe loops, then makes sure the catalogs and `.rag/` got updated. Talks to you in normal language. Never ends a question the notebook cannot answer with “no supporting data.” Repo-ops is the exception.
 
 ### Phase 0 — rumor mill (briefing only)
 
@@ -283,7 +288,7 @@ Suppose you say: “Research whether weekly rapamycin restores nutrient sensing 
 4. **Phase 0** writes `BRIEFING.md`: claim as asked vs as used in the wild, definition traps, who sells the capsule, what “restore” will falsely match.
 5. **Phase 1** launches validator, invalidator, and domain collector together. Each reads `AGENTS.md` + the briefing. Each writes only its own findings + staging notes.
 6. **Compiler** builds `DRAFT.md`, `LINKCHECK.md`, `DECISION.md`.
-7. If the draft deleted the practice map the old report already had, or one side of a 🥼 fight is missing, the compiler writes `UPDATE.r2.md` and the parent runs Phase 1 again. Same briefing, extra hunt list. Max three times.
+7. If the draft deleted the practice map the old report already had, or one side of a 🥼 fight is missing, the compiler writes `UPDATE.r2.md` and the parent runs Phase 1 again. Same briefing, extra hunt list. Max five times.
 8. **Save:** `compounds/rapamycin/report.md` (weave, do not wipe) and matching `sources/📚/…`, `sources/🤔/…`, and so on. File a note in the folder that matches the mark on the sentence.
 9. **Sidecar + catalogs + reindex.** The next ask can find the new sentences.
 
@@ -356,7 +361,8 @@ have-fun-dont-die/
   .cursor/agents/rule-validation.md
   .cursor/rules/20-docs-rag.mdc
   .cursor/hooks.json                post-edit path recorder + stop follow-up
-  .mcp.json                         starts docs-rag
+  .cursor/mcp.json                  Cursor starts docs-rag
+  .mcp.json                         Claude Code starts docs-rag
   .claude/skills/                   Claude Code copies of the same skills
 ```
 
@@ -375,7 +381,7 @@ have-fun-dont-die/
 
 ## If you only remember four things
 
-1. **Ask** searches the notebook. **Research** writes new pages. Say which you want.
+1. **Ask** searches the notebook. **Research** writes new pages — when you ask for it, or when the notebook cannot answer.
 2. Context is a **small pile**: rules + a search + the files the search pointed at. Helpers get a **briefing packet**, not your whole chat.
 3. Three research agents argue the same claim from different jobs. A compiler merges them and checks links. Nobody is supposed to tidy away a fight.
 4. After a save, run **both** indexes that apply, or the next session cannot find the work.

@@ -1,6 +1,6 @@
 # How to ask agents questions
 
-Hits are what is already written. Not new research. Corpus is `hallmarks/`, `topics/`, and `compounds/` reports plus filed source notes. Not `tmp/`, not `template.md`. House rules: [`AGENTS.md`](AGENTS.md). How the agents, search, and context stack fit together: [`HOW_DOES_THIS_THING_WORK.md`](HOW_DOES_THIS_THING_WORK.md). Package notes: [`mcp/docs-rag/README.md`](mcp/docs-rag/README.md).
+Hits are what is already written. Corpus is `hallmarks/`, `topics/`, and `compounds/` reports plus filed source notes. Not `tmp/`, not `template.md`. If search cannot answer the actual question, the agent starts research instead of saying “no supporting data.” How-to-add-a-topic and other repo-ops are not that path — those answers live in [`AGENTS.md`](AGENTS.md). How the agents, search, and context stack fit together: [`HOW_DOES_THIS_THING_WORK.md`](HOW_DOES_THIS_THING_WORK.md). Package notes: [`mcp/docs-rag/README.md`](mcp/docs-rag/README.md).
 
 Ask a real question. Keyword spam is worse than a sentence. If you want a new or rewritten report, say so; that is [adversarial-research](.cursor/skills/adversarial-research/), not search. To add a topic or compound (tree, sources, catalog, reindex): [AGENTS.md — Adding a topic](AGENTS.md#adding-a-topic-or-compound). What to run after a save: [AGENTS.md — Indexing](AGENTS.md#indexing).
 
@@ -9,12 +9,13 @@ Needs `uv` and Python 3.11+. The index is local (`.rag/`, gitignored). First bui
 ## How to use the Cursor skill
 
 1. Open this folder in Cursor.
-2. Project [`.mcp.json`](.mcp.json) starts `docs-rag` on stdio. Reload MCP servers if the session does not list it. Ignore any other entry in that file that is not `docs-rag`.
+2. Cursor starts `docs-rag` from [`.cursor/mcp.json`](.cursor/mcp.json). Enable it under Settings → Tools & MCP, then reload if the session does not list it. Root [`.mcp.json`](.mcp.json) is for Claude Code. Ignore any other MCP in the session that is not `docs-rag`.
 3. The skill is [`.cursor/skills/docs-rag/`](.cursor/skills/docs-rag/). The always-on rule is [`.cursor/rules/20-docs-rag.mdc`](.cursor/rules/20-docs-rag.mdc). You do not invoke it by name. Ask in chat.
 4. The agent should call `search_docs` first, then read the cited `report.md` / source note. If the hits already answer and you did not ask to research, update, or fill a report, it should cite the files and stop.
-5. To research, update, or fill a report: [`.cursor/skills/adversarial-research/`](.cursor/skills/adversarial-research/). Say that. Search alone will not write a report.
+5. If the hits are empty or thin — they do not answer the actual question — it should **not** shrug with "no supporting data." It should say: "Hey, I don't have all the facts yet. I am going to go do some research. This will take a while. Is that okay?" Then it starts [adversarial-research](.cursor/skills/adversarial-research/) for at least one iteration and answers from what that flight compiled. `--mode=ask` cannot write; drop it if you want that path. Repo-ops (how to add a topic, where files go, how this repo works, how to ask) is not this path.
+6. To research, update, or fill a report on purpose: [`.cursor/skills/adversarial-research/`](.cursor/skills/adversarial-research/). Say that. Search alone will not write a report.
 
-If the MCP is not loaded, the skill falls back to:
+If the session does not list `docs-rag`, enable or reload it first. A missing namespace is not permission to skip to the CLI. CLI only if they cannot enable the server this turn:
 
 ```bash
 mcp/docs-rag/run.sh search "weekly rapamycin PEARL VAT"
@@ -32,11 +33,11 @@ mcp/docs-rag/run.sh status
 claude mcp add docs-rag -- bash mcp/docs-rag/run.sh
 ```
 
-Or enable the `docs-rag` entry from [`.mcp.json`](.mcp.json) and skip the rest of that file.
-4. Ask in chat. You do not invoke the skill by name. Search first, then read the cited `report.md`. Say “research” or “update the report” only when you want a write, not an answer.
-5. To research, update, or fill a report: [`.claude/skills/adversarial-research/`](.claude/skills/adversarial-research/).
+Or enable the `docs-rag` entry from [`.mcp.json`](.mcp.json) (Claude) / [`.cursor/mcp.json`](.cursor/mcp.json) (Cursor) and skip any other server.
+4. Ask in chat. You do not invoke the skill by name. Search first, then read the cited `report.md`. If the hits already answer, it should stop. If they do not answer the actual question, it should say it does not have the facts yet, start research, and answer after at least one iteration — not “no supporting data.” Repo-ops is not that path.
+5. To research, update, or fill a report on purpose: [`.claude/skills/adversarial-research/`](.claude/skills/adversarial-research/).
 
-If the MCP is not loaded, same CLI fallback as Cursor:
+If the session does not list `docs-rag`, enable or reload it first. A missing namespace is not permission to skip to the CLI. CLI only if they cannot enable the server this turn:
 
 ```bash
 mcp/docs-rag/run.sh search "weekly rapamycin PEARL VAT"
@@ -48,9 +49,9 @@ Cursor’s `agent` CLI is the same Agent, from a terminal. Not the IDE chat. Off
 
 1. `cd` to this repo. Workspace defaults to the current working directory. `--workspace <path>` if you are not already in the folder.
 2. Auth once: `agent login`. Scripts can use `CURSOR_API_KEY` or `--api-key`.
-3. Same law as the Cursor skill: [`.cursor/skills/docs-rag/`](.cursor/skills/docs-rag/), project [`.mcp.json`](.mcp.json), [`.cursor/rules/20-docs-rag.mdc`](.cursor/rules/20-docs-rag.mdc). Search first. Do not invent.
-4. Ask. You do not invoke the skill by name. Say “research” or “update the report” only when you want a write, not an answer.
-5. To research, update, or fill a report: drop `--mode=ask` and say that. [`.cursor/skills/adversarial-research/`](.cursor/skills/adversarial-research/). Search alone will not write a report.
+3. Same law as the Cursor skill: [`.cursor/skills/docs-rag/`](.cursor/skills/docs-rag/), [`.cursor/mcp.json`](.cursor/mcp.json), [`.cursor/rules/20-docs-rag.mdc`](.cursor/rules/20-docs-rag.mdc). Load `docs-rag`, then search. Do not invent.
+4. Ask. You do not invoke the skill by name. If search already answers, it should cite and stop. If it cannot, the write pipeline needs default mode (no `--mode=ask`).
+5. To research, update, or fill a report on purpose: drop `--mode=ask` and say that. [`.cursor/skills/adversarial-research/`](.cursor/skills/adversarial-research/). Search alone will not write a report.
 
 Interactive, read-only Q&A (cwd = this repo):
 
@@ -58,7 +59,7 @@ Interactive, read-only Q&A (cwd = this repo):
 agent --mode=ask "weekly rapamycin PEARL VAT"
 ```
 
-`--mode=ask` is read-only. Default (no `--mode`) can edit files and run shell. Use default only if you asked for a write.
+`--mode=ask` is read-only. Default (no `--mode`) can edit files and run shell. Use default if you asked for a write, or if you want the agent to research when the notebook cannot answer.
 
 Non-interactive (prints to stdout; for scripts):
 
@@ -74,7 +75,7 @@ If cwd is not the repo:
 agent --workspace /path/to/have-fun-dont-die --mode=ask "weekly rapamycin PEARL VAT"
 ```
 
-If the MCP is not loaded, same fallback:
+If the session does not list `docs-rag`, enable or reload it first (`--approve-mcps` on `agent` helps). A missing namespace is not permission to skip to the CLI. CLI only if they cannot enable the server this turn:
 
 ```bash
 mcp/docs-rag/run.sh search "weekly rapamycin PEARL VAT"

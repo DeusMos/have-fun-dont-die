@@ -39,4 +39,4 @@ Needs `uv`. First production index downloads `BAAI/bge-small-en-v1.5` via fastem
 
 ## Cursor
 
-Project `.mcp.json` starts this server on stdio. After adding or changing it, reload MCP servers so the session sees `docs-rag`.
+Cursor starts this server from `.cursor/mcp.json`. Claude Code uses the root `.mcp.json`. After adding or changing either, enable `docs-rag` (Settings → Tools & MCP) and reload so the session sees it.
