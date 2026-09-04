@@ -284,7 +284,7 @@ Suppose you say: “Research whether weekly rapamycin restores nutrient sensing 
 
 1. **Parent searches** `docs-rag` for the subject. Hits go into the briefing as `already_in_repo`. Because you asked to research, the flight still runs.
 2. **Destination is chosen.** A molecule writeup lands at `compounds/rapamycin/`. The hallmark it touches (`06-deregulated-nutrient-sensing`) can be updated too. A rumor that is not a molecule would go to `topics/<slug>/`. A hallmark rewrite stays in `hallmarks/NN-short-name/`.
-3. **Session folder** `tmp/YYYY-MM-DD_rapamycin/` is created if needed. Sources tree is created with `init-topic-sources.sh` if the dir is new (copies the per-mark README folders).
+3. **Session folder** `tmp/YYYY-MM-DD_rapamycin/` is created if needed. Sources tree is created with `init-topic-sources.sh` if the dir is new (`sources/<emoji>/` dirs; marks live in AGENTS.md).
 4. **Phase 0** writes `BRIEFING.md`: claim as asked vs as used in the wild, definition traps, who sells the capsule, what “restore” will falsely match.
 5. **Phase 1** launches validator, invalidator, and domain collector together. Each reads `AGENTS.md` + the briefing. Each writes only its own findings + staging notes.
 6. **Compiler** builds `DRAFT.md`, `LINKCHECK.md`, `DECISION.md`.

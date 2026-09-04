@@ -22,4 +22,7 @@ Generated table (`python3 scripts/build-index.py`). Do not hand-edit the generat
 <!-- BEGIN GENERATED: topics-catalog -->
 | Slug | Report | Last updated | One-line claim |
 |---|---|---|---|
+| [crispr](./crispr/report.md) | [report.md](./crispr/report.md) | September 3, 2026 | RNA-guided Cas plus host repair (or a fused deaminase/RT) writes a genotype distribution; Casgevy is one ex vivo HSPC product, liver LNP is not whole-body rewrite, and no CRISPR aging RCT was found. |
+| [enamel-remineralization-gel](./enamel-remineralization-gel/report.md) | [report.md](./enamel-remineralization-gel/report.md) | September 3, 2026 | The 2025–2026 enamel-regrowth gel is several SKUs: Hasan 2025 ~10 μm extracted-tooth ELR film (Epinamel, no in-mouth results), chairside P11-4/Curodont (live RCT fight vs fluoride), and consumer nano-HA / CPP-ACP pastes. |
+| [salamander-like-regeneration](./salamander-like-regeneration/report.md) | [report.md](./salamander-like-regeneration/report.md) | September 3, 2026 | 2026 PNAS: conserved SP6/SP8 plus zebrafish-LEN FGF8 AAV partially rescues or speeds mouse P3 digit bone; not a salamander-gene transplant and not whole-limb regeneration. |
 <!-- END GENERATED -->

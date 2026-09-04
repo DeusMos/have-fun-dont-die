@@ -13,7 +13,7 @@ Indexed:
 - `compounds/*/report.md`
 - `hallmarks/*/sources/<mark>/*.md`, `topics/*/sources/<mark>/*.md`, and `compounds/*/sources/<mark>/*.md`
 
-Not indexed: `tmp/`, `template.md`, source `README.md` files, skills, AGENTS.md.
+Not indexed: `tmp/`, `template.md`, catalog READMEs, skills, AGENTS.md.
 
 ## Tools
 

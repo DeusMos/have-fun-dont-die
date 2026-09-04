@@ -1,0 +1,6 @@
+# Shaalan et al., 2024. Evaluation of the remineralization potential of self-assembling peptide P11-4 with fluoride compared to fluoride varnish in the management of incipient carious lesions: a randomized controlled clinical trial. Clinical Oral Investigations.
+https://doi.org/10.1007/s00784-024-05822-z / PMID 39037455 / NCT05094492
+Used for: Curodont Repair Fluoride Plus (P11-4 plus fluoride; vVARDIS) lowered DIAGNOdent more than Bifluorid 10 NaF varnish at 3 and 6 months and moved 65.5% of lesions from DIAGNOdent score 3 (11–20) to score 1 (0–4) versus 13.8% with varnish, with 60% less risk of caries progression at 6 months.
+Mark: 🥼
+N / effect / population / endpoint / duration: 28 participants, 58 incipient non-cavitated lesions; 14 participants / 29 lesions per arm. Parallel RCT, blinded DIAGNOdent assessors, Cairo University ethics 15|4|22. Between-group LF difference ns at 1 month; P<0.05 at 3 and 6 months favoring Curodont Repair Fluoride Plus. Score 3→1: 65.5% vs 13.8% at 6 months. Authors report 60% less risk of caries progression vs NaF varnish at 6 months. Duration=6 months. This is Curodont Fluoride Plus, not Epinamel / Nottingham ELR.
+Conflict if any: Product is sold by vVARDIS; paper does not state manufacturer funding in the fetched abstract/methods block.

@@ -58,7 +58,7 @@ bash .cursor/skills/adversarial-research/scripts/init-topic-sources.sh topics/<s
 bash .cursor/skills/adversarial-research/scripts/init-topic-sources.sh compounds/<slug>
 ```
 
-That copies READMEs from `tmp/2026-09-02_layout/canonical/sources/` (fallback: any hallmark `sources/`).
+That creates `sources/<emoji>/` dirs. File notes there. Marks live in AGENTS.md. Do not copy per-mark READMEs.
 
 How to add a topic (not research one): `topics/<slug>/` (or `compounds/<slug>/`) + this init script + `report.md` + `scripts/index-meta.yaml` + `python3 scripts/build-index.py` + `reindex`. Point at those files. Do not reconstruct the list from an explore pass.
 

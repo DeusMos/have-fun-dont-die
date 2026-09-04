@@ -1,0 +1,6 @@
+# Alkilzy et al., 2018. Self-assembling Peptide P11-4 and Fluoride for Regenerating Enamel. Journal of Dental Research.
+https://doi.org/10.1177/0022034517730531 / PMID 28892645 / PMC6429572 / NCT02724592
+Used for: In a single-blind RCT, one chairside application of Curodont Repair (P11-4) plus fluoride varnish on erupting-molar occlusal ICDAS 1–3 lesions inactivated 80% of test lesions by Nyvad at 6 months versus 34% with fluoride varnish alone, with laser-fluorescence odds ratio 3.5 (P=0.015) favoring P11-4.
+Mark: 🥼
+N / effect / population / endpoint / duration: 70 children randomized 1:1 (n=35/35); analysed n=31 test / 34 control after attrition; one lesion per child; ages ~7–13 (medians 9 and 10.5). Test: Curodont Repair (Credentis) once at baseline + Duraphat 22,600 ppm FV; control: FV alone; both got FV at 3 months. LF: test 45.2 ± 22.9 → 27.2 ± 19.3 at 6 mo vs control 33.0 ± 16.5 → 32.6 ± 24.9; combined 3+6 mo OR 3.5, P=0.015. Nyvad inactive: 52% vs 20% at 3 mo; 80% vs 34% at 6 mo; combined OR 12.2, P<0.0001. ICDAS regression OR 5.1, P=0.018. Pop=children with active early occlusal caries on erupting permanent molars. Duration=6 months. No adverse events reported.
+Conflict if any: Supported in part by Credentis AG (then seller of Curodont Repair); authors state Credentis had no role in design/analysis/writing.

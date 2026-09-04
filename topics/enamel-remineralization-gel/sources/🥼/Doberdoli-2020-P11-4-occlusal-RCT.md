@@ -1,0 +1,6 @@
+# Doberdoli et al., 2020. Randomized Clinical Trial investigating Self-Assembling Peptide P11-4 for Treatment of Early Occlusal Caries. Scientific Reports.
+https://doi.org/10.1038/s41598-020-60815-8
+Used for: In a three-arm RCT of non-cavitated occlusal caries, Curodont-class monomeric P11-4 plus fluoride varnish, or P11-4 plus twice-weekly home self-assembling peptide matrix gel, dropped laser fluorescence by −8.5 ± 5.9 and −7.7 ± 7.8 at day 360 while fluoride varnish alone rose +5.5 ± 7.8 (P<0.0005 vs control), and Nyvad inactive/active moved to 27/0 in both P11-4 arms versus 13/10 in control.
+Mark: 🥼
+N / effect / population / endpoint / duration: 90 children/adolescents, 30 per arm. Test 1: SAP P11-4 + FV at baseline and day 180. Test 2: SAP P11-4 at baseline + twice-weekly home SAPM gel (900 ppm F). Control: FV at baseline and day 180. LF day 360 change: control +5.5 ± 7.8 (27.2 → 31.8); Test 1 −8.5 ± 5.9 (31.4 → 22.7); Test 2 −7.7 ± 7.8 (25.3 → 17.6). ICDAS regression by day 360: 6.7% Test 1, 20.0% Test 2, 0% control; control progression 23.3%. Restorations needed: 6/30 control, 0 Test 1, 1 Test 2. Duration=360 days. NCT03780270.
+Conflict if any: C. Bommer is an employee of credentis; M. Heinzel-Gutenbrunner received compensation for work on the study.

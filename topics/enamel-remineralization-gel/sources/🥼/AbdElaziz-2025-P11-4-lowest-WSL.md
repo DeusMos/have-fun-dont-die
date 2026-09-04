@@ -1,0 +1,6 @@
+# Abd Elaziz et al., 2025. The remineralizing ability of self-assembling peptide P11-4, 2% arginine enriched sodium fluoride and functionalized tri calcium phosphate fluoride varnishes in treatment of white spot lesions – a randomized controlled trial. BDJ Open.
+https://doi.org/10.1038/s41405-025-00353-5 https://www.nature.com/articles/s41405-025-00353-5
+Used for: 📚 In a 2025 triple-blind RCT of pediatric white-spot lesions, P11-4 produced the smallest color improvement and did not beat fluoride-containing varnishes on lesion-size reduction at 9 months.
+Mark: 🥼
+N / effect / population / endpoint / duration: N=39 WSLs / 13 per arm; ages 8–12; ICDAS 1–2 labial maxillary anteriors; CAMBRA moderate risk. Arms: P11-4, 2% arginine-enriched NaF varnish, functionalized TCP fluoride varnish. Applications at 0, 3, 6 months; assessment at 3, 6, 9 months. At 9 months spectrophotometer ΔE: P11-4 12.21±3.03 vs arginine-NaF 9.37±3.79 vs TCP-F 9.15±2.74. Residual WSL dimension reported as P11-4 27.93±8.98% vs arginine-NaF 14.98±7.55% vs TCP-F 22.32±8.61% (authors call the smaller arginine-NaF figure “greater WSL reduction”). Authors' conclusion: P11-4 showed the lowest results.
+Conflict if any: Academic Ain Shams trial (NCT05127889); no vVARDIS/Credentis sponsorship stated in the fetched text.

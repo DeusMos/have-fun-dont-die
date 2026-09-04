@@ -1,0 +1,6 @@
+# Godenzi et al., 2023. Remineralizing potential of the biomimetic P11-4 self-assembling peptide on noncavitated caries lesions. JADA.
+https://doi.org/10.1016/j.adaj.2023.07.009 PMID: 37642611
+Used for: 📚 The vVARDIS “>90% success” citation is an uncontrolled retrospective of noncavitated proximal lesions, paid and coauthored by vVARDIS, with a median 7-month follow-up and no concurrent control.
+Mark: 📚
+N / effect / population / endpoint / duration: Retrospective uncontrolled cohort; 219 children ages 10–19; 405 proximal lesions; May 2015–Oct 2020; median follow-up 6.9 months (IQR 6.1–18.6; range 4.1–66.2). Stage regression 37% (95% CI 33–42%); no change 56%; progression 7%. “Successful clinical outcome (no restorative treatment)” in 371/405 lesions. No-cavitation proportion 0.96 at 1 year, 0.91 at 2 years. Authors: “retrospective, uncontrolled”; semistandardized radiographs “may introduce an overestimation of the treatment effect”; no concurrent FV/no-treatment arm.
+Conflict if any: C. Bommer is a clinical trial manager / employee of vVARDIS. vVARDIS paid statistical analysis, ethics-committee fee, and mailing. CareQuest Innovation Partners has a collaboration agreement with vVARDIS on US Curodont deployment.

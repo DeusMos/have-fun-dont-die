@@ -112,8 +112,6 @@ topics/README.md                                     topic catalog (non-molecule
 compounds/README.md                                  compound catalog + section maps
 hallmarks/NN-short-name/report.md                    finished writeup for that hallmark
 hallmarks/NN-short-name/sources/<emoji>/             sources for claims marked with that emoji
-hallmarks/NN-short-name/sources/<emoji>/README.md    what belongs in that dir
-hallmarks/NN-short-name/sources/README.md            short index; read the README in the dir you are filing into
 topics/<slug>/report.md                              first-class writeup for a non-molecule subject
 topics/<slug>/sources/<emoji>/                       same mark dirs as hallmarks
 compounds/<slug>/report.md                           first-class writeup for a named molecule / intervention
@@ -135,7 +133,7 @@ template.md                                          section skeleton only
 
 Two indexes, not one. `python3 scripts/build-index.py` patches the catalog / section-map blocks in the READMEs. MCP `reindex` (or `mcp/docs-rag/run.sh reindex`) embeds the writeups into `.rag/` for `search_docs`. A new page that skips either is invisible on that surface. See [Indexing](#indexing). Do not hand-edit the `BEGIN GENERATED` blocks.
 
-`sources/` has one subdirectory per evidence mark: 💯 📚 📜 🥼 🤔 🤼 ⛔ 🐉 ☠︎︎. File a document in the dir that matches how the claim is marked in `report.md`. Do not invent source files. Do not rewrite report content to match the folder.
+`sources/` has one subdirectory per evidence mark: 💯 📚 📜 🥼 🤔 🤼 ⛔ 🐉 ☠︎︎. File a document in the dir that matches how the claim is marked in `report.md`. Do not invent source files. Do not rewrite report content to match the folder. Mark meanings live in this file. Do not copy a filing-guide README into every `sources/<emoji>/`.
 
 | Dir | Hallmark |
 |---|---|
@@ -197,7 +195,7 @@ Indexed, and only these:
 - `hallmarks/*/report.md`, `topics/*/report.md`, `compounds/*/report.md`
 - `hallmarks/*/sources/<mark>/*.md`, `topics/*/sources/<mark>/*.md`, `compounds/*/sources/<mark>/*.md`
 
-Not indexed: `tmp/`, `template.md`, source-dir `README.md`, catalog READMEs, skills, this file. A note sitting anywhere else is invisible to `search_docs`.
+Not indexed: `tmp/`, `template.md`, catalog READMEs, skills, this file. A note sitting anywhere else is invisible to `search_docs`.
 
 `search_docs` incrementally embeds changed corpus files. Still call `reindex` after a write so the next session is not waiting on a search. `force=true` / `--force` only if the index is broken. `corpus_status` or `mcp/docs-rag/run.sh status` shows stale or missing files.
 

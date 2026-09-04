@@ -1,3 +1,3 @@
 # REUSE
-
-REUSE: hallmarks/14-psychosocial-isolation/sources/🤔/Mochi-2026-IN-oxytocin.md
+Existing extract: Mochi IN 18–48 IU.
+https://joinmochi.com/blog/oxytocin-nasal-spray-benefits-side-effects-how-it-works

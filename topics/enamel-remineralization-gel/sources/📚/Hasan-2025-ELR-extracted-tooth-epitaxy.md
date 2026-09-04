@@ -1,0 +1,6 @@
+# Hasan et al., 2025. Biomimetic supramolecular protein matrix restores structure and properties of human dental enamel. Nature Communications.
+https://doi.org/10.1038/s41467-025-64982-y / PMID 41188228 / PMC12586552
+Used for: An elastin-like recombinamer (ELR) coating applied to acid-etched extracted human teeth triggered epitaxial apatite growth that recreated prismatic, interprismatic, and aprismatic enamel architecture in a mineral layer up to ~10 μm thick, matching the coating thickness.
+Mark: 📚
+N / effect / population / endpoint / duration: Extracted human molars (ethics FMHS 313-0721). Representative SEM n=3 aprismatic, n=8 prismatic, n=5 dentine, n=12 prism architecture. Epitaxial fluorapatite/HAp-like nanocrystals ~50 nm diameter, layer thickness set by ELR coating up to ~10 μm. Nanoindentation on prismatic enamel: etched E 36.9 ± 14.3 GPa / H 1.1 ± 0.6 GPa → remineralised 76.3 ± 18.7 / 3.1 ± 0.8 vs native 80.7 ± 18.3 / 3.4 ± 0.9 (3 independent experiments/group). Whole-saliva arm: 3 donors, 14 days, E 74.6 ± 15.3 GPa / H 2.7 ± 1.1 GPa. Endpoints SEM/TEM/SAED/EDX/nanoindentation/tribology. Mineralisation 10 days in fluorapatite-supersaturated solution or artificial saliva; 14 days donor saliva. Ex vivo only.
+Conflict if any: A. Hasan and A. Mata are co-founders and hold equity in Mintech-Bio Ltd, established to translate this technology.

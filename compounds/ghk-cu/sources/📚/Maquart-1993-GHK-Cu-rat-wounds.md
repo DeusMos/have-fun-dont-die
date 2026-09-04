@@ -1,0 +1,7 @@
+# Maquart et al., 1993. In vivo stimulation of connective tissue accumulation by the tripeptide-copper complex glycyl-L-histidyl-L-lysine-Cu2+ in rat experimental wounds. JCI.
+https://doi.org/10.1172/JCI116842 PMID 8227353 PMC288419
+https://dm5migu4zj3pb.cloudfront.net/manuscripts/116000/116842/JCI93116842.pdf
+Used for: 📚 Serial 2.0 mg GHK-Cu (PC 1020) into rat wound chambers raised day-29 collagen to 344% of saline, dry weight 223%, protein 230%, GAG 208% (all P<0.01); specificity arm showed only the complex, not free GHK or CuCl₂, raised collagen.
+Mark: 📚
+N / effect / population / endpoint / duration: Male Sprague-Dawley 250–300 g. Schilling stainless-steel chambers. PC 1020 = GHK:Cu²⁺ 2:1, supplied by Procyte, Kirkland WA. Day-29 2.0 mg serial vs DPBS: collagen 344%, dry weight 223%, protein 230%, GAG 208%, peptidic hydroxyproline 188% (all P<0.01); DNA ns. Dose-response 0.2–4.0 mg, significant from 0.5 mg. Specificity: n=10 chambers each DPBS / 2.0 mg GHK-Cu / equimolar free GHK / CuCl₂, harvest day 21; only GHK-Cu higher than DPBS (P<0.01). EHP control: GHK-Cu collagen 20.27±1.32 vs control 11.63±0.43 µmol/chamber (P<0.02); EHP 14.62±0.48 ns. Type I and III mRNA up; TGF-β mRNA not. Local wound ECM, not systemic human restore. Full PDF fetched.
+Conflict if any: GHK-Cu (PC 1020) supplied by Procyte; paper supported by grants including Procyte Corporation. Patt and Trachy listed with Procyte affiliation.

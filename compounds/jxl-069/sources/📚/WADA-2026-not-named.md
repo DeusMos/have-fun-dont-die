@@ -1,0 +1,6 @@
+# WADA 2026 list — JXL-069 not named
+https://www.wada-ama.org/sites/default/files/2025-09/2026list_en_final_clean_september_2025.pdf
+Used for: 📚 Not named. S0 is a class, not a JXL line item.
+Mark: 📚
+N / effect / population / endpoint / duration: List effective 2026.
+Conflict if any: None.

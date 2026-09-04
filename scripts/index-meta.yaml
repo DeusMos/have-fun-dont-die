@@ -92,7 +92,13 @@ hallmarks:
     status: rewritten
     one_liner: "Isolation and loneliness associate with death, CVD, and dementia; residual isolation vs loneliness-NS is a live fight; UCLA-as-CRP, Oxipops, and AI companions are not a completed restore result."
 
-topics: []
+topics:
+  - slug: crispr
+    one_liner: "RNA-guided Cas plus host repair (or a fused deaminase/RT) writes a genotype distribution; Casgevy is one ex vivo HSPC product, liver LNP is not whole-body rewrite, and no CRISPR aging RCT was found."
+  - slug: enamel-remineralization-gel
+    one_liner: "The 2025–2026 enamel-regrowth gel is several SKUs: Hasan 2025 ~10 μm extracted-tooth ELR film (Epinamel, no in-mouth results), chairside P11-4/Curodont (live RCT fight vs fluoride), and consumer nano-HA / CPP-ACP pastes."
+  - slug: salamander-like-regeneration
+    one_liner: "2026 PNAS: conserved SP6/SP8 plus zebrafish-LEN FGF8 AAV partially rescues or speeds mouse P3 digit bone; not a salamander-gene transplant and not whole-limb regeneration."
 
 # cas: registry number, YAML list (first = primary), pending, or none.
 # aliases / home_hallmark are optional.
@@ -126,7 +132,7 @@ compounds:
     aliases: [NMN]
     home_hallmark: 06-deregulated-nutrient-sensing
   - slug: nad
-    one_liner: "Peach IV 100–1000 mg and AgelessRx nasal 30 mg are practice; IV vs oral vs nasal is an amateur split; blood NAD is target engagement, not genome or mito restoration."
+    one_liner: "CID 5892 / CAS 53-84-9; Grant 750 mg IV +398% plasma at 6 h after a 2 h flat; oral NR RCTs miss muscle NAD/OXPHOS; Peach/AgelessRx practice. No healthy-person aging RCT."
     cas: 53-84-9
     aliases: [NAD+, NAD IV, NAD nasal]
     home_hallmark: 01-genomic-instability
@@ -176,17 +182,17 @@ compounds:
     aliases: [LODOCO]
     home_hallmark: 11-chronic-inflammation
   - slug: semaglutide
-    one_liner: "SELECT cut MACE in obesity plus established CVD; relabeling that as nutrient-sensing restoration for healthy buyers is a definition swap."
+    one_liner: "SELECT 2.4 mg weekly cut MACE HR 0.80 in obesity+CVD; STEP-1-class −14.9% weight; SM-GLP1 RUO ≠ Wegovy. No healthy-person aging RCT."
     cas: 910463-68-2
     aliases: [Wegovy, Ozempic, SM-GLP1]
     home_hallmark: 06-deregulated-nutrient-sensing
   - slug: tirzepatide
-    one_liner: "Named on AgelessRx XPRIZE-finals copy next to weekly rapamycin; no healthy-person aging RCT."
+    one_liner: "Zepbound SURMOUNT-1-class 15 mg −20.9% at 72 weeks; AgelessRx XPRIZE names compounded tirzepatide; T-GLP2 RUO ≠ Zepbound. No healthy-person aging RCT."
     cas: 2023788-19-2
     aliases: [GLP-1/GIP, T-GLP2]
     home_hallmark: 06-deregulated-nutrient-sensing
   - slug: oxytocin
-    one_liner: "Pitocin is obstetric injectable; compounded IN/troche is the longevity SKU; Berger trait-loneliness null; Sikich ASD social-functioning null."
+    one_liner: "CID 439302 / CAS 50-56-6; Pitocin t½ 1–6 min with labeled water-intoxication deaths; Berger IN trait-null; Sikich ASD null; 10 mg RUO ≠ Pitocin."
     cas: 50-56-6
     aliases: [IN OT, Oxipops, Pitocin]
     home_hallmark: 14-psychosocial-isolation
@@ -195,172 +201,219 @@ compounds:
     cas: 7235-40-7
     home_hallmark: 01-genomic-instability
   - slug: hexarelin
-    one_liner: "Mindful Research 5 mg research-chem vial; GHRP storefront extract; no compiled aging RCT on this page."
+    one_liner: "Examorelin CID 6918297 / CAS 140703-51-1 + acetate 208251-52-9 / UNII 09QF37C617. Ghigo 1994 routes; Massoud PRL/cortisol. WADA S2.2.4."
     cas: [208251-52-9, 140703-51-1]
     aliases: [Examorelin, EP-23905, MF-6003]
+    home_hallmark: 06-deregulated-nutrient-sensing
   - slug: 5-amino-1mq
-    one_liner: "Mindful Research 5–50 mg NNMTi powder; storefront extract; no compiled aging RCT on this page."
+    one_liner: "Cation CID 950107 / iodide CAS 42464-96-0; Neelakantan 2018 + Babula 2024 mouse only (oral F 3.5%); not a peptide; no human RCT."
     cas: 42464-96-0
-    aliases: [5-Amino-1-methylquinolinium, NNMTi]
+    aliases: [5-Amino-1-methylquinolinium, NNMTi, 5A1MQ]
+    home_hallmark: 06-deregulated-nutrient-sensing
   - slug: testagen
-    one_liner: "Mindful Research 20 mg KEDG tetrapeptide; Khavinson-class storefront extract; no compiled aging RCT on this page."
+    one_liner: "KEDG tetrapeptide; PubChem CID 404 this flight. Fedoreyeva 2011 HeLa nuclear/CAG binding. No human RCT. RUO 20 mg ≠ testosterone."
     cas: 1026993-38-3
-    aliases: [KEDG]
+    aliases: [KEDG, Lys-Glu-Asp-Gly]
+    home_hallmark: 03-epigenetic-alterations
   - slug: pinealon
-    one_liner: "Mindful Research 20 mg EDR tripeptide; Khavinson-class storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 10273502 / CAS 175175-23-2; EDR tripeptide. Khavinson 2014 cortex-cell serotonin + docking. No UNII. No human RCT. RUO 20 mg ≠ epithalon."
     cas: 175175-23-2
-    aliases: [EDR]
+    aliases: [EDR, Glu-Asp-Arg]
+    home_hallmark: 03-epigenetic-alterations
   - slug: kisspeptin-10
-    one_liner: "Mindful Research 5 mg KP-10 vial; GnRH-axis storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 25240297 / CAS 374675-21-5 / UNII FS1N52VS3S. George 2011 IV LH 4.1→12.4. Jayasena follicular null. Href CID 16131448 nociceptin. RUO ≠ KP-54."
     cas: 374675-21-5
     aliases: [KP-10, Metastin (45-54)]
+    home_hallmark: 10-altered-intercellular-communication
   - slug: orforglipron
-    one_liner: "Mindful Research 1–3 mg oral capsules with SNAC; non-peptide GLP-1 storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 137319706 / CAS 2212020-52-3; ATTAIN-1 36 mg −11.2% at 72 weeks; Mindful CID 135565576 + C45 formula wrong; SNAC capsule ≠ Lilly tablet."
     cas: 2212020-52-3
-    aliases: [LY3502970]
+    aliases: [LY3502970, OWL833]
+    home_hallmark: 06-deregulated-nutrient-sensing
   - slug: aniracetam
-    one_liner: "Mindful Research 750 mg racetam capsules; nootropic storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 2196 / CAS 72432-10-1 / UNII 5L16LKN964. Senin 1991 N=109 SDAT vs placebo; Parnetti vs piracetam. RUO 750 mg ≠ Ampamet. Not named WADA 2026."
     cas: 72432-10-1
+    aliases: [Ro 13-5057, Draganon, Sarpul, Ampamet]
+    home_hallmark: 10-altered-intercellular-communication
   - slug: epithalon
-    one_liner: "Mindful Research 10 mg vial and 3 mg capsules; telomere-slogan peptide; storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 219042 / CAS 307297-39-8 AEDG; Khavinson 2003 fibroblasts + Al-dulaimi 2025 ALT-in-cancer; Anisimov 2003 mean LS null; FDA staff no insomnia evidence; no aging RCT."
     cas: 307297-39-8
-    aliases: [Epitalon, Ala-Glu-Asp-Gly]
+    aliases: [Epitalon, Ala-Glu-Asp-Gly, AEDG]
+    home_hallmark: 02-telomere-attrition
   - slug: enclomiphene
-    one_liner: "Mindful Research 12.5 mg SERM capsules with piperine; storefront extract; no compiled aging RCT on this page."
+    one_liner: "Citrate CID 6420009 / CAS 7599-79-3 / UNII J303A6U9Y6. Kim 2016 ZA-304 TT 445.8 ng/dL, sperm preserved. FDA CRL 2015; EMA EnCyzix refused 2018. RUO 12.5 mg ≠ Androxal. WADA S4.2."
     cas: 7599-79-3
-    aliases: [trans-clomiphene]
+    aliases: [trans-clomiphene, Androxal, EnCyzix]
+    home_hallmark: 10-altered-intercellular-communication
   - slug: methylcobalamin
-    one_liner: "Mindful Research 1.5 mg/mL methyl-B12 ampoule; also 1 mg/mL inside LIPO-C; vitamin SKU, not an aging trial."
+    one_liner: "CAS 13422-55-4 / UNII BR1SN1JS2W. Sawangjit 2020 15 RCTs RR 1.17 neuropathy. Mindful CID 5460224 is pipecolate ⛔. RUO ≠ Methycobal."
     cas: 13422-55-4
-    aliases: [B12 methylated]
+    aliases: [B12 methylated, mecobalamin]
+    home_hallmark: 03-epigenetic-alterations
   - slug: cyanocobalamin
-    one_liner: "Mindful Research cyanocobalamin 10 mg/10 mL and 0.5 mg ampoule; vitamin SKU, not an aging trial."
+    one_liner: "CID 16058087 / CAS 68-19-9 / UNII P6YC3EG204. USP IM repletion; labeled hypokalemia on intense megaloblastic treatment. RUO 10 mg/10 mL ≠ 1000 µg/mL."
     cas: 68-19-9
     aliases: [B12 cyano, B12 vial]
+    home_hallmark: 03-epigenetic-alterations
   - slug: dsip
-    one_liner: "Mindful Research 5 mg DSIP vial; sleep-slogan peptide; storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 68816 / CAS 62568-57-4 / UNII YN28Z5YZ73 emideltide. Schneider vs Bes/Monti 🥼. FDA staff against 503A; PCAC 6–7–1 against. RUO ≠ 1980s IV."
     cas: 62568-57-4
-    aliases: [Delta sleep-inducing peptide]
+    aliases: [emideltide, Delta sleep-inducing peptide]
+
   - slug: retatrutide
-    one_liner: "Mindful Research RT-GLP3 10–30 mg lists CAS 2381089-83-2; tri-agonist storefront extract; no compiled aging RCT on this page."
+    one_liner: "LY3437943 GIP/GLP-1/GCG agonist; CAS 2381089-83-2 on PubChem SID 523601838 (no CID this round). Jastreboff 2023 12 mg −24.2% at 48 weeks; no US label."
     cas: 2381089-83-2
     aliases: [RT-GLP3, LY3437943]
     home_hallmark: 06-deregulated-nutrient-sensing
   - slug: mazdutide
-    one_liner: "Mindful Research 10 mg oxyntomodulin analogue; GLP-1/glucagon storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 167312357 / CAS 2259884-03-0; GLORY-1 6 mg −12.55% at 32 weeks; NMPA weight + T2D 2025; RUO 10 mg ≠ Innovent 4/6 mg; no US label."
     cas: 2259884-03-0
+    aliases: [IBI362, LY3305677]
+    home_hallmark: 06-deregulated-nutrient-sensing
   - slug: cagrilintide
-    one_liner: "Mindful Research 5–10 mg amylin analogue; storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 171397054 / CAS 1415456-99-3; Lau 2021 4.5 mg −10.8%; REDEFINE 1 CagriSema −20.4%; Mindful CID 433770923 empty; RUO ≠ Novo 2.4 mg."
     cas: 1415456-99-3
+    aliases: [AM833, CagriSema]
+    home_hallmark: 06-deregulated-nutrient-sensing
   - slug: tesofensine
-    one_liner: "Mindful Research 500 mcg triple-reuptake capsules; storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 11370864 / CAS 402856-42-2 / UNII BLH9UKX9V1. Astrup 2008 0.5 mg −9.2% at 24 weeks; t½ 234 h. Mindful href CID 11373595 wrong molecule. WADA S6. No US label."
     cas: 402856-42-2
+    aliases: [NS-2330, NS2330]
+    home_hallmark: 06-deregulated-nutrient-sensing
   - slug: hcg
-    one_liner: "Mindful Research 5000 IU research-chem vial; LH-analogue storefront extract; no compiled aging RCT on this page."
+    one_liner: "CAS 9002-61-3 / UNII 20ED16GHEB, no CID. Pregnyl LH analogue; label kills obesity. Mindful MW 232 ⛔. WADA S2.2.1 males."
     cas: 9002-61-3
     aliases: [human chorionic gonadotropin]
+    home_hallmark: 10-altered-intercellular-communication
   - slug: l-carnitine
-    one_liner: "Mindful Research 600 mg/mL concentrate and MIC-shot blends; carnitine-shuttle SKU, not an aging trial."
+    one_liner: "CID 10917 / CAS 541-15-1 / UNII 0G389FZZ9M. Malaguarnera 2007 2 g ×6 mo centenarians; Koeth 2013 TMAO. RUO 600 mg/mL ≠ Carnitor."
     cas: 541-15-1
+    aliases: [levocarnitine, Carnitor]
+    home_hallmark: 07-mitochondrial-dysfunction
   - slug: ara-290
-    one_liner: "Mindful Research 10 mg EPO-helix-B peptide; storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 91810664 / CAS 1208243-50-8 / UNII 9W5677JKDA. Culver 2017 4 mg CNFA +697 µm²; Dahan/Brines 28-day SFN. WADA S2.1.5 class, not named. RUO ≠ Bachem."
     cas: 1208243-50-8
-    aliases: [cibinetide]
+    aliases: [cibinetide, ARA290, pHBSP]
+    home_hallmark: 11-chronic-inflammation
   - slug: slu-pp-332
-    one_liner: "Mindful Research 1000 mcg capsules; exercise-mimetic chatter SKU; storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 5338394 / CAS 303760-60-3. ERR pan-agonist (not ERβ). Billon 2023 mouse IP ~70% longer run; Billon 2024 DIO −12% BW. No human RCT. Not named on WADA 2026."
     cas: 303760-60-3
+    aliases: [4-hydroxy-N'-(naphthalen-2-ylmethylene)benzohydrazide]
+    home_hallmark: 07-mitochondrial-dysfunction
   - slug: melanotan-1
-    one_liner: "Mindful Research 10 mg MT-1 / afamelanotide; melanocortin storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 16197727 / CAS 75921-69-6 / UNII QW68W3J66U. Linear 13-mer, not cyclic. Scenesse 16 mg EPP implant; Langendonk US 69.4 vs 40.8 h. RUO 10 mg ≠ implant."
     cas: 75921-69-6
-    aliases: [MT-1, afamelanotide]
+    aliases: [MT-1, afamelanotide, Scenesse]
+    home_hallmark: 10-altered-intercellular-communication
   - slug: melanotan-2
-    one_liner: "Mindful Research 10 mg MT-2; melanocortin storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 92432 / CAS 121062-08-6. Cyclic heptapeptide amide. Dorr 1996 + Wessells 1998 ED. Extra CAS 75921-69-6 is afamelanotide. No US label. RUO ≠ Vyleesi/Scenesse."
     cas: 121062-08-6
     aliases: [MT-2, MT-II]
+    home_hallmark: 10-altered-intercellular-communication
   - slug: thymosin-alpha-1
-    one_liner: "Mindful Research 10 mg thymalfasin; TRIIM-adjacent storefront extract; no compiled aging RCT on this page."
+    one_liner: "Thymalfasin CAS 62304-98-7 / CID 16130571. Zadaxin is ex-US HBV 1.6 mg SC BIW, not FDA-approved; TRIIM used rhGH, not this peptide."
     cas: 62304-98-7
-    aliases: [thymalfasin]
+    aliases: [thymalfasin, Zadaxin, Tα1]
     home_hallmark: 03-epigenetic-alterations
   - slug: glutathione
-    one_liner: "Mindful Research 600 mg reduced GSH vial; antioxidant SKU, not an aging trial."
+    one_liner: "CID 124886 / CAS 70-18-8 / UNII GAN16C9B8O. Richie 2015 oral 1 g +30–35% stores; Allen 2011 4-wk null. Hauser 2009 IV PD UPDRS miss. RUO ≠ Setria."
     cas: 70-18-8
     aliases: [GSH, L-glutathione reduced]
+    home_hallmark: 07-mitochondrial-dysfunction
   - slug: cerebrolysin
-    one_liner: "Mindful Research 60 mg cerebroprotein hydrolysate; mixture SKU with listed CAS 12656-61-0; no compiled aging RCT on this page."
+    one_liner: "Mixture CAS 12656-61-0, no CID. CASTA N=1070 primary miss; CARS ARAT win. Href SID extra digit. 60 mg RUO ≠ 30 mL EVER."
     cas: 12656-61-0
     aliases: [cerebroprotein hydrolysate, FPE 1070]
+    home_hallmark: 10-altered-intercellular-communication
   - slug: kpv
-    one_liner: "Mindful Research 5–10 mg α-MSH fragment and KLOW blend constituent; storefront extract; no compiled aging RCT on this page."
+    one_liner: "α-MSH(11-13) CID 125672 / CAS 67727-97-3; Dalmasso/Kannengiesser mouse colitis; FDA staff against 503A; Mindful href CID 219062 is a dye."
     cas: 67727-97-3
     aliases: [α-MSH (11-13)]
+    home_hallmark: 11-chronic-inflammation
   - slug: ss-31
-    one_liner: "Mindful Research 10–50 mg elamipretide; Forzinity is Barth, not aging; storefront extract plus 07 mention."
+    one_liner: "Elamipretide CID 11764719 / CAS 736992-21-5; Forzinity is Barth accelerated approval, not aging; Roshanravan one-dose ATP max; MMPOWER-3 miss."
     cas: 736992-21-5
     aliases: [elamipretide, Forzinity]
     home_hallmark: 07-mitochondrial-dysfunction
   - slug: igf-1-lr3
-    one_liner: "Mindful Research 0.1–1 mg Long Arg3-IGF-1; storefront extract; no compiled aging RCT on this page."
+    one_liner: "83-mer Long Arg3-IGF-1 CAS 946870-92-4; PubChem that CAS hits a lipid CID this flight. Increlex is native 70-mer, not this vial. WADA S2.3."
     cas: 946870-92-4
     aliases: [Long Arg3-IGF-1]
+    home_hallmark: 06-deregulated-nutrient-sensing
   - slug: cjc-1295-no-dac
-    one_liner: "Mindful Research 5 mg Mod GRF (1-29) and 5/5 mg blend with ipamorelin; storefront extract; no compiled aging RCT on this page."
+    one_liner: "Mindful CID 56841945 is the 29-mer (3368 Da). PubChem title CJC-1295 is DAC CID 91971820 (3647 Da); shared CAS 863288-34-0. Teichman is DAC. WADA S2.2.4."
     cas: 863288-34-0
     aliases: [Mod GRF (1-29)]
+    home_hallmark: 06-deregulated-nutrient-sensing
   - slug: b7-33
-    one_liner: "Mindful Research 10 mg relaxin-family single-chain analogue; storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 162662592 / CAS 1818415-56-3. Hossain 2016 RXFP1-biased B-chain; Devarakonda 2020 mouse MI 22 vs 45%. No human RCT. Not named WADA 2026."
     cas: 1818415-56-3
+    home_hallmark: 13-extracellular-matrix-changes
   - slug: sermorelin
-    one_liner: "Mindful Research 5 mg GHRH 1-29; AgelessRx names nasal sermorelin next to rapamycin; no compiled aging RCT on this page."
+    one_liner: "Sermorelin INN CAS 86168-78-7 / CID 16132413. Geref acetate withdrawn (FR 2013 not-safety). Corpas 14-day GH/IGF-1; Vittone nightly DEXA null."
     cas: 86168-78-7
-    aliases: [GHRH (1-29)]
+    aliases: [GHRH (1-29), Geref]
     home_hallmark: 06-deregulated-nutrient-sensing
   - slug: selank
-    one_liner: "Mindful Research 10 mg tuftsin analogue; nootropic storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 11765600 / CAS 129954-34-3 / UNII TS9JR8EP1G. Zozulia 2008 N=62 vs medazepam. Volkova 2016 GABA genes. RUO 10 mg ≠ 0.15% drops. No 503A vote."
     cas: 129954-34-3
+    aliases: [Selanc, TP-7]
+    home_hallmark: 10-altered-intercellular-communication
   - slug: tb-500
-    one_liner: "Mindful Research 10 mg thymosin β4 and blend constituent; storefront extract; no compiled aging RCT on this page."
+    one_liner: "Mindful table is timbetasin CID 16132341 / CAS 77591-33-4; PubChem/FDA TB-500 is Ac-LKKTETQ 885340-08-9. SEER-1 NK 6/10 vs 1/8 p=0.0656. WADA S2."
     cas: 77591-33-4
-    aliases: [thymosin beta-4]
+    aliases: [thymosin beta-4, timbetasin]
+    home_hallmark: 13-extracellular-matrix-changes
   - slug: semax
-    one_liner: "Mindful Research 10 mg ACTH(4-10) analogue; nootropic storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 9811102 / CAS 80714-61-0 / UNII I5FAL2585H. Dolotov 2006 BDNF. Gusev 2018 N=110. Mindful MW 854.99 ≠ 813.9/874.0. FDA staff against 503A; PCAC 8–5–1."
     cas: 80714-61-0
+    aliases: [MEHFPGP, ACTH(4-7)-PGP]
+    home_hallmark: 10-altered-intercellular-communication
   - slug: ipamorelin
-    one_liner: "Mindful Research 4 mg GHRP and 5/5 mg blend with CJC no DAC; storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 9831659 / CAS 170851-70-4 / UNII Y9M3S784Z6. Raun 1998 swine-selective GHS. Beck 2014 POI 25.3 vs 32.6 h p=0.15. WADA S2.2.4."
     cas: 170851-70-4
+    home_hallmark: 06-deregulated-nutrient-sensing
   - slug: mots-c
-    one_liner: "Mindful Research 10–40 mg mtDNA-encoded peptide; Reynolds mouse capacity is not a human restore trial; 07 extract plus storefront SKU."
+    one_liner: "16-aa mtDNA peptide; Lee mouse HFD/IR and Reynolds late-life capacity; n=10 endogenous exercise is not a vial RCT; NCT07505745 recruiting for insulin sensitivity."
     cas: 1627580-64-6
+    aliases: [MOTS-c]
     home_hallmark: 07-mitochondrial-dysfunction
   - slug: tesamorelin
-    one_liner: "Mindful Research 10 mg GHRH analogue; Egrifta is HIV lipodystrophy; TRIIM-adjacent amateur use; no compiled healthy-aging RCT on this page."
-    cas: 901758-09-6
-    aliases: [Egrifta]
+    one_liner: "Tesamorelin acetate (CAS 901758-09-6 / CID 44147413); free base 218949-48-5 / CID 16137828. Egrifta HIV-VAT label; TRIIM used rhGH, not this peptide."
+    cas: [901758-09-6, 218949-48-5]
+    aliases: [Egrifta, tesamorelin acetate, TH9507]
     home_hallmark: 03-epigenetic-alterations
   - slug: pt-141
-    one_liner: "Mindful Research 9 mg bremelanotide; labeled HSDD drug sold as research powder; no compiled aging RCT on this page."
+    one_liner: "CID 9941379 / CAS 189691-06-3 / UNII 6Y24O4F92S. Vyleesi 1.75 mg HSDD; FSFI-Desire +0.5/+0.6; SSE null. Nausea 40%. RUO 9 mg ≠ autoinjector."
     cas: 189691-06-3
     aliases: [bremelanotide, Vyleesi]
+    home_hallmark: 10-altered-intercellular-communication
   - slug: snap-8
-    one_liner: "Mindful Research 9 mg SNAP-25 analogue; cosmetic-peptide storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 76283482 / CAS 868844-74-0 / UNII 8K14HJF88S. Name SNAP-8 also hits CID 71587832. Lipotec 2010 17-woman imprint. RUO ≠ serum."
     cas: 868844-74-0
     aliases: [acetyl octapeptide-3]
+    home_hallmark: 13-extracellular-matrix-changes
   - slug: bpc-157
-    one_liner: "Mindful Research 10 mg vial, capsules, and GLOW/KLOW blends; 12 leaky-gut slogan peptide; storefront extract; no compiled aging RCT on this page."
+    one_liner: "Pentadecapeptide CID 9941957 / CAS 137525-51-0; acetate 216441-37-1; rodent Sikiric file is not a human RCT; Lee 2021 IA knee phone survey; no aging RCT."
     cas: 137525-51-0
     home_hallmark: 12-dysbiosis
   - slug: ghk-cu
-    one_liner: "Mindful Research 50–100 mg copper tripeptide plus GLOW/KLOW/REJUV-3X; 13 extract: rat wound collagen is not a human restore trial."
+    one_liner: "Copper complex CID 71587328 / CAS 89030-95-5; Maquart rat wound collagen is not human restore; Miller 2006 topical objective-null; no SubQ aging RCT."
     cas: 89030-95-5
     aliases: [copper tripeptide-1]
     home_hallmark: 13-extracellular-matrix-changes
   - slug: aod-9604
-    one_liner: "Mindful Research 4 mg hGH fragment 176–191; fat-loss storefront extract; no compiled aging RCT on this page."
+    one_liner: "CID 71300630 Tyr-hGH 177–191; Mindful CID 16131447 is the wrong isomer; Stier 2013 safety / OPTIONS 2007 miss; WADA S2.2.3; no aging RCT."
     cas: 386264-39-7
+    aliases: [AOD9604, Tyr-hGH 177-191]
+    home_hallmark: 06-deregulated-nutrient-sensing
   - slug: ahk-cu
-    one_liner: "Mindful Research sells AHK-Cu only inside REJUV-3X at 15 mg/mL; no solo vial on the September 3, 2026 pull."
-    cas: 49557-75-7
-    aliases: [copper tripeptide-3]
+    one_liner: "CID 168431292 / CAS 682809-81-0 (HCl). Storefront 49557-75-7 is free GHK ⛔. Pyo 2007 ex vivo only. Blend-only on REJUV-3X."
+    cas: 682809-81-0
+    aliases: [copper tripeptide-3, AHK copper]
+    home_hallmark: 13-extracellular-matrix-changes
   - slug: jxl-069
-    one_liner: "Mindful Research sells JXL-069 only inside REJUV-3X at 0.1 mg/mL; MPC-inhibitor storefront extract; no compiled aging RCT on this page."
-    cas: 2232594-65-1
+    one_liner: "CID 137374808 / CAS 2260696-63-5. Mindful 2232594-65-1 PubChem 404. Liu 2021 mouse topical MPC. No human RCT. Blend-only."
+    cas: 2260696-63-5
+    aliases: [JXL069]
+    home_hallmark: 07-mitochondrial-dysfunction

@@ -1,0 +1,6 @@
+# Pickart, Vasquez-Soltero, Margolina, 2015. GHK peptide as a natural modulator of multiple cellular pathways in skin regeneration. BioMed Research International.
+https://doi.org/10.1155/2015/648108 PMID 26236730 PMC4508379
+Used for: 📚 Review of GHK as a Cu²⁺ complex that stimulates collagen / GAG / decorin and coordinates Cu(II) via His imidazole N, Gly α-amino N, and deprotonated Gly-His amide N; practice-adjacent cosmetic claims sit in the same paper.
+Mark: 📚
+N / effect / population / endpoint / duration: Review. Reports plasma GHK ~200 ng/mL (~10⁻⁷ M) at age 20 declining to 80 ng/mL by age 60. Coordination chemistry summarized from X-ray, EPR, XAS, PMR, titration. Cites Maquart dish/wound work. Also recites unpublished-here facial cream N=71 / eye cream N=41 / thigh biopsy series — those primary papers were not re-fetched this pass; do not upgrade them from this review. Full text fetched via Wiley/Hindawi.
+Conflict if any: All three authors list Skin Biology, 4122 Factoria Boulevard, Bellevue WA. Pickart discovered/developed GHK-Cu; Procyte sold it and supplied Maquart 1993 PC 1020. Review reads like a product monograph. Mechanism/practice-adjacent only; not organismal rejuvenation.

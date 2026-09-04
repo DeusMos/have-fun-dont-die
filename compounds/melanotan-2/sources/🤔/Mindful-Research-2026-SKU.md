@@ -1,6 +1,5 @@
-# Mindful Research Melanotan-2 SKU
-
-🤔 Mindful Research LLC listed Melanotan-2 (CAS 121062-08-6) as 10 mg lyophilized powder, $44.00 on https://happypeptides.com/products/ml-2 when the catalog was pulled September 3, 2026. The shop footer states research-use-only / not for human or animal consumption and that the company is not a 503A compounding pharmacy.
-
-https://happypeptides.com/
-https://happypeptides.com/products/ml-2
+# Mindful Research MT-2 Shopify JSON
+https://happypeptides.com/products/ml-2.json
+Catalog pull 2026-09-03/04. 10 MG, $44.00, SKU LP-ML2-10MG. CAS 121062-08-6, CID 92432.
+Used for: 🤔 storefront identity + practice.
+Mark: 🤔

@@ -1,5 +1,7 @@
-# Mindful Research NAD+ SKU
-
-🤔 Mindful Research LLC listed NAD+ as a 500 mg / 10 mL research-chem vial at $60.00 on https://happypeptides.com/products/nad when the catalog was pulled September 3, 2026. The shop footer states research-use-only / not for human or animal consumption and that the company is not a 503A compounding pharmacy.
-
-https://happypeptides.com/products/nad
+# Mindful Research LLC. NAD+ SKU.
+https://happypeptides.com/products/nad.json
+https://happypeptides.com/policies/terms-of-service
+Used for: 🤔 500 mg / 10 mL $60.00 SKU LP-NAD-500MG; CAS 53-84-9; CID 925 (Endopride-titled duplicate); C21H27N7O14P2; MW 663.43; RUO.
+Mark: 🤔
+N / effect / population / endpoint / duration: Catalog pull September 3–4, 2026.
+Conflict if any: Mindful sells the SKU.

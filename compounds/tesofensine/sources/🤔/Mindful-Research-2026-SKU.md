@@ -1,6 +1,5 @@
-# Mindful Research Tesofensine SKU
-
-🤔 Mindful Research LLC listed Tesofensine (CAS 402856-42-2) as 500 mcg × 60 capsules with piperine, $98.00 on https://happypeptides.com/products/tesofensine when the catalog was pulled September 3, 2026. The shop footer states research-use-only / not for human or animal consumption and that the company is not a 503A compounding pharmacy.
-
-https://happypeptides.com/
-https://happypeptides.com/products/tesofensine
+# Mindful Research Tesofensine Shopify JSON
+https://happypeptides.com/products/tesofensine.json
+Catalog pull 2026-09-03/04. 500 mcg × 60 + piperine, $98.00, SKU EC-TSF-500MCG. CAS 402856-42-2, C17H23Cl2NO, MW 328.27. Href CID 11373595.
+Used for: 🤔 storefront identity + practice.
+Mark: 🤔
