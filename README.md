@@ -2,7 +2,21 @@
 
 ## What this is
 
+This repo is an **agentic research workflow** — a jumping-off point for an **agent**, not a textbook — demonstrated by a deep dive on the hallmarks of aging and prolonging healthy life. The name is have-fun-dont-die.
+
+Any research topic is welcome. Political and PC filler is not: no equity sermons, access lectures, stigma language, identity politics, or “societal implications” filler. Biology, evidence, practice, uncertainty.
+
+Do not memorize it. Do not read every file — most writeups are shorthand.
+
+Ask it questions. Have it research to answer them. How: [Ask this repo](#ask-this-repo).
+
 Sourced dump of aging biology, tactics people are actually running, and the speculative edge — ideas the institutional apparatus will not go first on. We document. We do not recommend.
+
+It makes mistakes. When the miss is the repo or the agent config, `/self-improve` so the same failure does not recur. Please PR improvement one at a time, provide an example of it failing and then it succeeding after, so we can share the improvements!
+
+Use the most capable model you can for **analysis**. Cheap agents work for **scraping**. Fifty Composer agents reading ten papers each will beat Fable reading one.
+
+LLMs do not think. They follow directions. The thinking is yours.
 
 ## Not medical advice
 
@@ -24,10 +38,50 @@ Every assertion in a rewritten report starts with one of these. Titles, headers,
 | ☠︎︎ | Sure, meaningful harm. | Established that this hurts people in a real way. |
 | 🐉 | Here be dragons. Wild speculation. | Forward-looking or mechanistic leaps with little or no direct evidence. |
 
+## Ask this repo
+
+Hits are what is already written. Not new research. Corpus is `hallmarks/`, `topics/`, and `compounds/` reports plus filed source notes. Not `tmp/`, not `template.md`. Package notes: [`mcp/docs-rag/README.md`](mcp/docs-rag/README.md). House rules: [`AGENTS.md`](AGENTS.md).
+
+Needs `uv` and Python 3.11+. The index is local (`.rag/`, gitignored). First build downloads `BAAI/bge-small-en-v1.5` and embeds the corpus (~10 min on CPU). Later searches only embed what changed. Do not use a user-level `markdown_rag` server — this repo’s server is `docs-rag`.
+
+Ask a real question. Keyword spam is worse than a sentence. If you want a new or rewritten report, say so; that is adversarial-research, not search.
+To add a topic or compound (tree, sources, catalog, reindex): [AGENTS.md — Adding a topic](AGENTS.md#adding-a-topic-or-compound).
+
+### CLI
+
+Works without Cursor or Claude Code.
+
+```bash
+mcp/docs-rag/run.sh reindex
+mcp/docs-rag/run.sh search "weekly rapamycin PEARL VAT"
+mcp/docs-rag/run.sh status
+```
+
+### Cursor
+
+1. Open this folder.
+2. Project [`.mcp.json`](.mcp.json) starts `docs-rag` on stdio. Reload MCP servers if the session does not list it. Ignore any other entry in that file that is not `docs-rag`.
+3. Ask in chat. The agent should call `search_docs` first (always-on rule [`.cursor/rules/20-docs-rag.mdc`](.cursor/rules/20-docs-rag.mdc); skill [`.cursor/skills/docs-rag/`](.cursor/skills/docs-rag/)).
+4. To research, update, or fill a report: [`.cursor/skills/adversarial-research/`](.cursor/skills/adversarial-research/).
+
+### Claude Code
+
+1. Open this folder.
+2. Skills are in [`.claude/skills/`](.claude/skills/) (`docs-rag`, `adversarial-research`). Same law as Cursor: [`AGENTS.md`](AGENTS.md).
+3. If the session does not already have `docs-rag`, add the project server:
+
+```bash
+claude mcp add docs-rag -- bash mcp/docs-rag/run.sh
+```
+
+Or enable the `docs-rag` entry from [`.mcp.json`](.mcp.json) and skip the rest of that file.
+4. Ask in chat. Search first, then read the cited `report.md`. Say “research” or “update the report” only when you want a write, not an answer.
+
 ## Start here
 
-Five entry paths. Not a recommendation ladder.
+Six entry paths. Not a recommendation ladder.
 
+- [Ask the repo](#ask-this-repo) — Cursor, Claude Code, or CLI
 - [By hallmark](#hallmarks-catalog)
 - [By compound](#compounds-catalog)
 - [By tactic people are running](#by-tactic-assay-and-protocol) — NAD, rapamycin, senolytics, CHIP panels, clocks, fucoidan, plasma/HBOT, antioxidants
@@ -134,7 +188,8 @@ Observed practice, not advice. Rows are “this subject appears here.” No effi
 - [`compounds/`](compounds/) — per-molecule extracts from the hallmark reports, same shape
 - `sources/<mark>/` — filed notes matching the mark on the claim
 - [`scripts/build-index.py`](scripts/build-index.py) — regenerates catalog / section-map blocks from reports + [`scripts/index-meta.yaml`](scripts/index-meta.yaml)
+- [`mcp/docs-rag/`](mcp/docs-rag/) — local search MCP + CLI over the writeups
 - `tmp/` — scratch; gitignored; not indexed
-- [`AGENTS.md`](AGENTS.md) — voice, marks, layout
+- [`AGENTS.md`](AGENTS.md) — voice, marks, layout; [adding a topic or compound](AGENTS.md#adding-a-topic-or-compound)
 - [`LICENSE`](LICENSE) — MIT
-- [`template.md`](template.md) — section skeleton only; ignore its voice
+- [`template.md`](template.md) — section skeleton only

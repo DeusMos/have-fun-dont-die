@@ -1,12 +1,14 @@
 # AGENTS.md
 
-This file is the operating brief for anyone — human or model — writing in this repo. Existing reports and `template.md` predate these rules. **This file wins.** Do not copy their caution theater, lifestyle sermons, or “do / don’t” ladders.
+This file is the operating brief for anyone — human or model — writing in this repo. Existing reports predate these rules. **This file wins.** Do not copy caution theater, lifestyle sermons, or “do / don’t” ladders. `template.md` is headings only — never write a filled report into it.
 
 ## What this repo is
 
 Collect and share realistic, non-biased information on aging biology, longevity tactics, and what adventurous people are actually trying. The interesting work is the speculative edge: ideas that do not yet have full scientific backing, because the institutional research apparatus is glacially conservative and will not go first.
 
 We document. We do not recommend for or against. The reader is not a child; they decide.
+
+Front-door framing (agentic workflow, any topic welcome): [README.md](README.md).
 
 ## Not medical advice
 
@@ -144,11 +146,22 @@ Catalogs and section maps in the READMEs are generated. Do not hand-edit the `BE
 | `hallmarks/13-extracellular-matrix-changes/` | Extracellular matrix changes |
 | `hallmarks/14-psychosocial-isolation/` | Psychosocial isolation |
 
-New or rewritten hallmark work lands at `hallmarks/NN-short-name/report.md`. A named molecule, peptide, hormone, antibody, approved live-biotherapeutic, or metabolite taken as an intervention lands at `compounds/<slug>/report.md`. Other non-hallmark subjects (protocols, procedures, clocks-as-product, rumors) land at `topics/<slug>/report.md`. Same `sources/<emoji>/` tree in each. Do not drop reports on the repo root. Ignore `template.md` tone, disclaimer spam, lifestyle defaults, and the old “no dosing / action ladder” checklist. Use it as a section skeleton only.
+New or rewritten hallmark work lands at `hallmarks/NN-short-name/report.md`. A named molecule, peptide, hormone, antibody, approved live-biotherapeutic, or metabolite taken as an intervention lands at `compounds/<slug>/report.md`. Other non-hallmark subjects (protocols, procedures, clocks-as-product, rumors) land at `topics/<slug>/report.md`. Same `sources/<emoji>/` tree in each. Do not drop reports on the repo root. Do not write report content into `template.md`. Use `template.md` as the section skeleton; voice is this file.
 
 Ask a question against already-written reports with MCP `docs-rag` (skill: `.cursor/skills/docs-rag/`, Claude: `.claude/skills/docs-rag/`). To research a hallmark, claim, compound, rumor, or new topic, follow `.cursor/skills/adversarial-research/SKILL.md` (Claude: `.claude/skills/adversarial-research/`). Phase 0 briefing, then validator / invalidator / domain collector in parallel, then a compiler that link-checks and either loops Phase 1 (max 3) or saves the report. Do not pick a winner to look tidy.
 
 When researching: dump notes and source tables in `tmp/` first, then write the report. Do not “finish” from memory.
+
+## Adding a topic or compound
+
+Not a research flight. If they asked you to *research* the subject, follow `.cursor/skills/adversarial-research/` — that skill includes these steps.
+
+1. Pick the tree: molecule → `compounds/<slug>/`; protocol / procedure / rumor / clock-as-product → `topics/<slug>/`; hallmark rewrite → existing `hallmarks/NN-short-name/`.
+2. `bash .cursor/skills/adversarial-research/scripts/init-topic-sources.sh topics/<slug>` (or `compounds/<slug>`).
+3. Write `report.md` (voice and marks: this file; headings: `template.md`). File sources under `sources/<emoji>/` matching the mark on the claim. Do not cite `tmp/`.
+4. Add or update the row in `scripts/index-meta.yaml` (status, one_liner; compounds also `cas` / `aliases`).
+5. `python3 scripts/build-index.py` — do not hand-edit `BEGIN GENERATED` blocks.
+6. `mcp/docs-rag/run.sh reindex` (or MCP `reindex`).
 
 ## Asking the docs
 
@@ -160,7 +173,7 @@ This repo ships MCP `docs-rag` over `hallmarks/`, `topics/`, and `compounds/`.
 - After saving a report or source note, `reindex`.
 - Corpus is reports and filed source notes. Not `tmp/`, not `template.md`, not READMEs.
 
-When the template and this file fight — structure vs. sermon — keep the section outline if it still serves, and rewrite the voice to match this file.
+Structure from `template.md`. Voice from this file.
 
 ## Writing standard
 

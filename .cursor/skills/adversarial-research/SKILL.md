@@ -20,7 +20,7 @@ Prompt templates: [prompts.md](prompts.md). Carrot/bleach gold standard: [exampl
 | `hallmark` | no | `01`–`14` or dir name. If omitted, route from the map below |
 | `scope` | no | `full` (default), `mechanism`, `practice`, `rumor` — still run the whole pipeline |
 
-Normalize a `slug`: lowercase, hyphens, no spaces. Example: `carrots-bleach`, `rapamycin`.
+Normalize a `slug`: lowercase, hyphens, no spaces. Example: `hbot`, `rapamycin`. Phase 0 gold standard in [examples.md](examples.md) is still carrots/bleach.
 
 ## Route the destination
 
@@ -59,6 +59,8 @@ bash .cursor/skills/adversarial-research/scripts/init-topic-sources.sh compounds
 ```
 
 That copies READMEs from `tmp/2026-09-02_layout/canonical/sources/` (fallback: any hallmark `sources/`).
+
+How to add a topic (not research one): `topics/<slug>/` (or `compounds/<slug>/`) + this init script + `report.md` + `scripts/index-meta.yaml` + `python3 scripts/build-index.py` + `reindex`. Point at those files. Do not reconstruct the list from an explore pass.
 
 ## Session folder
 
@@ -258,7 +260,7 @@ The compiler does not pick a winner to look tidy.
 - Dead or invented citations: drop the claim
 - Updating an existing report: weave; do not wipe; do not restore `template.md` sermons. A stub or "not re-fetched this round" in place of a prior practice map is a wipe — loop, do not save
 - 💯 is textbook-uncontested only. A consensus or famous review (López-Otín included) is 📚, not a 💯 parking lot
-- New report: `template.md` is section skeleton only; voice is AGENTS.md
+- New report: `template.md` is section skeleton only; voice is AGENTS.md. Never write a filled report into `template.md`.
 - Speculative section is required. Mark 🐉 or 🤔 and move on
 
 #### Save
@@ -274,7 +276,7 @@ Only when `another_round` is no, or the cap is hit.
 | Compound | `compounds/<slug>/report.md` | `compounds/<slug>/sources/<emoji>/` (create the tree if needed) |
 | New topic | `topics/<slug>/report.md` | `topics/<slug>/sources/<emoji>/` (create the tree if needed) |
 
-Working notes stay in `tmp/YYYY-MM-DD_<slug>/`. Do not delete them.
+Working notes stay in `tmp/YYYY-MM-DD_<slug>/`. Do not delete them. Do not cite `tmp/` or other gitignored paths from `report.md`.
 
 Then, still before returning:
 

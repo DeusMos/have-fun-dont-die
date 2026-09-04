@@ -38,8 +38,10 @@ mcp/docs-rag/run.sh status
 ## Rules
 
 - Search first. Then read the cited file if you will quote or update it.
+- If the hits already answer and the user did not ask to research, update, or fill a report, cite the files and stop.
 - Hits are the current writeup. They are not a verdict and not a reason to skip a research run the user asked for.
 - Empty/thin hits on the actual question → say so. Then either read the obvious `report.md` or start adversarial-research if they asked to research/update.
+- How to add a topic / how this repo works is not corpus (READMEs and skills are not indexed). Point at `topics/README.md`, `.cursor/skills/adversarial-research/` (`init-topic-sources.sh` + `scripts/index-meta.yaml` + `build-index.py`), and `AGENTS.md`. Do not start a research flight.
 - Do not treat `tmp/` as corpus.
 - After a save, `reindex`.
 
