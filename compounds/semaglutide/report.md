@@ -12,6 +12,7 @@ This repository is not medical advice. It is a sourced information dump for anyo
 - [The claim and the slogan](#the-claim-and-the-slogan)
 - [Pharmacokinetics / pharmacodynamics](#pharmacokinetics--pharmacodynamics)
 - [Human data — labeled / indicated use](#human-data--labeled--indicated-use)
+- [Observed practice](#observed-practice)
 - [Legal / access status](#legal--access-status)
 - [Related hallmarks](#related-hallmarks)
 - [Related compounds](#related-compounds)
@@ -20,7 +21,7 @@ This repository is not medical advice. It is a sourced information dump for anyo
 
 ## Identity
 
-Home hallmark: [06 deregulated nutrient sensing](../../hallmarks/06-deregulated-nutrient-sensing/report.md). Aliases in the extracted reports: Wegovy, Ozempic.
+Home hallmark: [06 deregulated nutrient sensing](../../hallmarks/06-deregulated-nutrient-sensing/report.md). Aliases in the extracted reports: Wegovy, Ozempic. Mindful Research sells the same CAS as **SM-GLP1**.
 
 **CAS:** 910463-68-2 (📚 PubChem Semaglutide CID page; CAS 910463-68-2. https://pubchem.ncbi.nlm.nih.gov/compound/Semaglutide).
 
@@ -41,6 +42,12 @@ Home hallmark: [06 deregulated nutrient sensing](../../hallmarks/06-deregulated-
 
 📚 SELECT: weekly semaglutide 2.4 mg cut MACE in people with obesity and established CVD (HR 0.80, 95% CI 0.72–0.90; 6.5% vs 8.0%; n=17,604; mean 39.8 months) (Lincoff et al., NEJM, 2023, https://doi.org/10.1056/NEJMoa2307563, PMID 37952131). Novo Nordisk funded. Indicated secondary prevention, not hallmark-06 restoration in metabolically healthy buyers. Extracted from [06](../../hallmarks/06-deregulated-nutrient-sensing/report.md#human-data).
 
+## Observed practice
+
+Practice is not efficacy. Doses are observed, not instructions.
+
+🤔 Mindful Research sells SM-GLP1 lyophilized powder listing CAS 910463-68-2 and PubChem 56843331 at 5 mg $42.00, 10 mg $76.00, and 13 mg $98.00 (https://happypeptides.com/products/sm-glp1; catalog pull September 3, 2026). Mindful Research LLC sells the SKU as RUO, not Wegovy / Ozempic.
+
 ## Legal / access status
 
 📚 SELECT cut MACE in obesity plus established CVD; that is a labeled cardiometabolic outcome, not nutrient-sensing restoration for healthy buyers ([06](../../hallmarks/06-deregulated-nutrient-sensing/report.md)).
@@ -52,7 +59,7 @@ Home hallmark: [06 deregulated nutrient sensing](../../hallmarks/06-deregulated-
 
 ## Related compounds
 
-[tirzepatide](../tirzepatide/report.md), [metformin](../metformin/report.md), [rapamycin](../rapamycin/report.md).
+[tirzepatide](../tirzepatide/report.md), [retatrutide](../retatrutide/report.md), [orforglipron](../orforglipron/report.md), [metformin](../metformin/report.md), [rapamycin](../rapamycin/report.md).
 
 ## Open questions
 

@@ -189,25 +189,4 @@ No action ladder.
 
 ## Compounds
 
-Existing molecule pages. Link these from Named compounds / Related compounds. Do not invent a slug that has no dir. Full catalog: [compounds/README.md](compounds/README.md).
-
-- [rapamycin](compounds/rapamycin/report.md)
-- [everolimus](compounds/everolimus/report.md)
-- [rtb101](compounds/rtb101/report.md)
-- [metformin](compounds/metformin/report.md)
-- [nicotinamide-riboside](compounds/nicotinamide-riboside/report.md)
-- [nicotinamide-mononucleotide](compounds/nicotinamide-mononucleotide/report.md)
-- [nad](compounds/nad/report.md)
-- [fisetin](compounds/fisetin/report.md)
-- [dasatinib](compounds/dasatinib/report.md)
-- [quercetin](compounds/quercetin/report.md)
-- [fucoidan](compounds/fucoidan/report.md)
-- [spermidine](compounds/spermidine/report.md)
-- [urolithin-a](compounds/urolithin-a/report.md)
-- [resveratrol](compounds/resveratrol/report.md)
-- [berberine](compounds/berberine/report.md)
-- [colchicine](compounds/colchicine/report.md)
-- [semaglutide](compounds/semaglutide/report.md)
-- [tirzepatide](compounds/tirzepatide/report.md)
-- [oxytocin](compounds/oxytocin/report.md)
-- [beta-carotene](compounds/beta-carotene/report.md)
+Existing molecule pages. Link these from Named compounds / Related compounds. Do not invent a slug that has no dir. Live list: [compounds/README.md](compounds/README.md) generated catalog (includes Mindful Research storefront extracts).

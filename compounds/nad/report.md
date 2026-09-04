@@ -59,6 +59,8 @@ Practice is not efficacy. Doses are observed, not instructions.
 
 🤔 NCT07475546 90-day pilot titrates NAD nasal 30 mg/day with LDR, metformin, LDN, and a GSH patch (ClinicalTrials.gov NCT07475546 protocol ALRx011v3). AgelessRx sells those agents. Extracted from [06](../../hallmarks/06-deregulated-nutrient-sensing/report.md).
 
+🤔 Mindful Research sells a 500 mg / 10 mL NAD+ research-chem vial at $60.00 (https://happypeptides.com/products/nad; catalog pull September 3, 2026). Mindful Research LLC sells the SKU as RUO, not a 503A compound.
+
 ## Fights
 
 🤼 Clinic and protocol blogs split NAD IV vs daily oral NR/NMN vs nasal; oral has the RCTs (Martens/Dollerup/Elhassan); IV/nasal are cash-pay PK slogans without an aging-outcomes trial on those pages (Peach IV; AgelessRx; DoNotAge; Martens 2018; Dollerup 2018; Elhassan 2019). Extracted from [07](../../hallmarks/07-mitochondrial-dysfunction/report.md).

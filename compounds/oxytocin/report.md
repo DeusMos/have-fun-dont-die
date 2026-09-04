@@ -68,6 +68,8 @@ Practice is not efficacy. Doses are observed, not instructions.
 
 🤔 Bayview Pharmacy compounds metered IN oxytocin at 25, 40, 100, and 120 units/mL and a sublingual/oral troche at ~200 units; starting price listed $118 / 10 mL; refrigeration required for the spray; the page explicitly declines bonding/intimacy efficacy claims (Bayview Pharmacy, https://www.bayviewrx.com/formulations/oxytocin; updated 28 Aug 2026). Bayview sells the compound. Extracted from [14](../../hallmarks/14-psychosocial-isolation/report.md).
 
+🤔 Mindful Research sells a 10 mg lyophilized oxytocin vial at $47.50 (https://happypeptides.com/products/oxytocin; catalog pull September 3, 2026). Mindful Research LLC sells the SKU as RUO, not a 503A compound.
+
 ## Fights
 
 🤼 On Rapamycin News thread 21995 (Oct–Nov 2025), users split on research-chem oxytocin: AustraliaLongevity reports flushing, tachycardia, metallic taste, no liked social-timing effect, then bedtime experiments from 10 mg / 2 mL BAC at ~1 insulin unit; desertshores points to Nootropic Source and Base Peptides nasal/injectable; Beth notes gethealthspan.com marketing emails for a nasal spray; others want a calculated paper dose from a Kato/Conboy OT+A5i mouse remaining-lifespan claim. Healthspan sells a spray; peptide shops sell powder. No amateur consensus dose. Extracted from [14](../../hallmarks/14-psychosocial-isolation/report.md).

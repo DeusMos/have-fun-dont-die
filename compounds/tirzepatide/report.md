@@ -20,7 +20,7 @@ This repository is not medical advice. It is a sourced information dump for anyo
 
 ## Identity
 
-Home hallmark: [06 deregulated nutrient sensing](../../hallmarks/06-deregulated-nutrient-sensing/report.md). Aliases in the extracted reports: GLP-1/GIP.
+Home hallmark: [06 deregulated nutrient sensing](../../hallmarks/06-deregulated-nutrient-sensing/report.md). Aliases in the extracted reports: GLP-1/GIP. Mindful Research sells the same CAS as **T-GLP2**.
 
 **CAS:** 2023788-19-2 (📚 PubChem Tirzepatide CID page; CAS 2023788-19-2. https://pubchem.ncbi.nlm.nih.gov/compound/Tirzepatide).
 
@@ -41,6 +41,8 @@ Practice is not efficacy. Doses are observed, not instructions.
 
 🤔 AgelessRx longevity catalog fetched this round listed GLP-1s as a live SKU (AgelessRx product index). Extracted from [08](../../hallmarks/08-cellular-senescence/report.md).
 
+🤔 Mindful Research sells T-GLP2 lyophilized powder listing CAS 2023788-19-2 and PubChem CID 156588324 at 10 mg $92.00, 30 mg $162.00, 60 mg $265.00, and 100 mg $385.00 (https://happypeptides.com/products/glp2; catalog pull September 3, 2026). Mindful Research LLC sells the SKU as RUO, not Mounjaro / Zepbound.
+
 🐉 No compiled milligram, titration, or healthy-person aging RCT for tirzepatide. no source; inference from the extract — the fact is not compiled on this page.
 
 ## Legal / access status
@@ -56,7 +58,7 @@ Practice is not efficacy. Doses are observed, not instructions.
 
 ## Related compounds
 
-[semaglutide](../semaglutide/report.md), [rapamycin](../rapamycin/report.md), [metformin](../metformin/report.md).
+[semaglutide](../semaglutide/report.md), [retatrutide](../retatrutide/report.md), [cagrilintide](../cagrilintide/report.md), [rapamycin](../rapamycin/report.md), [metformin](../metformin/report.md).
 
 ## Open questions
 
