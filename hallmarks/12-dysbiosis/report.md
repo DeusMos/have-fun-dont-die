@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 3, 2026  
 **Last updated:** September 3, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is a score-and-subscribe fad: your diversity / Akkermansia / zonulin / Viome BioAge is aging you; restore it with Seed DS-01, Pendulum or pasteurized MucT, spore probiotics, butyrate, colostrum, BPC-157, a parasite cleanse, or young-donor FMT. Nearby true facts — López-Otín listed dysbiosis, stool composition changes with age, FMT and Vowst/Rebyota work for recurrent *C. difficile*, aged-mouse transfers move permeability, some centenarians have distinctive bile-acid taxa — get laundered into that stack.
 

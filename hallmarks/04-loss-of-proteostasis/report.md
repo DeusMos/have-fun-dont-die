@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 2, 2026  
 **Last updated:** September 3, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is a consumer “cellular cleanup / hallmark 04 stack” fad: sauna or cold as an HSP/proteasome switch, spermidine 1–8 mg as autophagy restoration, TUDCA 250–500 mg as a chemical chaperone, oleuropein or unnamed proteasome activators as garbage-disposal pills, and a SomaScan organ-age number as folding quality you treat to target. Nearby true facts — ATTR stabilizer mortality wins, anti-amyloid plaque drop, worm chaperone/proteasome genetics, HSP70 after heat — get laundered into that product.
 

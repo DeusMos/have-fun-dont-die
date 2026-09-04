@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 2, 2026  
 **Last updated:** September 3, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is a consumer “zombie-cell flush” fad: Qualia Senolytic 1400 mg fisetin × 2 days / 28 off; DoNotAge 800 mg fisetin daily; Life Extension 56 mg weekly “Senolytic Activator”; Mayo-copied D+Q pulses (100 mg dasatinib + 1000–1250 mg quercetin × 2–3 days); cash-pay half-dose D+Q plus a TruDiagnostic clock; gray-market dasatinib on Rapamycin News. Nearby true facts — Hayflick arrest, López-Otín listing, Baker INK-ATTAC lifespan, Xu transplant/D+Q mice, Hickson/Justice/Gonzales pilots — get laundered into that SKU. The counter-smear (“longevity scam”) launders Unity’s UBX0101 knee-OA miss into ontology denial.
 

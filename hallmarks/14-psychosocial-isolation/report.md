@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 3, 2026  
 **Last updated:** September 3, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is a public-health-to-product launder: loneliness is as deadly as smoking 15 cigarettes a day; it is the missing hallmark; score it with UCLA-3 like hsCRP, restore it with connection, hearing aids, CBT, volunteering, compounded oxytocin (“Oxipops”), MDMA/psychedelic “connection” sessions, or a Replika-class companion. Nearby true facts — Holt-Lunstad mortality metas, Cole’s CTRA, residual UK Biobank isolation–death after covariates, widowhood, Lancet Commission isolation-as-dementia-risk, Berger in-session OT state-loneliness — get sold as a completed causal clock and a spray.
 

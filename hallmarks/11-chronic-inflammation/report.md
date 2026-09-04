@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 3, 2026  
 **Last updated:** September 3, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is an inflammaging-treat-to-target fad: your hsCRP / IL-6 / TNF / NLR / GrimAge is aging you; titrate it below 1.0 mg/L (or 0.5) with curcumin + omega-3 + SPM marine oil, off-label colchicine 0.5 mg, canakinumab, a JAK inhibitor, weekly rapamycin, or an ozone drip. Nearby true facts — Franceschi named the phenotype, López-Otín listed it, CANTOS moved MACE without moving LDL, COLCOT/LoDoCo2 moved CAD events, CHIP can drive IL-1β, SASP exists — get laundered into that stack.
 

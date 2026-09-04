@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 3, 2026  
 **Last updated:** September 3, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is a score-and-restore fad: your collagen is aging you; your tissues are glued with AGEs; a 60-second forearm fluorescence number is your biological age. Restore youthful matrix with Vital Proteins-class peptides, GHK-Cu topical or 1–2 mg subcutaneous, hyaluronan, “ECM priming” before lasers, carnosine/benfotiamine stacks, research-chem alagebrium, and a future glucosepane enzyme. Nearby true facts — century-scale cartilage collagen, glucosepane as the dominant skin AGE cross-link, PWV predicting events, IPF antifibrotics slowing FVC, tretinoin raising dermal collagen I, *C. elegans* matreotype genetics — get laundered into that product.
 

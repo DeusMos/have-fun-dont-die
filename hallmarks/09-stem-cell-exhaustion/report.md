@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 2, 2026  
 **Last updated:** September 2, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is a refill-the-tank fad: you are running out of stem cells; an IV of cord / Wharton’s jelly / adipose SVF / “exosomes,” a STEMREGEN-class botanical mobilizer, or a young-plasma drip will replenish the pool and reverse aging. Nearby true facts — HSC function and clonality change with age, satellite-cell content falls in the oldest-old, HSCT and omidubicel work after conditioning, mouse parabiosis moves regenerative readouts, MSCs secrete factors in culture — get laundered into that product.
 

@@ -285,7 +285,7 @@ Then, still before returning:
 
 ## Hard constraints (AGENTS.md)
 
-- We document. We do not recommend for or against.
+- We document. We do not recommend for or against — except ☠︎︎, where stay-away is required.
 - Hallucinations are not tolerated. Fetch the paper.
 - 💯 is expensive. Textbook-grade, uncontested. One paper is 📚. A famous or consensus review is 📚, not 💯. A preprint is 📜. Live literature fight is 🥼.
 - ☠︎︎ is sure meaningful harm, not Prop-65 theater. ⛔ is suspect / does not make sense.

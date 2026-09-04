@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 2, 2026  
 **Last updated:** September 3, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is a consumer “autophagy switch / cleanup stack / fasting-clock” fad: 16:8 (or 24 / 36 / 48 / 72 h) and autophagy “kicks on”; ketones or hunger are the meter; spermidine 1–8 mg, Mitopure 500–1000 mg, trehalose, berberine, or weekly sirolimus restore cellular cleanup; a blood LC3/p62 or SNP “autophagy report” is the score you titrate against. Nearby true facts — Ohsumi’s mechanism work, the 2023 hallmark split, mouse Atg5/Beclin/Rubicon genetics, a PBMC flux assay, urolithin A mitophagy RCTs — get laundered into that product.
 
