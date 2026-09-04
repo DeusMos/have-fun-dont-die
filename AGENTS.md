@@ -102,6 +102,7 @@ The scientific community’s “wait for the perfect RCT in 2048” stance is no
 
 ```
 README.md                                            GitHub front door (index, not a writeup)
+CONTRIBUTING.md                                      copyright takedown PR; disagreement adds, does not delete
 hallmarks/README.md                                  hallmark catalog + section maps
 topics/README.md                                     topic catalog (non-molecule subjects)
 compounds/README.md                                  compound catalog + section maps
@@ -149,6 +150,13 @@ New or rewritten hallmark work lands at `hallmarks/NN-short-name/report.md`. A n
 Ask a question against already-written reports with MCP `docs-rag` (skill: `.cursor/skills/docs-rag/`, Claude: `.claude/skills/docs-rag/`). To research a hallmark, claim, compound, rumor, or new topic, follow `.cursor/skills/adversarial-research/SKILL.md` (Claude: `.claude/skills/adversarial-research/`). Phase 0 briefing, then validator / invalidator / domain collector in parallel, then a compiler that link-checks and either loops Phase 1 (max 3) or saves the report. Do not pick a winner to look tidy.
 
 When researching: dump notes and source tables in `tmp/` first, then write the report. Do not “finish” from memory.
+
+## Pull requests
+
+Two jobs. Do not mix them. Full instructions: [CONTRIBUTING.md](CONTRIBUTING.md).
+
+- Copyrighted verbatim material: [takedown PR](CONTRIBUTING.md#copyright-takedown-pr). Remove only the identified expression. Leave the cite.
+- Disagreement with a claim: add a marked statement and a source note. Do not delete the existing claim. [CONTRIBUTING.md](CONTRIBUTING.md#disagreement-add-do-not-delete).
 
 ## Asking the docs
 
