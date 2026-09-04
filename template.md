@@ -6,7 +6,7 @@ Do not fill this file. Do not copy a finished writeup back into it. Destination 
 
 One not-medical-advice paragraph per document, then stop:
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 Every asserting sentence starts with an evidence mark. Titles, headers, and bare citations do not.
 
@@ -23,7 +23,7 @@ Topics use the same sections as hallmarks. Title a hallmark `# The Hallmarks of 
 **Evidence cutoff:** <Month D, YYYY>
 **Last updated:** <Month D, YYYY>
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 ## Contents
 
@@ -99,7 +99,7 @@ Title `# Compound: <Name>`. CAS is a first-class field. Rules: [compounds/README
 **Evidence cutoff:** <Month D, YYYY>
 **Last updated:** <Month D, YYYY>
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 ## Contents
 

@@ -1,5 +1,6 @@
 tmp/
 .rag/
+.cursor/hooks/state/
 mcp/docs-rag/.venv/
 mcp/docs-rag/.pytest_cache/
 __pycache__/

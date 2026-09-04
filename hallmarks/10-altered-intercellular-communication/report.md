@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 3, 2026  
 **Last updated:** September 3, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is a milieu-reset fad: your cells have stopped talking; buy young-donor plasma (Ambrosia/Ivy $8k–$12k), cash-pay therapeutic plasma exchange (~$10k/session at Ways2Well-class clinics), an “exosome” IV, a GDF11 / klotho / oxytocin / GnRH peptide vial, or Generation Lab’s undisclosed “1 Generation” two-drug TPE mimic. Nearby true facts — cells do signal, López-Otín listed the hallmark, parabiosis and dilution move mouse readouts, SASP exists, hormones change with age, Chen-class young-plasma sEVs extend mouse life, Fuentealba-class TPE moves clocks — get laundered into that product.
 

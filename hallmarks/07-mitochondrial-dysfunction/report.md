@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 2, 2026  
 **Last updated:** September 3, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is a consumer “dying batteries / ROS spiral / mito-renewal stack” fad: Timeline Mitopure 500–1000 mg “directly activates mitophagy”; Peach IV / Elysium / DoNotAge / AgelessRx NAD restores energy; MitoQ 10–20 mg quenches mito ROS; CoQ10/ubiquinol is the default mito pill; gray-market MOTS-c 5–10 mg SubQ is exercise-in-a-syringe; Troscriptions methylene blue 4–16 mg; Forzinity/elamipretide’s 2025 Barth label is spoken as if aging now has an FDA mito drug; TruHealth / Mosaic OAT / mescreen are the score you titrate against; Mitrix Right-to-Try clinics sell organelle replacement. Nearby true facts — López-Otín listing, Polg mutator progeria, SN-neuron mtDNA deletions, UA muscle/immune RCTs, Martens blood-NAD, Rossman FMD, Reynolds endogenous MOTS-c — get laundered into that SKU.
 

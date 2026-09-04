@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 2, 2026  
 **Last updated:** September 3, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is a CR-mimetic / weekly-rapamycin / metformin-for-the-healthy / NAD-sirtuin product fad: AgelessRx titrates sirolimus to 6 mg/week plus metformin 500 mg and NAD nasal; Healthspan starts at 3 mg and titrates to 5–8 mg weekly ($64/mo); HealthRX lists 1–6 or 3–10 mg and treats grapefruit as contraindicated while Rapamycin News treats it as a booster; TAME is spoken as if metformin already proved aging-as-indication; Bannister-class headlines say diabetics on metformin outlive non-diabetics; Sinclair-ecosystem resveratrol and Elysium/DoNotAge NAD bottles are sold as sirtuin activation; berberine is sold as AMPK Charge; 16:8 and ProLon are sold as the fasting switch. Nearby true facts — Kenyon IIS genetics, NIA ITP rapamycin, CALERIE risk-factor moves, Mannick Phase 2 vaccine titers, indicated GLP-1/SGLT2 outcomes — get laundered into that SKU.
 

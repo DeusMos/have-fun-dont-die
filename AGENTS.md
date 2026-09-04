@@ -6,17 +6,17 @@ This file is the operating brief for anyone — human or model — writing in th
 
 Collect and share realistic, non-biased information on aging biology, longevity tactics, and what adventurous people are actually trying. The interesting work is the speculative edge: ideas that do not yet have full scientific backing, because the institutional research apparatus is glacially conservative and will not go first.
 
-We document. We do not recommend for or against. The reader is not a child; they decide.
+We document. We do not recommend for or against — except ☠︎︎. When it is established that something hurts people in a real way, say stay away. That is not a lifestyle ladder and not a liability cloak. Everything else: the reader decides.
 
-Front-door framing (agentic workflow, any topic welcome): [README.md](README.md).
+Front-door framing (agentic workflow, any topic welcome): [README.md](README.md). Kitchen tour (how agents are spawned, how context is built): [HOW_DOES_THIS_THING_WORK.md](HOW_DOES_THIS_THING_WORK.md).
 
 ## Not medical advice
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves. Say that once, in its own paragraph, so it can be highlighted. Then stop. Repeating a liability cloak in every section is preaching, and it gets the whole document ignored.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details. Say that once, in its own paragraph, so it can be highlighted. Then stop. Repeating a liability cloak in every section is preaching, and it gets the whole document ignored. The longer front-door version lives in [README.md](README.md).
 
 ## Who this is for
 
-Extremely adventurous biohackers. Assume a technical reader. If a paragraph would make that reader roll their eyes, cut it. If the writeup is overly cautious, they will dismiss the repo and do the thing blind — which is worse than giving them the actual evidence, including the ugly parts.
+Anyone who wants the details. Extremely adventurous biohackers are the original audience; they are not the only one. Write for a technical reader. If a paragraph would make that reader roll their eyes, cut it. If the writeup is overly cautious, they will dismiss the repo and do the thing blind — which is worse than giving them the actual evidence, including the ugly parts.
 
 ## Voice
 
@@ -33,7 +33,7 @@ Extremely adventurous biohackers. Assume a technical reader. If a paragraph woul
 3. Mark how solid it is with the emoji at the start of the statement.
 4. Include speculative ideas. Omitting them because they are unproven is a failure of purpose.
 5. Include nulls, harms, and “this does not make sense.” Hiding those is bias.
-6. Do not tell the reader to do it or not do it. Report the claim, the source, the effect size, the population, and the holes.
+6. Do not tell the reader to do it or not do it — except ☠︎︎. Report the claim, the source, the effect size, the population, and the holes. If the mark is ☠︎︎, add the stay-away.
 
 ## Evidence marks
 
@@ -48,7 +48,7 @@ Every statement that asserts something starts with one of these. Titles, section
 | 🤔 | Guys on the internet said it, it makes sense, and it is not actively known to be false. | Forums, clinics, newsletters, podcasts, self-experiments, protocols-in-the-wild. Mechanistically coherent. Cite the thread, clinic page, or writeup. |
 | 🤼 | Amateur / biohacker fight. | Forum posts, Discord, blogs, clinic marketing — not research papers. Practitioners disagree. Cite the threads. |
 | ⛔ | Suspect. Does not make sense. | The claim is circulating but is biologically implausible, internally inconsistent, or already contradicted. Cite the claim *and* why it fails. |
-| ☠︎︎ | Sure, meaningful harm. | Established that this hurts people in a real way. Not a hypothetical. Not “may cause cancer” labeling. Bleach-for-COVID energy. |
+| ☠︎︎ | Sure, meaningful harm. | Established that this hurts people in a real way. Not a hypothetical. Not “may cause cancer” labeling. Bleach-for-COVID energy. This is the only time we give advice: stay away. |
 | 🐉 | Here be dragons. Wild speculation. | Forward-looking or mechanistic leaps with little or no direct evidence. Still say what the leap stands on. |
 
 ### Marking rules
@@ -59,7 +59,7 @@ Every statement that asserts something starts with one of these. Titles, section
 - If the paper is in a live fight, use 🥼 — not 📚, not 📜, not 🤼. That includes paper vs paper and preprint vs paper.
 - 🤼 is only for amateurs and biohackers arguing on forums and the like. Never for research papers.
 - Clinic marketing and “protocol” blogs are 🤔 at best, or 🤼 if the scene is split. If the mechanism is garbage, ⛔.
-- ☠︎︎ is sure, meaningful harm. Established that this hurts people in a real way. Not potential risk. Not Prop-65 “may cause cancer” theater. Do not confuse with ⛔: ⛔ is suspect / does not make sense; ☠︎︎ is we are sure it hurts. If a claim is both false and known-harmful, mark the harm with ☠︎︎; the false efficacy can sit in the same statement.
+- ☠︎︎ is sure, meaningful harm. Established that this hurts people in a real way. Not potential risk. Not Prop-65 “may cause cancer” theater. Do not confuse with ⛔: ⛔ is suspect / does not make sense; ☠︎︎ is we are sure it hurts. If a claim is both false and known-harmful, mark the harm with ☠︎︎; the false efficacy can sit in the same statement. ☠︎︎ is the only mark that carries advice: stay away. Do not hedge that into “talk to your doctor” or a four-rung action ladder.
 - “What people are doing” can be 🤔 even when efficacy is 📚-null or 🐉.
 - Do not upgrade a mark because the finding would be cool. Do not downgrade a mark because the finding is inconvenient.
 
@@ -73,7 +73,7 @@ Every statement that asserts something starts with one of these. Titles, section
 🤔 Off-label weekly sirolimus is commonly 6 mg generic, or 5–15 mg compounded after titration (Kaeberlein survey 2023; clinic protocols).
 🤼 Weekly rapamycin dose and whether to chase grapefruit-juice boosting are split on Rapamycin News and Reddit; there is no amateur consensus.
 ⛔ High-dose beta-carotene as “DNA protection” in smokers is a garbage claim; the protection framing does not survive ATBC (NEJM, 1994).
-☠︎︎ Drinking bleach to cure COVID-19: bleach is a corrosive poison; it does not treat SARS-CoV-2.
+☠︎︎ Drinking bleach to cure COVID-19: bleach is a corrosive poison; it does not treat SARS-CoV-2. Stay away.
 🐉 Transient partial reprogramming might restore repair coordination without locking in a tumor program; that is a hope, not a result.
 ```
 
@@ -94,7 +94,7 @@ The scientific community’s “wait for the perfect RCT in 2048” stance is no
 
 - Exercise. Don’t smoke. Don’t drink. Sleep more. Avoid stress. Eat vegetables. These are givens. They are not content.
 - “For a healthy early adopter, the rational position is…”
-- “Do now / consider with a clinician / avoid for now / watch closely” as a recommendation ladder.
+- “Do now / consider with a clinician / avoid for now / watch closely” as a recommendation ladder. ☠︎︎ stay-away is not that ladder.
 - “Talk to your doctor” as punctuation.
 - Dosing framed as instructions. Doses that people actually use belong here as observed practice, with a source and a mark.
 - Equity, stigma, insurance, “who deserves access,” or public-health lectures.
@@ -104,6 +104,9 @@ The scientific community’s “wait for the perfect RCT in 2048” stance is no
 
 ```
 README.md                                            GitHub front door (index, not a writeup)
+ABOUT.md                                             why this exists (not corpus)
+HOW_TO_ASK_AGENTS_QUESTIONS.MD                       Cursor / Cursor Agent CLI / Claude Code ask path; no shipped chat product
+HOW_DOES_THIS_THING_WORK.md                          kitchen tour: agents, spawn, how context is built
 hallmarks/README.md                                  hallmark catalog + section maps
 topics/README.md                                     topic catalog (non-molecule subjects)
 compounds/README.md                                  compound catalog + section maps
@@ -119,13 +122,15 @@ scripts/build-index.py                               regenerate catalog / sectio
 scripts/index-meta.yaml                              curated status, one-liners, and compound cas
 .cursor/skills/adversarial-research/                 research a hallmark, claim, rumor, compound, or new topic
 .cursor/skills/docs-rag/                             query what is already written
+.cursor/agents/                                      project Task subagents (rule-validation and the like)
+.cursor/hooks.json + .cursor/hooks/                  post-edit validation hooks; see .cursor/hooks/README.md
 mcp/docs-rag/                                        built-in RAG MCP + CLI over hallmarks/, topics/, and compounds/
 template.md                                          section skeleton only
 ./tmp/YYYY-MM-DD_topic/                              working notes, source lists, scratch
 .rag/                                                local search index (generated, not corpus)
 ```
 
-Catalogs and section maps in the READMEs are generated. Do not hand-edit the `BEGIN GENERATED` blocks; change `scripts/index-meta.yaml` or the report headings and re-run `python3 scripts/build-index.py`.
+Two indexes, not one. `python3 scripts/build-index.py` patches the catalog / section-map blocks in the READMEs. MCP `reindex` (or `mcp/docs-rag/run.sh reindex`) embeds the writeups into `.rag/` for `search_docs`. A new page that skips either is invisible on that surface. See [Indexing](#indexing). Do not hand-edit the `BEGIN GENERATED` blocks.
 
 `sources/` has one subdirectory per evidence mark: 💯 📚 📜 🥼 🤔 🤼 ⛔ 🐉 ☠︎︎. File a document in the dir that matches how the claim is marked in `report.md`. Do not invent source files. Do not rewrite report content to match the folder.
 
@@ -148,7 +153,7 @@ Catalogs and section maps in the READMEs are generated. Do not hand-edit the `BE
 
 New or rewritten hallmark work lands at `hallmarks/NN-short-name/report.md`. A named molecule, peptide, hormone, antibody, approved live-biotherapeutic, or metabolite taken as an intervention lands at `compounds/<slug>/report.md`. Other non-hallmark subjects (protocols, procedures, clocks-as-product, rumors) land at `topics/<slug>/report.md`. Same `sources/<emoji>/` tree in each. Do not drop reports on the repo root. Do not write report content into `template.md`. Use `template.md` as the section skeleton; voice is this file.
 
-Ask a question against already-written reports with MCP `docs-rag` (skill: `.cursor/skills/docs-rag/`, Claude: `.claude/skills/docs-rag/`). To research a hallmark, claim, compound, rumor, or new topic, follow `.cursor/skills/adversarial-research/SKILL.md` (Claude: `.claude/skills/adversarial-research/`). Phase 0 briefing, then validator / invalidator / domain collector in parallel, then a compiler that link-checks and either loops Phase 1 (max 3) or saves the report. Do not pick a winner to look tidy.
+Ask a question against already-written reports with MCP `docs-rag` (how: [HOW_TO_ASK_AGENTS_QUESTIONS.MD](HOW_TO_ASK_AGENTS_QUESTIONS.MD); skill: `.cursor/skills/docs-rag/`, Claude: `.claude/skills/docs-rag/`). To research a hallmark, claim, compound, rumor, or new topic, follow `.cursor/skills/adversarial-research/SKILL.md` (Claude: `.claude/skills/adversarial-research/`). Phase 0 briefing, then validator / invalidator / domain collector in parallel, then a compiler that link-checks and either loops Phase 1 (max 3) or saves the report. Do not pick a winner to look tidy.
 
 When researching: dump notes and source tables in `tmp/` first, then write the report. Do not “finish” from memory.
 
@@ -159,18 +164,61 @@ Not a research flight. If they asked you to *research* the subject, follow `.cur
 1. Pick the tree: molecule → `compounds/<slug>/`; protocol / procedure / rumor / clock-as-product → `topics/<slug>/`; hallmark rewrite → existing `hallmarks/NN-short-name/`.
 2. `bash .cursor/skills/adversarial-research/scripts/init-topic-sources.sh topics/<slug>` (or `compounds/<slug>`).
 3. Write `report.md` (voice and marks: this file; headings: `template.md`). File sources under `sources/<emoji>/` matching the mark on the claim. Do not cite `tmp/`.
-4. Add or update the row in `scripts/index-meta.yaml` (status, one_liner; compounds also `cas` / `aliases`).
-5. `python3 scripts/build-index.py` — do not hand-edit `BEGIN GENERATED` blocks.
-6. `mcp/docs-rag/run.sh reindex` (or MCP `reindex`).
+4. Add or update the sidecar row in `scripts/index-meta.yaml`. A new `topics/` or `compounds/` `report.md` without a row fails the catalog build.
+5. Run both indexes that apply: [Indexing](#indexing).
+
+## Indexing
+
+Two jobs. Catalog = front-door tables. RAG = `search_docs`. Neither watches the other.
+
+### Catalog
+
+`python3 scripts/build-index.py` rewrites the `BEGIN GENERATED` blocks in `README.md`, `hallmarks/README.md`, `topics/README.md`, and `compounds/README.md`. Curated fields live in `scripts/index-meta.yaml`. Headings and `**Last updated:**` are read from each `report.md`. Do not hand-edit the generated blocks.
+
+`topics/<slug>/report.md` or `compounds/<slug>/report.md` without a matching sidecar slug is a hard fail. Hallmark dirs are already in the sidecar; rewrite `status` / `one_liner` when the page changes.
+
+| Tree | Required sidecar fields | Optional |
+|---|---|---|
+| Hallmarks | `slug`, `name`, `status` (`rewritten` \| `legacy template` \| `no report`), `one_liner` | — |
+| Topics | `slug`, `one_liner` | — |
+| Compounds | `slug`, `one_liner`, `cas` | `aliases`, `home_hallmark` |
+
+`cas` is a registry number, a YAML list (first = primary), `pending`, `none`, or `not assigned`. Never guess a CAS. Source notes do not get a sidecar row.
+
+### RAG (`docs-rag`)
+
+MCP `reindex` or `mcp/docs-rag/run.sh reindex`. Writes `.rag/` (gitignored, local). This repo’s server is `docs-rag`. Do not use a user-level `markdown_rag` MCP — it shares one collection with other vaults.
+
+Indexed, and only these:
+
+- `hallmarks/*/report.md`, `topics/*/report.md`, `compounds/*/report.md`
+- `hallmarks/*/sources/<mark>/*.md`, `topics/*/sources/<mark>/*.md`, `compounds/*/sources/<mark>/*.md`
+
+Not indexed: `tmp/`, `template.md`, source-dir `README.md`, catalog READMEs, skills, this file. A note sitting anywhere else is invisible to `search_docs`.
+
+`search_docs` incrementally embeds changed corpus files. Still call `reindex` after a write so the next session is not waiting on a search. `force=true` / `--force` only if the index is broken. `corpus_status` or `mcp/docs-rag/run.sh status` shows stale or missing files.
+
+Needs `uv`. First production build downloads `BAAI/bge-small-en-v1.5` and embeds the corpus (~10 min on CPU). Later runs only embed what changed. `HFDD_EMBEDDER=hash` is a test double — do not use it for real search.
+
+### What to run
+
+| Change | Catalog | RAG |
+|---|---|---|
+| New topic or compound (`report.md` + sidecar) | yes | yes |
+| Hallmark rewrite (`status` / `one_liner` / `##` headings) | yes | yes |
+| Edit existing `report.md` body only | no | yes |
+| New or edited source note under `sources/<mark>/` | no | yes |
+| `index-meta.yaml` only | yes | no |
+| `tmp/` notes | neither | neither |
 
 ## Asking the docs
 
-This repo ships MCP `docs-rag` over `hallmarks/`, `topics/`, and `compounds/`.
+How to ask from Cursor, the Cursor Agent CLI, or Claude Code: [HOW_TO_ASK_AGENTS_QUESTIONS.MD](HOW_TO_ASK_AGENTS_QUESTIONS.MD). This repo ships MCP `docs-rag` over `hallmarks/`, `topics/`, and `compounds/`.
 
 - Before launching adversarial-research, call `search_docs` (or `mcp/docs-rag/run.sh search "…"`).
 - If the hits already answer the question and the user did not ask to update or fill a report, cite the files and stop.
 - If they asked to research or update, the hits are starting context. Do not re-fetch a citation that is already filed unless link-check says it is dead.
-- After saving a report or source note, `reindex`.
+- After saving a report or source note, `reindex`. Details: [Indexing](#indexing).
 - Corpus is reports and filed source notes. Not `tmp/`, not `template.md`, not READMEs.
 
 Structure from `template.md`. Voice from this file.

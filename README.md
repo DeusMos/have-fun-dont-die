@@ -8,9 +8,9 @@ Any research topic is welcome. Political and PC filler is not: no equity sermons
 
 Do not memorize it. Do not read every file — most writeups are shorthand.
 
-Ask it questions. Have it research to answer them. How: [Ask this repo](#ask-this-repo).
+Ask it questions. Have it research to answer them. How: [HOW_TO_ASK_AGENTS_QUESTIONS.MD](HOW_TO_ASK_AGENTS_QUESTIONS.MD).
 
-Sourced dump of aging biology, tactics people are actually running, and the speculative edge — ideas the institutional apparatus will not go first on. We document. We do not recommend.
+Sourced dump of aging biology, tactics people are actually running, and the speculative edge — ideas the institutional apparatus will not go first on. We document. We do not recommend — except ☠︎︎, where we say stay away.
 
 It makes mistakes. When the miss is the repo or the agent config, `/self-improve` so the same failure does not recur. Please PR improvement one at a time, provide an example of it failing and then it succeeding after, so we can share the improvements!
 
@@ -18,9 +18,35 @@ Use the most capable model you can for **analysis**. Cheap agents work for **scr
 
 LLMs do not think. They follow directions. The thinking is yours.
 
+## About the author & why I made this.
+
+I always suspected we could be a lot further toward agelessness if that were actually the assignment. It is not. Institutional science would rather do nothing than be wrong in public. They will get there. My people are on a timer.
+
+I do not treat “natural causes” as an answer. It is a filing category for machinery that failed in named ways, after which everyone writes a review article and goes to lunch. I wanted the other ending. Not a wellness brand. Not a graceful decline. The people I love, still here, still sharp.
+
+I went to university for molecular biology to eliminate tooth decay. That sentence is already a personality test. Cavities were the tutorial: one tissue, one ecology, a rot you can actually corner. I intended to keep going. Then I stayed for a self-imposed fifth year of a triple bachelor’s in biology, botany, and chemistry — cringe, better than a tattoo, worse than a plan. Three stacks. One motive. Smart people do dumb things. Get over it.
+
+School found out why I wanted all three. I was trying to stack enough mechanism to make my loved ones immortal. They were not charmed. There is a particular silence that arrives when you say the quiet part to people whose job is to keep it quiet. How dare I treat the course catalog like a spellbook. Meetings were had. Concern was expressed. I was invited to want a smaller, more employable thing.
+
+So I dropped out and switched to software design. Same problem, different compiler. The wet lab wanted permission and a ten-year aims page. I wanted an apparatus that works at night.
+
+Then a beautiful woman knocked on my dorm room door. I fell in love before I had a protocol for it. The ordinary campaign started going suspiciously well. 😉 👶👶👶
+
+The timer got a number when my mom died at 60 of God knows what. Not a named disease. Not a paper you can cite. Just gone. Sixty is not a finished run. I need a lot more clock than that. The papers came back off the shelf.
+
+I herd agentic swarms for a living now. Of course I built one for this. Automate the reading. Automate the sourcing. Keep the thinking. I mean the motto: laziness is nothing but the relentless pursuit of efficiency.
+
+This is the briefing I am leaving on the table. Sourced notes, evidence marks, agents you can point at the literature the journals will get to in 2048. For people who want that knowledge and do not already know how to stand up the apparatus.
+
+
+
 ## Not medical advice
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice, a protocol, or a clinic. It is a sourced dump of what is known, what is guessed, and what people are actually running — for anyone who wants the details.
+
+You do not have to be mid-experiment to read it. Self-experimenters are welcome. So is anyone who wants the primary papers, the nulls, the harms, and the forum protocols in one place, marked for how thin they are.
+
+We document. We do not recommend — except ☠︎︎. A dose in these files is observed practice, not an instruction. You decide. If the mark is established harm, stay away.
 
 ## How to read a mark
 
@@ -35,53 +61,15 @@ Every assertion in a rewritten report starts with one of these. Titles, headers,
 | 🤔 | Forum / clinic / newsletter practice; mechanistically coherent; not known false. | Forums, clinics, newsletters, podcasts, self-experiments. |
 | 🤼 | Amateur / biohacker fight. | Forum posts, Discord, blogs, clinic marketing — not research papers. |
 | ⛔ | Suspect. Does not make sense. | Circulating but implausible, inconsistent, or already contradicted. |
-| ☠︎︎ | Sure, meaningful harm. | Established that this hurts people in a real way. |
+| ☠︎︎ | Sure, meaningful harm. | Established that this hurts people in a real way. This is the only time we give advice "STAY THE FUCK AWAY"|
 | 🐉 | Here be dragons. Wild speculation. | Forward-looking or mechanistic leaps with little or no direct evidence. |
-
-## Ask this repo
-
-Hits are what is already written. Not new research. Corpus is `hallmarks/`, `topics/`, and `compounds/` reports plus filed source notes. Not `tmp/`, not `template.md`. Package notes: [`mcp/docs-rag/README.md`](mcp/docs-rag/README.md). House rules: [`AGENTS.md`](AGENTS.md).
-
-Needs `uv` and Python 3.11+. The index is local (`.rag/`, gitignored). First build downloads `BAAI/bge-small-en-v1.5` and embeds the corpus (~10 min on CPU). Later searches only embed what changed. Do not use a user-level `markdown_rag` server — this repo’s server is `docs-rag`.
-
-Ask a real question. Keyword spam is worse than a sentence. If you want a new or rewritten report, say so; that is adversarial-research, not search.
-To add a topic or compound (tree, sources, catalog, reindex): [AGENTS.md — Adding a topic](AGENTS.md#adding-a-topic-or-compound).
-
-### CLI
-
-Works without Cursor or Claude Code.
-
-```bash
-mcp/docs-rag/run.sh reindex
-mcp/docs-rag/run.sh search "weekly rapamycin PEARL VAT"
-mcp/docs-rag/run.sh status
-```
-
-### Cursor
-
-1. Open this folder.
-2. Project [`.mcp.json`](.mcp.json) starts `docs-rag` on stdio. Reload MCP servers if the session does not list it. Ignore any other entry in that file that is not `docs-rag`.
-3. Ask in chat. The agent should call `search_docs` first (always-on rule [`.cursor/rules/20-docs-rag.mdc`](.cursor/rules/20-docs-rag.mdc); skill [`.cursor/skills/docs-rag/`](.cursor/skills/docs-rag/)).
-4. To research, update, or fill a report: [`.cursor/skills/adversarial-research/`](.cursor/skills/adversarial-research/).
-
-### Claude Code
-
-1. Open this folder.
-2. Skills are in [`.claude/skills/`](.claude/skills/) (`docs-rag`, `adversarial-research`). Same law as Cursor: [`AGENTS.md`](AGENTS.md).
-3. If the session does not already have `docs-rag`, add the project server:
-
-```bash
-claude mcp add docs-rag -- bash mcp/docs-rag/run.sh
-```
-
-Or enable the `docs-rag` entry from [`.mcp.json`](.mcp.json) and skip the rest of that file.
-4. Ask in chat. Search first, then read the cited `report.md`. Say “research” or “update the report” only when you want a write, not an answer.
 
 ## Start here
 
 Six entry paths. Not a recommendation ladder.
 
-- [Ask the repo](#ask-this-repo) — Cursor, Claude Code, or CLI
+- [How this works](HOW_DOES_THIS_THING_WORK.md) — agents, search, how context is built
+- [How to ask](HOW_TO_ASK_AGENTS_QUESTIONS.MD) — Cursor, Cursor Agent CLI, or Claude Code
 - [By hallmark](#hallmarks-catalog)
 - [By compound](#compounds-catalog)
 - [By tactic people are running](#by-tactic-assay-and-protocol) — NAD, rapamycin, senolytics, CHIP panels, clocks, fucoidan, plasma/HBOT, antioxidants
@@ -190,6 +178,9 @@ Observed practice, not advice. Rows are “this subject appears here.” No effi
 - [`scripts/build-index.py`](scripts/build-index.py) — regenerates catalog / section-map blocks from reports + [`scripts/index-meta.yaml`](scripts/index-meta.yaml)
 - [`mcp/docs-rag/`](mcp/docs-rag/) — local search MCP + CLI over the writeups
 - `tmp/` — scratch; gitignored; not indexed
+- [`HOW_DOES_THIS_THING_WORK.md`](HOW_DOES_THIS_THING_WORK.md) — kitchen tour: agents, spawn, context
+- [`HOW_TO_ASK_AGENTS_QUESTIONS.MD`](HOW_TO_ASK_AGENTS_QUESTIONS.MD) — Cursor / Cursor Agent CLI / Claude Code ask path
+- [`ABOUT.md`](ABOUT.md) — why this exists
 - [`AGENTS.md`](AGENTS.md) — voice, marks, layout; [adding a topic or compound](AGENTS.md#adding-a-topic-or-compound)
 - [`LICENSE`](LICENSE) — MIT
 - [`template.md`](template.md) — section skeleton only

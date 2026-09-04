@@ -43,6 +43,6 @@ mcp/docs-rag/run.sh status
 - Empty/thin hits on the actual question → say so. Then either read the obvious `report.md` or start adversarial-research if they asked to research/update.
 - How to add a topic / how this repo works is not corpus (READMEs and skills are not indexed). Point at `topics/README.md`, `.cursor/skills/adversarial-research/` (`init-topic-sources.sh` + `scripts/index-meta.yaml` + `build-index.py`), and `AGENTS.md`. Do not start a research flight.
 - Do not treat `tmp/` as corpus.
-- After a save, `reindex`.
+- After a save, `reindex`. Catalog vs RAG, corpus paths, and when to skip `build-index.py`: [AGENTS.md — Indexing](../../../AGENTS.md#indexing).
 
 Package notes: [mcp/docs-rag/README.md](../../../mcp/docs-rag/README.md).

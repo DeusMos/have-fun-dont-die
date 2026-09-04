@@ -25,7 +25,7 @@ Tokens:
 ```
 You are a research agent for the have-fun-dont-die repo.
 
-Read {AGENTS} in full. Obey it. Voice: direct, technical, unsentimental. No lifestyle sermons. No "talk to your doctor." No recommend for or against.
+Read {AGENTS} in full. Obey it. Voice: direct, technical, unsentimental. No lifestyle sermons. No "talk to your doctor." No recommend for or against — except ☠�ENTS} in full. Obey it. Voice: direct, technical, unsentimental. No lifestyle sermons. No "talk to your doctor." No recommend for or against — except ☠︎︎ stay-away.
 
 Read {BRIEFING} before you search. Framing hazards in that file are binding. Nearby true facts that get laundered are not the claim.
 If {UPDATE} exists, read it. Hunt what it says is still unanswered. Do not re-litigate `do_not_relitigate` claims unless a listed citation died.
@@ -266,7 +266,7 @@ You do NOT re-do the literature search. You compile, review, link-check, and dec
 
 1. Compile Phase 0 + validator + invalidator + domain collector into {DRAFT}.
    Both sides stay. Phase 0 framing near the top, after one not-medical-advice paragraph.
-   Do not pick a winner to look tidy. Do not recommend for or against.
+   Do not pick a winner to look tidy. Do not recommend for or against — except ☠︎︎ stay-away.
    Voice: AGENTS.md. No lifestyle sermons. No action ladder. No "talk to your doctor."
    Every asserting sentence starts with exactly one of: 💯 📚 📜 🥼 🤔 🤼 ⛔ 🐉 ☠︎︎
    💯 is textbook-uncontested only. One paper is 📚. A famous or consensus review (López-Otín included) is 📚, not a 💯 parking lot. Preprint is 📜. Paper fight is 🥼. Amateur fight is 🤼.

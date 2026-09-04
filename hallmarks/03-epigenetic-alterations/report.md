@@ -4,7 +4,7 @@
 **Evidence cutoff:** September 2, 2026  
 **Last updated:** September 3, 2026
 
-This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
+This repository is not medical advice. It is a sourced information dump for anyone who wants the details.
 
 The slogan in the wild is a consumer-clock and “reinstall the software” fad: a blood, saliva, or cheek number is your real age; moving it younger is age reversal; Sinclair’s information theory plus mouse OSK plus a first human eye-dose is sold as the reset. Nearby true facts — age-associated methylation, cohort mortality prediction, modest trial clock moves, mouse OSK function — get laundered into that product.
 
