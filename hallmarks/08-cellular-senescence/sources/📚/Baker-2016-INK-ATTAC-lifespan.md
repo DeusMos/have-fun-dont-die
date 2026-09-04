@@ -1,0 +1,6 @@
+# Baker et al., 2016. Naturally occurring p16Ink4a-positive cells shorten healthy lifespan. Nature.
+https://doi.org/10.1038/nature16932 PMID 26840489 PMC4845101
+Used for: 📚 Periodic AP20187 ablation of naturally accumulating p16Ink4a-positive cells from 12 months of age extended median lifespan 24% (C57BL/6, 5% fat) and 27% (mixed background, 9% fat) for both sexes combined, and 17–35% when sexes were split; maximum lifespan rose only in mixed-background sexes combined (p=0.0295); AP on non-transgenic mice did not extend life; tumor latency increased without changing tumor spectrum.
+Mark: 📚
+N / effect / population / endpoint / duration: Two sequential longevity cohorts, both sexes; AP twice weekly from 12 mo until death (dose 0.2 then 2.0 μg/g mixed cohort; 2.0 μg/g C57BL/6). +24 to +27% median. Wild-type-background INK-ATTAC mice. Median/max lifespan, glomerulosclerosis, BUN, cardiac stress tolerance, fat, cataracts, open-field. 12 mo→death; 18-month healthspan n typically 4/group. Exact n/days per KM arm live on Fig. 2, not restated as a single integer in text. C57BL/6 vehicle males were short of unmanipulated lab norms (injection-stress caveat).
+Conflict if any: Mayo academic; authors note ATTAC kills p16-high cells, not a pure senescent census.

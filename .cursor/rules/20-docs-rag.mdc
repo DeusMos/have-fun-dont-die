@@ -1,0 +1,20 @@
+---
+description: Search this repo's writeups via docs-rag before answering or re-researching.
+alwaysApply: true
+---
+
+# Docs RAG
+
+This repo ships an MCP named `docs-rag` over `hallmarks/`, `topics/`, and `compounds/`.
+
+Before answering a question about aging biology, a hallmark, a compound, a protocol, clinic practice, or "what does this repo say":
+
+1. Call `search_docs` (or `mcp/docs-rag/run.sh search "…"` if the MCP is not loaded).
+2. Read the cited `report.md` / source note when the hits are enough.
+3. Do not launch adversarial-research unless the user asked to research, update, or fill a report, or the hits are empty/thin for the actual question.
+
+After writing or saving files under `hallmarks/`, `topics/`, or `compounds/`, call `reindex`.
+
+Do not index or cite `tmp/` as corpus. Hits are what is already written, not a license to invent citations.
+
+Do not use the user-level `markdown_rag` MCP for this repo. That server shares one collection with other vaults. This repo’s server is `docs-rag`.

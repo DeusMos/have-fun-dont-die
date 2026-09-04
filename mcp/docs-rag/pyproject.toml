@@ -1,0 +1,27 @@
+[project]
+name = "hfdd-docs-rag"
+version = "0.1.0"
+description = "Built-in RAG MCP over have-fun-dont-die hallmarks/ and topics/"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=2.10.2",
+    "fastembed>=0.6.0",
+    "numpy>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+hfdd-docs-rag = "hfdd_docs_rag.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["hfdd_docs_rag"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

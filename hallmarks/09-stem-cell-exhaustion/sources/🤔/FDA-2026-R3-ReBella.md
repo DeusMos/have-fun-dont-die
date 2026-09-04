@@ -1,0 +1,6 @@
+# FDA CBER, 2026. Warning Letter — R3 Medical Companies (ReBellaWJ, ReBellaXO, ReBellaXOL, ReBellaCB).
+https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/r3-medical-companies-726330-08142026
+Used for: 🤔 R3 / Bello Bio / Regen Suppliers still manufacture and distribute WJ, exosome, lyophilized-exosome, and cord-blood allografts for anti-aging / neuro / COPD / joint / ED claims as of the Aug 2026 letter.
+Mark: 🤔
+N / effect / population / endpoint / duration: Inspection 17 Nov–16 Dec 2025 at 10045 E. Dynamite Blvd., Scottsdale, AZ; letter 14 Aug 2026, MARCS-CMS 726330, to David L. Greene, M.D. Products: ReBellaWJ (WJ), ReBellaXO/XOL (WJ-MSC exosome / lyophilized), ReBellaCB (cord blood). FDA quotes r3stemcell.com, r3antiaging.com, regensuppliers.com, YouTube/TikTok/Instagram. Quoted claims: neurologic, heart/kidney/lung failure, COPD, autism, CP, diabetes, Lyme, SI joint, ED, joint/soft tissue, hair/facial/sexual rejuvenation; exosomes for Alzheimer’s/Parkinson’s/post-stroke. Staff video 5 Mar 2026: “30 million in each vial” ReBellaCB. Unapproved new drugs, unlicensed biologics, non-homologous HCT/Ps, adulterated (unvalidated aseptic process; no identity/strength/quality/purity validation).
+Conflict if any: R3 / Regen / Bello sell the products FDA is citing.

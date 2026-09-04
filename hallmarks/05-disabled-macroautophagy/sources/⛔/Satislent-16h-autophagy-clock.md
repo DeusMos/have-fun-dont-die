@@ -1,0 +1,6 @@
+# Satislent S.L., n.d. Autophagy: what it is, how to activate it and how many hours of fasting you need. Company blog.
+https://www.satislent.com/en/blog/longevity/autophagy-what-it-is-how-to-activate-it-and-how-many-hours-of-fasting-you-need
+Used for: A universal human autophagy on-switch at hour 16 is biologically implausible: no flux-controlled human biopsy shows a whole-body kick-on at 16 h, and the 12–24 h human muscle data are null or down. This page states the circulating clock and falsely cites “Human muscle biopsy studies” for 12–16 h elevations.
+Mark: ⛔
+N / effect / population / endpoint / duration: Marketing copy, not a study. Claims 12–16 h: “Autophagy markers begin to rise in a measurable way. Human muscle biopsy studies confirm significant elevations of autophagic markers in this range.” Also: “a 16:8 intermittent fasting protocol is sufficient to activate autophagy regularly.” Satislent sells meal-replacement / nutrition products. The cited human-biopsy sentence does not survive Chaudhary 2022 (PMID 35660501), Dethlefsen 2018, or Vendelbo 2014. Parallel clock copy: EasyFasting “16:8… likely activates early-stage autophagy” (https://easyfasting.net/blog/autophagy-and-fasting).
+Conflict if any: Satislent sells food products adjacent to the fasting protocol they describe.

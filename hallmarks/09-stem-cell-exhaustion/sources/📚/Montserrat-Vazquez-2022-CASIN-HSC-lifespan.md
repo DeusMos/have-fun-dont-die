@@ -1,0 +1,6 @@
+# Montserrat-Vazquez et al., 2022. Transplanting rejuvenated blood stem cells extends lifespan of aged immunocompromised mice. npj Regenerative Medicine.
+https://doi.org/10.1038/s41536-022-00275-y PMID 36550150
+Used for: 📚 Four-day systemic CASIN restores aged mouse MuSC regeneration and HSC serial-transplant function; transplanting those HSCs into aged NBSGW mice extends median lifespan +24.8% and maximum +34.0% — stem-function restore with an organismal endpoint.
+Mark: 📚
+N / effect / population / endpoint / duration: C57BL/6 ≥80 weeks; CASIN 25 mg/kg i.p. × 4 days. Fitness: young n=20, aged/CASIN n=17/15; endurance >2-fold and grip 1.5-fold vs aged. Notexin + CASIN: Pax7+/MyoD+ MuSCs and flow MuSCs up (n=4); rotarod improved (young n=9, aged n=6, CASIN n=8). Serial competitive Tx: 200 HSCs + 3×10^5 competitors; primary/secondary PB: young n=5/6, aged n=9/12, CASIN n=7/12; better reconstitution and B-cell output. Lifespan Tx: 500 HSCs into aged NBSGW, no irradiation; aged n=10, CASIN n=16, untransplanted n=19; equal engraftment (aged n=7, CASIN n=9 at 4 mo). Median +24.8%, max +34.0% vs aged-HSC recipients (Mantel-Cox).
+Conflict if any: Academic (Florian / IDIBELL / Ulm). CASIN supplied by Yi Zheng.

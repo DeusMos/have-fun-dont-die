@@ -1,0 +1,6 @@
+# Xu et al., 2018. Senolytics improve physical function and increase lifespan in old age. Nature Medicine.
+https://doi.org/10.1038/s41591-018-0092-9 PMID 29988130 PMC6082705
+Used for: 📚 Transplanting 1×10^6 radiation-induced senescent preadipocytes into 6-month-old mice impaired walking speed, hanging endurance, and grip within 1 month; 0.5×10^6 senescent cells into 17-month-old mice raised 1-year mortality hazard 5.2-fold (p=0.006). Intermittent oral D+Q starting at 24–27 months raised median post-treatment lifespan 36% and cut mortality hazard to 64.9% (p=0.01). D+Q improved function in 20-month-old non-transplanted mice treated biweekly for 4 months.
+Mark: 📚
+N / effect / population / endpoint / duration: Young transplant function n=6–8/group; 17-mo survival n=23 SEN vs 24 CON vs 33 non-transplanted. Late-life D+Q n=71 (40 M, 31 F) vs vehicle n=76 (41 M, 35 F); D 5 mg/kg + Q 50 mg/kg, 3 days every 2 weeks from 24–27 mo to death. 20-mo function n=20 D+Q vs 13 vehicle males, 4 months. C57BL/6. RotaRod, hang, grip, survival. Human omental explants from obese donors also showed D+Q reducing TAF+/p16-high/SA-β-gal+ cells and SASP (n=5–8).
+Conflict if any: Mayo / Kirkland–Tchkonia senolytic discovery group; NIH and foundations.

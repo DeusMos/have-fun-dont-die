@@ -1,0 +1,196 @@
+# Curated catalog fields. Regenerating indexes does not invent these.
+# status: rewritten
+# one_liner: judgment.
+
+adjacency: >
+  From 01: 02 telomeres (uncapped ends as persistent DDR / TIFs), 03 clocks/LINE1
+  (a clock move is not lesion clearance), 06 NAD/mTOR, 07 mtDNA, 08 DDR/senescence,
+  09 CHIP/HSC, 11 cGAS/CHIP IL-1. From 03: 01 clock ≠ lesion, 02 HBOT is TL unless
+  a DNAm paper appears, 06 metformin/rapamycin as clock movers, 08/09 reprogramming
+  identity risk, 11 GrimAge protein proxies / L1-IFN. From 04: 05 autophagy/spermidine
+  (LC3 flux is not folding quality), 06 mTOR/translation/fasting, 03/Oh organ-age
+  (abundance ≠ solubility), 08 senescent HSR (Sabath), 07 mtUPR, 13 ECM long-lived
+  proteins, 11 aggregate/ER-stress innate immunity. From 05: 04 proteostasis
+  split sibling, 06 rapamycin/TRE, 07 urolithin mitophagy, 03 RTR242 not-OSK,
+  08 Cassidy senescence markers, 11 inflammasome/cargo innate signaling.
+  From 06: 01 NAD/SIRT6, 03 CALERIE clocks/TRIIM/AgelessRx, 04 translation,
+  05 autophagy-initiation/rapa-as-cleanup, 07 mito/NAD, 08 mTOR-SASP, 09 stem-cell mTOR.
+  From 07: 01 mtDNA/Polg, 03 metabolite-chromatin, 04 mtUPR, 05 urolithin
+  mitophagy, 06 NAD/metformin-vs-training, 08 mito-senescence, 11 mtDNA cGAS.
+  From 08: 01 DDR/arrest, 02 TIF/Hachmo T-helper %, 03 L1-IFN SASP/clocks,
+  04 senescent HSR, 05 Cassidy markers, 06 mTOR-SASP senomorphic, 07 MiDAS,
+  09 niche/HSC senolysis, 11 SASP inflammaging.
+  From 09: 01 CHIP/HSC clones, 02 TBD/POT1 CHIP, 03 OSKM identity, 06 mTOR/HSC,
+  08 senescent HSC/MuSC, 11 CHIP IL-1.
+  From 10: 08 SASP-as-signal not senolysis, 09 milieu/parabiosis/dilution not
+  refill IVs, 06 klotho-IIS border, 01 CHIP-as-clone not here, 11 inflammaging
+  leftover-from-2013 only, 12 microbial metabolites, 13 ECM parked-here-by-LO,
+  14 neuroendocrine threat circuitry.
+  From 11: 01 cGAS/CHIP IL-1, 08 SASP-as-cell-state, 10 2013 leftover, 12
+  barrier/LPS handshake (11 owns cytokines).   From 12: 11 Thevaranjan
+  barrier-to-TNF (11 owns CANTOS), 10 metabolites-as-signals, 06 diet/mTOR
+  parked, 05/07 urolithin parked, 14 isolation→microbiome emerging.
+  From 14: 11 CTRA/HPA tone not CANTOS, 10 Elabd OT-as-muscle not isolation,
+  12 isolation→microbiome emerging only, 03 clocks not social-age, 02 LTL
+  not an isolation assay.
+
+hallmarks:
+  - slug: 01-genomic-instability
+    name: Genomic instability
+    status: rewritten
+    one_liner: "DNA lesions, misrepair, chromosomal/mtDNA change, and selected clones accumulate with age; whether ordinary SNV burden is the master clock is a live paper fight."
+  - slug: 02-telomere-attrition
+    name: Telomere attrition
+    status: rewritten
+    one_liner: "Telomeres shorten with age and can cause tissue failure at Mendelian extremes; ordinary LTL as a master clock, and lengthening as geroprotection, is a live fight."
+  - slug: 03-epigenetic-alterations
+    name: Epigenetic alterations
+    status: rewritten
+    one_liner: "Methylation and chromatin drift with age and later clocks predict death; whether epigenetic information loss is the driver, and clock moves as rejuvenation, is a live fight."
+  - slug: 04-loss-of-proteostasis
+    name: Loss of proteostasis
+    status: rewritten
+    one_liner: "Chaperones, UPS, and solubility fail with age and named proteinopathies are causal; a general cleanup score-and-restore product is not a completed human result."
+  - slug: 05-disabled-macroautophagy
+    name: Disabled macroautophagy
+    status: rewritten
+    one_liner: "Macroautophagy is a causal lifespan knob in mice; ordinary human flux is not uniformly down, and the 16-hour / spermidine / Mitopure cleanup product is not a completed restoration result."
+  - slug: 06-deregulated-nutrient-sensing
+    name: Deregulated nutrient sensing
+    status: rewritten
+    one_liner: "IIS/mTOR/AMPK/sirtuin tone is a causal lifespan knob in animals; weekly rapamycin / metformin-for-the-healthy / NAD stacks are not a completed human restoration result."
+  - slug: 07-mitochondrial-dysfunction
+    name: Mitochondrial dysfunction
+    status: rewritten
+    one_liner: "Capacity, clonal mtDNA deletions, and quality control fail with age in tissue-specific ways; Mitopure/NAD/MitoQ/Forzinity/MOTS-c are not a completed human restore result."
+  - slug: 08-cellular-senescence
+    name: Cellular senescence
+    status: rewritten
+    one_liner: "p16-high/senescent populations can be causal in mice; human senolytics are n=5–14 pilots plus OA/ITP nulls; Qualia/D+Q/fisetin SKUs are not a completed restore result."
+  - slug: 09-stem-cell-exhaustion
+    name: Stem-cell exhaustion
+    status: rewritten
+    one_liner: "Useful regenerative capacity falls with age in tissue-specific ways (HSC function/clonality, MuSC, ISC/HFSC); refill IVs, STEMREGEN, and young plasma are not a completed restore result."
+  - slug: 10-altered-intercellular-communication
+    name: Altered intercellular communication
+    status: rewritten
+    one_liner: "Endocrine/neural/EV/SASP-as-signal and circulating factors change with age; young plasma, TPE, and exosome IVs are not a completed human restore result."
+  - slug: 11-chronic-inflammation
+    name: Chronic inflammation
+    status: rewritten
+    one_liner: "Sterile low-grade inflammatory tone rises with age and CANTOS moved MACE; hsCRP dashboards, curcumin/SPM stacks, and off-label colchicine/canakinumab/JAKi are not a completed human restore result."
+  - slug: 12-dysbiosis
+    name: Dysbiosis
+    status: rewritten
+    one_liner: "Gut communities and functions change with age and mouse transfers can move permeability and progeria lifespan; Viome/Akkermansia/FMT stacks are not a completed human restore result."
+  - slug: 13-extracellular-matrix-changes
+    name: Extracellular matrix changes
+    status: rewritten
+    one_liner: "Long-lived collagen accumulates AGEs and stiffness predicts events; collagen/GHK-Cu/AGE-Reader/alagebrium stacks are not a completed human restore result."
+  - slug: 14-psychosocial-isolation
+    name: Psychosocial isolation
+    status: rewritten
+    one_liner: "Isolation and loneliness associate with death, CVD, and dementia; residual isolation vs loneliness-NS is a live fight; UCLA-as-CRP, Oxipops, and AI companions are not a completed restore result."
+
+topics: []
+
+# cas: registry number, YAML list (first = primary), pending, or none.
+# aliases / home_hallmark are optional.
+compounds:
+  - slug: rapamycin
+    one_liner: "ITP lifespan hit in mice; PEARL VAT null and RAPA-EX-01 chair-stand miss at weekly geroscience doses; transplant daily sirolimus has boxed infection/pneumonitis."
+    cas: 53123-88-9
+    aliases: [sirolimus, Rapamune]
+    home_hallmark: 06-deregulated-nutrient-sensing
+  - slug: everolimus
+    one_liner: "Mannick Phase 2 vaccine-titer and infection-surrogate signals; not a lifespan or disability-free-survival result."
+    cas: 159351-69-6
+    aliases: [RAD001]
+    home_hallmark: 06-deregulated-nutrient-sensing
+  - slug: rtb101
+    one_liner: "Phase 3 winter respiratory-illness null in adults ≥65; the indication was dropped."
+    cas: [915019-65-7, 1028385-32-1]
+    home_hallmark: 06-deregulated-nutrient-sensing
+  - slug: metformin
+    one_liner: "DPP indicated diabetes delay; ITP lifespan null; TAME not launched; Konopka vs Pilmark is a live exercise-adaptation fight."
+    cas: [1115-70-4, 657-24-9]
+    home_hallmark: 06-deregulated-nutrient-sensing
+  - slug: nicotinamide-riboside
+    one_liner: "Raises blood NAD; ITP lifespan null; Dollerup clamp and muscle-respiration nulls; Elysium Basis is the storefront pair with pterostilbene."
+    cas: 1341-23-7
+    aliases: [NR]
+    home_hallmark: 06-deregulated-nutrient-sensing
+  - slug: nicotinamide-mononucleotide
+    one_liner: "Yoshino 2021 muscle insulin-sensitivity move in prediabetes; DoNotAge 500–1000 mg storefront; not sirtuin restoration."
+    cas: 1094-61-7
+    aliases: [NMN]
+    home_hallmark: 06-deregulated-nutrient-sensing
+  - slug: nad
+    one_liner: "Peach IV 100–1000 mg and AgelessRx nasal 30 mg are practice; IV vs oral vs nasal is an amateur split; blood NAD is target engagement, not genome or mito restoration."
+    cas: 53-84-9
+    aliases: [NAD+, NAD IV, NAD nasal]
+    home_hallmark: 01-genomic-instability
+  - slug: fisetin
+    one_liner: "ITP lifespan null; unformulated oral barely appears in plasma; Qualia 1400 mg pulse vs DoNotAge 800 mg daily vs Life Extension 56 mg weekly is an amateur split."
+    cas: 528-48-3
+    aliases: [Qualia Senolytic fisetin, Bio-Fisetin]
+    home_hallmark: 08-cellular-senescence
+  - slug: dasatinib
+    one_liner: "D+Q senolytic pilots are n=5–19; continuous CML Sprycel has an established pleural-effusion/PAH harm file; DIY gray-market pulses are forum practice."
+    cas: [302962-49-8, 863127-77-9]
+    aliases: [Sprycel]
+    home_hallmark: 08-cellular-senescence
+  - slug: quercetin
+    one_liner: "Paired with dasatinib in the 2015 screen and human pilots; CSF undetectable in Gonzales AD; also sold inside Qualia/Life Extension/AMPK stacks."
+    cas: 117-39-5
+    aliases: [Quercefit]
+    home_hallmark: 08-cellular-senescence
+  - slug: fucoidan
+    one_liner: "DoNotAge SIRT6Activator 800–2400 mg; Gorbunova 2025 preprint is male-mouse lifespan; NCT07500649 GrimAge primary is not mutation burden."
+    cas: none
+    aliases: [SIRT6Activator]
+    home_hallmark: 01-genomic-instability
+  - slug: spermidine
+    one_liner: "Autophagy-dependent lifespan in models; SmartAge 0.9 mg memory primary null; 1–2 mg wheat-germ vs 8 mg synthetic is an amateur split."
+    cas: 124-20-9
+    aliases: [spermidineLIFE, Primeadine]
+    home_hallmark: 05-disabled-macroautophagy
+  - slug: urolithin-a
+    one_liner: "Parkin-axis muscle signature at 500–1000 mg; missed Singh peak power and Liu 6MWT; mitophagy cargo, not general macroautophagy restoration."
+    cas: 1143-70-0
+    aliases: [Mitopure, UA]
+    home_hallmark: 07-mitochondrial-dysfunction
+  - slug: resveratrol
+    one_liner: "ITP lifespan null; Poulsen/Kjær human metabolic nulls; SIRT1-activator fight; SRT501 myeloma nephrotoxicity is established at that exposure."
+    cas: 501-36-0
+    aliases: [trans-resveratrol, SRT501]
+    home_hallmark: 06-deregulated-nutrient-sensing
+  - slug: berberine
+    one_liner: "Sold as AMPK / CR-mimetic (DoNotAge 500 mg, DiBerberine, AMPK Charge+); no compiled lifespan or healthy-aging RCT."
+    cas: [2086-83-1, 633-65-8]
+    aliases: [DiBerberine]
+    home_hallmark: 06-deregulated-nutrient-sensing
+  - slug: colchicine
+    one_liner: "COLCOT/LoDoCo2 moved CAD events at 0.5 mg; CLEAR SYNERGY was null; clinic inflammaging use and CYP3A4/P-gp vs sirolimus are amateur practice."
+    cas: 64-86-8
+    aliases: [LODOCO]
+    home_hallmark: 11-chronic-inflammation
+  - slug: semaglutide
+    one_liner: "SELECT cut MACE in obesity plus established CVD; relabeling that as nutrient-sensing restoration for healthy buyers is a definition swap."
+    cas: 910463-68-2
+    aliases: [Wegovy, Ozempic]
+    home_hallmark: 06-deregulated-nutrient-sensing
+  - slug: tirzepatide
+    one_liner: "Named on AgelessRx XPRIZE-finals copy next to weekly rapamycin; no healthy-person aging RCT."
+    cas: 2023788-19-2
+    aliases: [GLP-1/GIP]
+    home_hallmark: 06-deregulated-nutrient-sensing
+  - slug: oxytocin
+    one_liner: "Pitocin is obstetric injectable; compounded IN/troche is the longevity SKU; Berger trait-loneliness null; Sikich ASD social-functioning null."
+    cas: 50-56-6
+    aliases: [IN OT, Oxipops, Pitocin]
+    home_hallmark: 14-psychosocial-isolation
+  - slug: beta-carotene
+    one_liner: "ATBC and CARET raised lung cancer and death in smokers; DNA-protection framing does not survive those trials."
+    cas: 7235-40-7
+    home_hallmark: 01-genomic-instability

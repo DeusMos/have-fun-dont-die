@@ -1,0 +1,6 @@
+# Nakamura et al., 2019. Suppression of autophagic activity by Rubicon is a signature of aging. Nature Communications.
+https://doi.org/10.1038/s41467-019-08729-6 PMID 30783089
+Used for: 📚 Rubicon, a negative regulator of autophagosome–lysosome fusion, rose with age in worm, female fly, and mouse kidney/liver; knockdown extended worm and female-fly lifespan, and knockout mice had less age-associated kidney fibrosis and less brain α-synuclein accumulation.
+Mark: 📚
+N / effect / population / endpoint / duration: C. elegans rub-1 RNAi from L4: lifespan extended, abolished by concurrent bec-1 RNAi; exact percent not stated in open text; rub-1 transcript cut to ~40–50%. Drosophila whole-body dRubicon KD: slight female-only lifespan extension; neuron-specific KD extended female median and maximum lifespan (exact days not in open text). Mice: Rubicon transcript/protein higher at 20 months than 2 months in kidney and liver; systemic KO raised LC3-II and lowered p62; reduced interstitial kidney fibrosis and α-synuclein in brain. No mouse lifespan curve. 9-month calorie restriction lowered mouse liver/kidney Rubicon.
+Conflict if any: Academic. Mouse result is healthspan histology, not longevity.
