@@ -8,6 +8,10 @@ Sourced dump of aging biology, tactics people are actually running, and the spec
 
 This repository is not medical advice. It is a sourced information dump for people who already experiment on themselves.
 
+## Copyright
+
+Verbatim copyrighted expression hosted here: open a [takedown PR](CONTRIBUTING.md#copyright-takedown-pr). GitHub’s [DMCA process](CONTRIBUTING.md#github-dmca) is still available if that is not enough. Disagreeing with a finding is not a takedown — [add sources, do not delete the existing claim](CONTRIBUTING.md#disagreement-add-do-not-delete).
+
 ## How to read a mark
 
 Every assertion in a rewritten report starts with one of these. Titles, headers, and bare citations do not. Full marking rules: [AGENTS.md](AGENTS.md).
@@ -136,5 +140,6 @@ Observed practice, not advice. Rows are “this subject appears here.” No effi
 - [`scripts/build-index.py`](scripts/build-index.py) — regenerates catalog / section-map blocks from reports + [`scripts/index-meta.yaml`](scripts/index-meta.yaml)
 - `tmp/` — scratch; gitignored; not indexed
 - [`AGENTS.md`](AGENTS.md) — voice, marks, layout
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) — copyright takedown PR; disagreement adds sources, does not delete
 - [`LICENSE`](LICENSE) — MIT
 - [`template.md`](template.md) — section skeleton only; ignore its voice
