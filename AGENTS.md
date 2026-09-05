@@ -120,10 +120,11 @@ scripts/build-index.py                               regenerate catalog / sectio
 scripts/index-meta.yaml                              curated status, one-liners, and compound cas
 .cursor/skills/adversarial-research/                 research a hallmark, claim, rumor, compound, or new topic
 .cursor/skills/docs-rag/                             query what is already written
-.cursor/rules/20-docs-rag.mdc                        always-on: search first; empty/thin hits start research
+.cursor/skills/paper-hunter/                         fetch one paper (legal OA); patch related writeups
+.cursor/rules/20-docs-rag.mdc                        always-on: search first; empty/thin hits start research or paper-hunter
 .cursor/mcp.json                                     Cursor starts docs-rag
 .mcp.json                                            Claude Code starts docs-rag
-.cursor/agents/                                      project Task subagents (rule-validation and the like)
+.cursor/agents/                                      project Task subagents (paper-hunter, rule-validation)
 .cursor/hooks.json + .cursor/hooks/                  post-edit validation hooks; see .cursor/hooks/README.md
 mcp/docs-rag/                                        built-in RAG MCP + CLI over hallmarks/, topics/, and compounds/
 template.md                                          section skeleton only
@@ -155,6 +156,8 @@ Two indexes, not one. `python3 scripts/build-index.py` patches the catalog / sec
 New or rewritten hallmark work lands at `hallmarks/NN-short-name/report.md`. A named molecule, peptide, hormone, antibody, approved live-biotherapeutic, or metabolite taken as an intervention lands at `compounds/<slug>/report.md`. Other non-hallmark subjects (protocols, procedures, clocks-as-product, rumors) land at `topics/<slug>/report.md`. Same `sources/<emoji>/` tree in each. Do not drop reports on the repo root. Do not write report content into `template.md`. Use `template.md` as the section skeleton; voice is this file.
 
 Ask a question against already-written reports with MCP `docs-rag` (how: [HOW_TO_ASK_AGENTS_QUESTIONS.MD](HOW_TO_ASK_AGENTS_QUESTIONS.MD); skill: `.cursor/skills/docs-rag/`, Claude: `.claude/skills/docs-rag/`). To research a hallmark, claim, compound, rumor, or new topic, follow `.cursor/skills/adversarial-research/SKILL.md` (Claude: `.claude/skills/adversarial-research/`). Phase 0 briefing, then validator / invalidator / domain collector in parallel, then a compiler that link-checks and either loops Phase 1 (max 5) or saves the report. Do not pick a winner to look tidy.
+
+To find a specific paper and (when asked) weave it into the writeups it belongs in, follow `.cursor/skills/paper-hunter/SKILL.md` (Claude: `.claude/skills/paper-hunter/`). That is fetch/patch, not a research flight. Legal OA ladder only. Do not use pirate mirrors.
 
 When researching: dump notes and source tables in `tmp/` first, then write the report. Do not “finish” from memory.
 
@@ -218,8 +221,9 @@ How to ask from Cursor, the Cursor Agent CLI, or Claude Code: [HOW_TO_ASK_AGENTS
 
 - Load MCP `docs-rag` first (Cursor: `.cursor/mcp.json`). Then call `search_docs`. CLI (`mcp/docs-rag/run.sh search "…"`) only if they cannot enable the server this turn. A missing namespace is not permission to skip to the CLI.
 - If the hits already answer the question and the user did not ask to update or fill a report, cite the files and stop.
-- If the hits are empty or thin — they do not answer the actual question — and this is not repo-ops: do not stop with "no supporting data." Tell the user: "Hey, I don't have all the facts yet. I am going to go do some research. This will take a while. Is that okay?" Then run adversarial-research for at least one Phase 1 iteration. After the compiler, answer if compiled, link-checked claims are enough; if not, loop per that skill (cap 5). Read-only `--mode=ask` cannot write the flight — same sentence, then tell them to drop `--mode=ask`.
+- If the hits are empty or thin — they do not answer the actual question — and this is not repo-ops: do not stop with "no supporting data." If the job is retrieve one paper, start paper-hunter. Otherwise tell the user: "Hey, I don't have all the facts yet. I am going to go do some research. This will take a while. Is that okay?" Then run adversarial-research for at least one Phase 1 iteration. After the compiler, answer if compiled, link-checked claims are enough; if not, loop per that skill (cap 5). Read-only `--mode=ask` cannot write the flight — same sentence, then tell them to drop `--mode=ask`.
 - Repo-ops (how to add a topic, where files go, how this repo works, how to ask) is not corpus. Those answers live in this file, `topics/README.md`, and the skills. Empty hits there are expected. Point at the files. Do not start a research flight.
+- Fetching one paper (paywalled, 403, unfetched source, or “find this paper”) is `.cursor/skills/paper-hunter/`. Not a research flight. Legal OA only. Do not use pirate mirrors.
 - If they asked to research or update, the hits are starting context. Do not re-fetch a citation that is already filed unless link-check says it is dead.
 - After saving a report or source note, `reindex`. Details: [Indexing](#indexing).
 - Corpus is reports and filed source notes. Not `tmp/`, not `template.md`, not READMEs.

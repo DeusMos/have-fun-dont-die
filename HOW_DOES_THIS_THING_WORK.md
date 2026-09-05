@@ -31,7 +31,7 @@ Four piles of stuff, on purpose:
 |---|---|---|
 | Writeups | `hallmarks/`, `topics/`, `compounds/` | The public notes. This is the corpus. |
 | House rules | `AGENTS.md`, `.cursor/rules/`, `template.md` | Voice, marks, where files go. |
-| Skills | `.cursor/skills/` (Claude copies live under `.claude/skills/`) | Recipes the agent follows: search, or run a research flight. |
+| Skills | `.cursor/skills/` (Claude copies live under `.claude/skills/`) | Recipes the agent follows: search, fetch one paper, or run a research flight. |
 | Local search | `mcp/docs-rag/` + a gitignored `.rag/` index | “What did we already write about this?” |
 
 There is no ChatGPT custom GPT, no website that “asks the repo,” and no cloud vector store. Search stays on your machine. The thinking stays yours. The agents follow directions.
@@ -40,7 +40,7 @@ Cheap models are fine for fetching papers. Use a capable one for analysis. Fifty
 
 ---
 
-## The two jobs (ask vs research)
+## The jobs (ask vs research vs fetch)
 
 The agent is trained, by this repo, to tell these apart.
 
@@ -55,6 +55,10 @@ Now it is allowed to go outside the repo: PubMed, preprints, clinic pages, forum
 If search cannot answer, the agent must **not** return “no supporting data.” It tells you: “Hey, I don't have all the facts yet. I am going to go do some research. This will take a while. Is that okay?” Then it runs at least one Phase 1 iteration and answers from what the compiler link-checked. A shrug is a failed ask, not a finished one.
 
 If you only wanted an answer and the files already have one, you get the files. If you wanted a new or rewritten page, say “research” or “update the report.” If the notebook is empty on your question, you get research whether you said that word or not.
+
+**Fetch / patch** — “find this paper,” a 403 on a cited URL, or an unfetched source note that still needs N/effect.
+
+That is [paper-hunter](.cursor/skills/paper-hunter/), not a research flight. Identity via Crossref / PubMed / Unpaywall / the rest of the legal OA ladder, then `docs-rag` to see which writeups the paper actually changes. No pirate mirrors.
 
 Repo-ops questions (“how do I add a topic,” “where do files go”) are **not** search and **not** a research flight. Those answers live in this file, `AGENTS.md`, and `topics/README.md`. The search index does not include READMEs or skills on purpose. Empty hits there are expected.
 
@@ -73,12 +77,18 @@ You
          ├─ Ask path: search → read hits → answer you → stop
          │    (if hits are empty/thin: do not shrug — go to Research)
          │
+         ├─ Fetch path (one paper, 403, unfetched source):
+         │    paper-hunter Task subagent
+         │    legal OA ladder → hunt packet → maybe weave reports
+         │
          ├─ Research path (you asked, or ask could not answer):
          │    tell you it will take a while
          │    Phase 0 briefing
          │    three Task subagents in parallel
          │      validator / invalidator / domain collector
          │    one compiler (sequential)
+         │    parent may launch paper-hunter resolve-only
+         │      for LINKCHECK 403 / central paywall missing N/effect
          │    answer you if compiled claims are enough
          │    maybe another flight (cap 5)
          │    save report + sources + catalogs + reindex
@@ -115,8 +125,9 @@ A skill is a `SKILL.md` with a name and a description. The agent does **not** ne
 
 | Skill | When it fires | What it does |
 |---|---|---|
-| [docs-rag](.cursor/skills/docs-rag/) | “What does the repo say,” a question that may already be filed, or after a save | Search, maybe reindex. Hand off to research if the hits cannot answer. |
+| [docs-rag](.cursor/skills/docs-rag/) | “What does the repo say,” a question that may already be filed, or after a save | Search, maybe reindex. Hand off to research if the hits cannot answer; to paper-hunter if the job is retrieve one paper. |
 | [adversarial-research](.cursor/skills/adversarial-research/) | You asked to research, update, fill a report, or search could not answer the question | The Phase 0 → three-agent → compiler pipeline. |
+| [paper-hunter](.cursor/skills/paper-hunter/) | Find a specific paper, recover a 403, fill an unfetched source | Legal OA resolve; then patch related writeups if asked. Not a flight. |
 
 Claude Code uses the copies under `.claude/skills/`. Same law, same prompts.
 
@@ -238,7 +249,7 @@ Think of a newsroom, not a tribunal. Nobody is assigned to “win.”
 
 ### Parent (the one in your chat)
 
-Stage manager. Reads your ask. Searches the repo. Decides ask-vs-research (research if you asked, or if search cannot answer). If it is pivoting from a thin ask, it tells you it does not have the facts yet and that research will take a while. Creates `tmp/YYYY-MM-DD_<slug>/`. Writes or delegates Phase 0. Launches the three, waits, launches the compiler, answers you if the compiled claims are enough, maybe loops, then makes sure the catalogs and `.rag/` got updated. Talks to you in normal language. Never ends a question the notebook cannot answer with “no supporting data.” Repo-ops is the exception.
+Stage manager. Reads your ask. Searches the repo. Decides ask vs research vs fetch (research if you asked, or if search cannot answer; paper-hunter if the job is one paper). If it is pivoting from a thin ask, it tells you it does not have the facts yet and that research will take a while. Creates `tmp/YYYY-MM-DD_<slug>/`. Writes or delegates Phase 0. Launches the three, waits, launches the compiler. After `LINKCHECK.md`, launches paper-hunter `resolve-only` for `http-403-needs-rescue` or a central paywall still missing N/effect — the compiler does not nest-spawn. Answers you if the compiled claims are enough, maybe loops, then makes sure the catalogs and `.rag/` got updated. Talks to you in normal language. Never ends a question the notebook cannot answer with “no supporting data.” Repo-ops is the exception.
 
 ### Phase 0 — rumor mill (briefing only)
 
@@ -266,11 +277,15 @@ Maps the field. Does not prosecute and does not steelman. Canonical reviews, wha
 
 One agent, after the three files exist. Merges Phase 0 + both sides + the map into `DRAFT.md`. Both sides stay. No tidy winner. Every asserting sentence gets a mark. Practice is not efficacy.
 
-Then it **tests every link** (fetch or HEAD the URL / DOI / PMID) into `LINKCHECK.md`. Dead or invented citations drop. A 403 / “open this in a browser” is not treated as fake — it tries DOI or PubMed before giving up.
+Then it **tests every link** (fetch or HEAD the URL / DOI / PMID) into `LINKCHECK.md`. Dead or invented citations drop. A 403 / “open this in a browser” is not treated as fake — it tries DOI or PubMed before giving up. It does **not** spawn paper-hunter. The parent does that in `resolve-only` for `http-403-needs-rescue` and for a central `paywall-identified` row still missing N/effect.
 
 Then it writes `DECISION.md`: another round, or save. That decision is about **process** (did we miss a side, a must-watch clinic, a dead central paper), not about whether the claim is true.
 
 On save it copies surviving notes into `sources/<emoji>/`, writes `report.md` using [template.md](template.md) as **headings only**, updates `scripts/index-meta.yaml`, runs `build-index.py`, and reindexes search.
+
+### Paper hunter (fetch / patch)
+
+Finds one paper on the legal OA ladder (Crossref, PubMed, PMC, Unpaywall, OpenAlex, preprints, author manuscripts). Writes a hunt packet under `tmp/`. If you asked it to update reports, it uses `docs-rag` to see which writeups that paper actually changes and weaves the fact in. Not a research flight. Does not open a new topic or compound. Does not use pirate mirrors. Ask: “find DOI … and update the related reports,” or spawn `subagent_type: "paper-hunter"`.
 
 ### Rule-validation (after edits, optional)
 
@@ -287,10 +302,11 @@ Suppose you say: “Research whether weekly rapamycin restores nutrient sensing 
 3. **Session folder** `tmp/YYYY-MM-DD_rapamycin/` is created if needed. Sources tree is created with `init-topic-sources.sh` if the dir is new (`sources/<emoji>/` dirs; marks live in AGENTS.md).
 4. **Phase 0** writes `BRIEFING.md`: claim as asked vs as used in the wild, definition traps, who sells the capsule, what “restore” will falsely match.
 5. **Phase 1** launches validator, invalidator, and domain collector together. Each reads `AGENTS.md` + the briefing. Each writes only its own findings + staging notes.
-6. **Compiler** builds `DRAFT.md`, `LINKCHECK.md`, `DECISION.md`.
-7. If the draft deleted the practice map the old report already had, or one side of a 🥼 fight is missing, the compiler writes `UPDATE.r2.md` and the parent runs Phase 1 again. Same briefing, extra hunt list. Max five times.
-8. **Save:** `compounds/rapamycin/report.md` (weave, do not wipe) and matching `sources/📚/…`, `sources/🤔/…`, and so on. File a note in the folder that matches the mark on the sentence.
-9. **Sidecar + catalogs + reindex.** The next ask can find the new sentences.
+6. **Compiler** builds `DRAFT.md`, `LINKCHECK.md`, `DECISION.md`. It does not nest-spawn.
+7. If `LINKCHECK.md` has `http-403-needs-rescue` or a central `paywall-identified` row still missing N/effect, the **parent** launches [paper-hunter](.cursor/skills/paper-hunter/) `resolve-only`. Do not drop on the first 403.
+8. If the draft deleted the practice map the old report already had, or one side of a 🥼 fight is missing, the compiler writes `UPDATE.r2.md` and the parent runs Phase 1 again. Same briefing, extra hunt list. Max five times.
+9. **Save:** `compounds/rapamycin/report.md` (weave, do not wipe) and matching `sources/📚/…`, `sources/🤔/…`, and so on. File a note in the folder that matches the mark on the sentence.
+10. **Sidecar + catalogs + reindex.** The next ask can find the new sentences.
 
 You can watch the `tmp/` folder while this happens. That is the paper trail. It is not the published page.
 
@@ -358,6 +374,8 @@ have-fun-dont-die/
   tmp/YYYY-MM-DD_<slug>/            scratch for a flight (gitignored)
   .cursor/skills/docs-rag/
   .cursor/skills/adversarial-research/   SKILL.md, prompts.md, examples.md
+  .cursor/skills/paper-hunter/           SKILL.md, reference.md, resolve.py
+  .cursor/agents/paper-hunter.md
   .cursor/agents/rule-validation.md
   .cursor/rules/20-docs-rag.mdc
   .cursor/hooks.json                post-edit path recorder + stop follow-up
@@ -381,7 +399,7 @@ have-fun-dont-die/
 
 ## If you only remember four things
 
-1. **Ask** searches the notebook. **Research** writes new pages — when you ask for it, or when the notebook cannot answer.
+1. **Ask** searches the notebook. **Research** writes new pages — when you ask for it, or when the notebook cannot answer. **Paper-hunter** finds one paper on the legal OA ladder and, when asked, patches the writeups it belongs in.
 2. Context is a **small pile**: rules + a search + the files the search pointed at. Helpers get a **briefing packet**, not your whole chat.
 3. Three research agents argue the same claim from different jobs. A compiler merges them and checks links. Nobody is supposed to tidy away a fight.
 4. After a save, run **both** indexes that apply, or the next session cannot find the work.

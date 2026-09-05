@@ -43,6 +43,7 @@ Commercial conflicts get a clause ("X sells the capsule they are citing"), not a
 
 Write exactly one findings file: {FINDINGS}
 Stage source notes only under {STAGING}<emoji>/ as Author-Year-short-slug.md (or Venue-Year-short-slug.md).
+Each staged note's `N / effect / population / endpoint / duration` line must list n (or "n not reported"), population or strain, comparator, endpoint, duration, and effect size from the fetched paper. Do not restate the claim there.
 Do not write report.md. Do not write other agents' files. Do not append a shared FINDINGS.md.
 Do not "win" by being louder. One honest marked statement beats a pile of vibes.
 Then stop.
@@ -55,9 +56,11 @@ Source-note stub:
 URL / DOI / PMID
 Used for: <the marked claim sentence>
 Mark: <emoji>
-N / effect / population / endpoint / duration:
+N / effect / population / endpoint / duration: <n or "n not reported">; <strain or population + comparator>; <endpoint>; <duration>; <effect size>
 Conflict if any:
 ```
+
+A gloss that only restates the claim is not a source note. Pull those fields from the paper you fetched.
 
 Findings file shape:
 
@@ -281,6 +284,7 @@ You do NOT re-do the literature search. You compile, review, link-check, and dec
    Results: live | 404 | dead | invented | paywall-identified | paywall-no-identity | http-403-needs-rescue.
    HTTP 403 / need-a-browser is not invented, not dead, and not paywall-no-identity. Resolve via DOI, PMID, or Crossref before drop. Do not drop on the first 403.
    paywall-identified (title/authors resolve via DOI or PubMed) may stay.
+   http-403-needs-rescue, or a central paywall-identified row still missing N/effect: leave the row. Do not spawn paper-hunter. The parent launches paper-hunter resolve-only after you stop.
    404, dead, invented, paywall-no-identity: drop or flag the citation. Remove or downgrade the claim. No hanging leftovers. A 404 that is a user-agent or clinic-page artifact: retry a second fetch path before drop.
 
 4. Decide process, not whether the claim is true. Write {DECISION}:
@@ -318,7 +322,10 @@ If another_round is yes AND {ROUND} < {MAX_ROUNDS}:
 If another_round is no, OR {ROUND} == {MAX_ROUNDS}:
   If at cap, set another_round to no and flag remaining gaps in the report.
   Save {DRAFT} to {REPORT}. Create compounds/<slug>/ or topics/<slug>/ and run init-topic-sources.sh if needed.
-  Copy surviving staged sources into {DEST}/sources/<emoji>/ as Author-Year-short-slug.ext. File by the claim’s mark. Dedup.
+  Copy surviving staged sources into {DEST}/sources/<emoji>/ as Author-Year-short-slug.ext. File by the claim’s mark in {REPORT}.
+  Same-mark dedup: before adding a note, search note bodies in that same sources/<emoji>/ for the same DOI, PMID, or URL (not the filename). If one is already there, keep that file. Do not add a second slug for the same ID in that dir.
+  Cross-mark sibling: if the same URL also backs a claim with a different mark, that is a second card in the other mark dir. Used for and Mark on each card match that dir only. Do not copy a mixed card across dirs. Do not skip the second card because the first exists.
+  Each copied or rescue-written note must keep a filled `N / effect / population / endpoint / duration` line (n or "n not reported", population/strain, comparator, endpoint, duration, effect). A gloss that only restates the claim is not filed — fill it from the paper before save.
   Working notes stay in {SESSION}.
   Stop.
 
@@ -329,5 +336,6 @@ Forbidden:
 - Saving after a wiped, stubbed, or "not re-fetched" practice map that Phase 0 or the prior report already had
 - Skipping the link check
 - Dropping a source on the first HTTP 403
+- Spawning paper-hunter or any nested fetch agent (the parent does that)
 - Leaving a dead citation under a live mark
 ```

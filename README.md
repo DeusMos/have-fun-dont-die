@@ -109,6 +109,7 @@ The tree exists; there are no writeups yet. Layout: [topics/README.md](topics/RE
 | [crispr](topics/crispr/report.md) | [report.md](topics/crispr/report.md) | September 3, 2026 | RNA-guided Cas plus host repair (or a fused deaminase/RT) writes a genotype distribution; Casgevy is one ex vivo HSPC product, liver LNP is not whole-body rewrite, and no CRISPR aging RCT was found. |
 | [enamel-remineralization-gel](topics/enamel-remineralization-gel/report.md) | [report.md](topics/enamel-remineralization-gel/report.md) | September 3, 2026 | The 2025–2026 enamel-regrowth gel is several SKUs: Hasan 2025 ~10 μm extracted-tooth ELR film (Epinamel, no in-mouth results), chairside P11-4/Curodont (live RCT fight vs fluoride), and consumer nano-HA / CPP-ACP pastes. |
 | [salamander-like-regeneration](topics/salamander-like-regeneration/report.md) | [report.md](topics/salamander-like-regeneration/report.md) | September 3, 2026 | 2026 PNAS: conserved SP6/SP8 plus zebrafish-LEN FGF8 AAV partially rescues or speeds mouse P3 digit bone; not a salamander-gene transplant and not whole-limb regeneration. |
+| [bioelectricity](topics/bioelectricity/report.md) | [report.md](topics/bioelectricity/report.md) | September 4, 2026 | Levin-lab ion-channel mRNA, pump drugs, and GJ block change frog/planaria anatomy (7.5% complete ectopic eyes; 25% octanol two-heads); BioDome is silk+5 drugs, not a voltage-dye rewrite; aging is a 2024 perspective plus keratinocyte dish, not a human Vmem trial. |
 <!-- END GENERATED -->
 
 ## Compounds catalog

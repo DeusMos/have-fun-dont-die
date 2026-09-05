@@ -92,6 +92,7 @@ Task progress:
 - [ ] Phase 1: three flight agents in parallel (BRIEFING + UPDATE.r{N} if any)
 - [ ] Three FINDINGS.*.r{N}.md exist
 - [ ] Compiler: DRAFT.md + LINKCHECK.md + DECISION.md
+- [ ] If LINKCHECK has `http-403-needs-rescue` or a central `paywall-identified` row missing N/effect: **parent** launches paper-hunter `resolve-only` (compiler does not nest-spawn)
 - [ ] If another_round and N < cap → write UPDATE.r{N+1}.md, increment N, repeat Phase 1
 - [ ] If no, or N == cap → save report.md + sources/<emoji>/
 - [ ] `scripts/index-meta.yaml` rewritten for this subject; `python3 scripts/build-index.py`
@@ -201,8 +202,10 @@ Does four jobs:
 
 1. **Compile** those files into `{SESSION}/DRAFT.md`. Both sides present. Phase 0 framing in the draft. No tidy winner.
 2. **Review and update** so the draft follows AGENTS.md (marks, sources, voice, one not-medical-advice paragraph, ☠︎︎ vs ⛔, 🥼 vs 🤼, 📜 vs 📚).
-3. **Test every source link** (fetch or HEAD the URL, DOI, PMID). Write `{SESSION}/LINKCHECK.md`. Dead, 404, invented, or paywall-only-without-identity (cannot resolve title/authors) → drop or flag the citation. The claim is removed or downgraded. No hallucinated leftovers. HTTP 403 / need-a-browser is **not** invented or dead — resolve via DOI, PMID, or Crossref before drop. Do not drop on the first 403. Do not classify a 403 as `paywall-no-identity`.
+3. **Test every source link** (fetch or HEAD the URL, DOI, PMID). Write `{SESSION}/LINKCHECK.md`. Dead, 404, invented, or paywall-only-without-identity (cannot resolve title/authors) → drop or flag the citation. The claim is removed or downgraded. No hallucinated leftovers. HTTP 403 / need-a-browser is **not** invented or dead — resolve via DOI, PMID, or Crossref before drop. Do not drop on the first 403. Do not classify a 403 as `paywall-no-identity`. Mark those rows `http-403-needs-rescue`. A paywall that already has title/authors/DOI or PMID is `paywall-identified`.
 4. **Decide process**, not truth. Write `{SESSION}/DECISION.md`. Include whether the user’s original question is answerable from this round. Then either loop Phase 1 or save. The parent answers the user now if `question_answerable_now` is yes — do not wait for a save to do that.
+
+After `LINKCHECK.md` exists, the **parent** (not the compiler) launches [paper-hunter](../paper-hunter/SKILL.md) in `resolve-only` for each `http-403-needs-rescue` row and for a central `paywall-identified` citation that still lacks N/effect. The compiler does not nest-spawn. Hunt packet lands in the research session or `tmp/YYYY-MM-DD_paper-hunter/<slug>/`. The compiler or the next flight uses `IDENTITY.md` / `FULLTEXT.md`. Do not drop on the first 403.
 
 ```markdown
 # DECISION
@@ -288,7 +291,11 @@ The compiler does not pick a winner to look tidy.
 
 Only when `another_round` is no, or the cap is hit.
 
-1. Copy surviving staged sources into the destination `sources/<emoji>/`. File by how the **claim** is marked in `report.md`. Name: `Author-Year-short-slug.ext`. Dedup the same paper.
+1. File sources:
+   1. Copy surviving staged sources into the destination `sources/<emoji>/` by how the **claim** is marked in `report.md`. Name: `Author-Year-short-slug.ext`.
+   2. Same-mark dedup: before adding a note, search **note bodies** in that same `sources/<emoji>/` for the same DOI, PMID, or URL (not the filename). If one is already there, keep that file. Do not add a second slug for the same ID in that dir.
+   3. Cross-mark sibling: if the same URL also backs a claim with a different mark, that is a second card in the other mark dir. `Used for` and `Mark` on each card match that dir only. Do not copy a mixed card across dirs. Do not skip the second card because the first exists.
+   Each copied or rescue-written note must fill `N / effect / population / endpoint / duration` from the fetched paper (n or "n not reported", population/strain, comparator, endpoint, duration, effect). A gloss that only restates the claim is not filed.
 2. Write `report.md`:
 
 | Case | Writeup | Sources |
@@ -319,4 +326,5 @@ Then, still before returning:
 - [examples.md](examples.md) — carrots/bleach briefing (Phase 0 gold standard)
 - [AGENTS.md](../../../AGENTS.md) — marks, voice, source rules
 - [docs-rag](../docs-rag/SKILL.md) — search already-written reports before a new flight
+- [paper-hunter](../paper-hunter/SKILL.md) — parent-launched `resolve-only` for LINKCHECK 403 / central paywall missing N/effect
 - `template.md` — heading skeleton only

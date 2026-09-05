@@ -1,11 +1,11 @@
 ---
 name: docs-rag
-description: Search already-written hallmarks/, topics/, and compounds/ reports via the built-in docs-rag MCP. Use when the user asks what the repo says, asks a question that may already be filed, or after a report is saved and the index needs a refresh. If search cannot answer the actual question (empty or thin hits), hand off to adversarial-research — do not stop on "no supporting data." Repo-ops is not that path.
+description: Search already-written hallmarks/, topics/, and compounds/ reports via the built-in docs-rag MCP. Use when the user asks what the repo says, asks a question that may already be filed, or after a report is saved and the index needs a refresh. If search cannot answer the actual question (empty or thin hits), hand off to adversarial-research — do not stop on "no supporting data." If the job is retrieve one paper / recover a blocked fetch / fill an unfetched source, hand off to paper-hunter, not a research flight. Repo-ops is not that path.
 ---
 
 # Docs RAG
 
-Repo law: [AGENTS.md](../../../AGENTS.md). This skill is retrieval first. If retrieval cannot answer the actual question, hand off to [adversarial-research](../adversarial-research/SKILL.md). Do not stop on "no supporting data."
+Repo law: [AGENTS.md](../../../AGENTS.md). This skill is retrieval first. If retrieval cannot answer the actual question, hand off to [adversarial-research](../adversarial-research/SKILL.md). If the job is retrieve one identified paper, recover a blocked fetch, or fill an unfetched source note, hand off to [paper-hunter](../paper-hunter/SKILL.md) — that is fetch/patch, not a research flight. Judge the job from the ask. Do not classify it with a keyword list. Do not stop on "no supporting data."
 
 ## Tools
 
@@ -53,6 +53,7 @@ Use `-k 12` for breadth. Do not pass `--k` — the CLI reads that as `--kind`.
 - Judge whether the hits answer the **actual question**. Off-topic chunks, a related molecule, or a heading match are thin. Do not decide that by keyword counting. Do not classify the question as biology vs not.
 - Empty/thin hits that do not answer the actual question: do **not** answer with "no supporting data," "the repo does not cover this," or a shrug. That reply is useless. Tell the user exactly: "Hey, I don't have all the facts yet. I am going to go do some research. This will take a while. Is that okay?" Then start [adversarial-research](../adversarial-research/SKILL.md) in the same turn for **at least one** Phase 1 iteration (Phase 0 + three-agent flight + compiler). Do not wait for a second "yes" unless they already declined. After that compiler pass, evaluate: if compiled, link-checked claims answer the question, answer now. If not, follow the compiler loop (cap 5). Never return a bare no-data line after a flight.
 - `--mode=ask` (or any read-only session) cannot write the flight. Same sentence, then tell them to drop `--mode=ask` / use default mode. Do not invent an answer from memory.
+- A different job from a thin-ask research flight: retrieve a specific paper, recover a 403, or fill an unfetched source note. That is [paper-hunter](../paper-hunter/SKILL.md), not adversarial-research. Judge the job from the ask. Do not route it by matching words. Paper-hunter does not use pirate mirrors.
 - Repo-ops (how to add a topic, where files go, how this repo works, how to ask) is not corpus (READMEs and skills are not indexed). Point at `topics/README.md`, `.cursor/skills/adversarial-research/` (`init-topic-sources.sh` + `scripts/index-meta.yaml` + `build-index.py`), and `AGENTS.md`. Empty hits there are expected. Do not start a research flight.
 - Do not treat `tmp/` as corpus.
 - After a save, `reindex`. Catalog vs RAG, corpus paths, and when to skip `build-index.py`: [AGENTS.md — Indexing](../../../AGENTS.md#indexing).
