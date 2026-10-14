@@ -374,6 +374,41 @@ def compounds_catalog_rows(meta: IndexMeta, link_prefix: str) -> str:
     return "\n".join(lines)
 
 
+def root_hallmarks_rows(meta: IndexMeta) -> str:
+    """Front-door table: number, linked name, claim. Full catalog lives in hallmarks/README.md."""
+    lines = ["| # | Hallmark | One-line claim |", "|---|---|---|"]
+    for item in meta.hallmarks:
+        path = report_path(item.slug, "hallmarks")
+        if item.status == "no report":
+            if path.is_file():
+                raise SystemExit(f"{item.slug} marked no report but {path} exists")
+            name_cell = item.name
+        else:
+            if not path.is_file():
+                raise SystemExit(f"{item.slug} status {item.status!r} but missing {path}")
+            name_cell = f"[{item.name}]({_href('hallmarks/', item.slug)})"
+        lines.append(f"| {number_from_slug(item.slug)} | {name_cell} | {item.one_liner} |")
+    return "\n".join(lines)
+
+
+def root_topics_list(meta: IndexMeta) -> str:
+    """Front-door bullets. Full catalog lives in topics/README.md."""
+    topics_catalog_rows(meta, "topics/")  # sidecar/disk consistency checks
+    if not meta.topics:
+        return "_No topic writeups yet._"
+    return "\n".join(
+        f"- [{item.slug}]({_href('topics/', item.slug)}) — {item.one_liner}" for item in meta.topics
+    )
+
+
+def root_compounds_list(meta: IndexMeta) -> str:
+    """Front-door link strip, alphabetical. Claims and CAS live in compounds/README.md."""
+    compounds_catalog_rows(meta, "compounds/")  # sidecar/disk consistency checks
+    items = sorted(meta.compounds, key=lambda c: c.slug)
+    links = " · ".join(f"[{item.slug}]({_href('compounds/', item.slug)})" for item in items)
+    return f"{len(items)} compounds. Claims, CAS, and dates: [compounds/README.md](compounds/README.md).\n\n{links}"
+
+
 def compounds_section_maps(meta: IndexMeta) -> str:
     if not meta.compounds:
         return ""
@@ -424,15 +459,9 @@ def main() -> None:
     compounds_readme = ROOT / "compounds" / "README.md"
 
     root_text = root_readme.read_text(encoding="utf-8")
-    root_text = replace_block(
-        root_text, "hallmarks-catalog", hallmarks_catalog_rows(meta, "hallmarks/"), root_readme
-    )
-    root_text = replace_block(
-        root_text, "topics-catalog", topics_catalog_rows(meta, "topics/"), root_readme
-    )
-    root_text = replace_block(
-        root_text, "compounds-catalog", compounds_catalog_rows(meta, "compounds/"), root_readme
-    )
+    root_text = replace_block(root_text, "root-hallmarks", root_hallmarks_rows(meta), root_readme)
+    root_text = replace_block(root_text, "root-topics", root_topics_list(meta), root_readme)
+    root_text = replace_block(root_text, "root-compounds", root_compounds_list(meta), root_readme)
     write_if_changed(root_readme, root_text)
 
     hall_text = hallmarks_readme.read_text(encoding="utf-8")
