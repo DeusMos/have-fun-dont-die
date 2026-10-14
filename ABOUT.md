@@ -6,7 +6,7 @@ I've never bought "natural causes" as an answer. It's a filing category for mach
 
 This started way before my mom. I went to university for molecular biology because I wanted to eliminate tooth decay. Cavities were the tutorial: one tissue, one ecosystem, a rot you can actually corner. I meant to keep going after that. I stayed a fifth year on purpose, chasing a double bachelor's in molecular biology and chemistry with a minor in botany, because I was trying to collect enough mechanism to make my loved ones immortal. I never finished it.
 
-When the school figured out that was the plan, they weren't charmed. Meetings were had and concern was expressed, and I was nudged toward wanting something smaller and more employable. Then the laws changed and made what I was working on very, very illegal. So I dropped out and went into software. Honestly it's the same problem with a different compiler. The wet lab wanted permission and a ten-year aims page, and I wanted something that keeps working while I sleep.
+When the school figured out that was the plan, they weren't charmed. Meetings were had and concern was expressed, and I was nudged toward wanting something smaller and more employable. Then the laws changed and made what I was working on very, very illegal. So I dropped out and went into software. Honestly it's the same problem with a different compiler.
 
 Then a beautiful woman walked in. I fell in love before I had a protocol for it, and the ordinary campaign started going suspiciously well. 😉 👶👶👶
 
